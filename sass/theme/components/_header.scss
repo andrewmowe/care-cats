@@ -1,0 +1,132 @@
+// Header
+
+.navbar-brand {
+	max-width: 246px;
+}
+
+.navbar-nav {
+
+    @include labelfont;
+
+}
+
+.navbar-toggler {
+	z-index: 10;
+}
+
+@include media-breakpoint-down(md) {
+
+	.navbar-nav li {
+		margin-top:4px;
+		margin-bottom:4px;
+		text-align: center;
+		border-radius: 2px;
+	}
+
+	#main-menu li {
+
+		background-color: $brand-gray-md;
+
+	}
+
+	#second-menu li {
+
+		border: 2px solid $brand-gray-lt;
+
+	}
+
+	.navbar-inverse {
+		margin-bottom:20px;
+	}
+
+}
+
+@include media-breakpoint-up(lg) {
+
+	.navbar-nav {
+
+		a {
+			position: relative;
+		}
+
+		li:not(:first-child) a:before {
+			content: '\2022';
+			position: absolute;
+			left: -.4rem;
+			color: $brand-gray-dk;
+		}
+
+	}
+
+	.navbar-inverse {
+		margin-left:-1.5em;
+	}
+
+	.navbar-inverse .navbar-nav li:not(:first-child) a:before {
+		color: white;
+	}
+
+	.navbar-toggleable-md .navbar-nav .nav-link {
+	    padding-right: 1.5em;
+	    padding-left: 1.5em;
+	}
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: $brand-gray-dk;
+
+    &:hover {
+		color: $brand-secondary;
+	}
+}
+
+// DONATE BUTTON
+#main-menu.navbar-nav .nav-item:last-child .nav-link {
+
+	background-color: $brand-secondary;
+	color: white;
+	border-radius: 2px;
+
+	&:before {
+		display:none;
+	}
+
+	&:hover {
+		background-color: $brand-gray-dk;
+	}
+
+}
+
+.navbar-inverse .navbar-nav .nav-link {
+    color: white;
+
+    &:hover {
+		color: $brand-gray-dk;
+	}
+}
+
+// SEARCH FORM
+header {
+
+	.form-control {
+		border: none;
+	    border-radius: 2px;
+	}
+
+	.input-group-btn>.btn {
+
+		background-color: $brand-gray-md;
+		color: $brand-gray-dk;
+		border:none;
+	    border-radius: 2px;
+	    @include labelfont;
+	    font-size:14px;
+
+		&:hover {
+			background-color: $brand-gray-dk;
+			color:white;
+		}
+	}
+
+}
+

@@ -10,3 +10,13 @@
 
 // Any additional imported files //
 @import "theme/child_theme";  // <--------- Add your styles into this file
+
+
+@import "theme/base/globals";
+@import "theme/base/text";
+
+@import "theme/components/header";
+@import "theme/components/footer";
+
+
+@import "theme/templates/homepage";

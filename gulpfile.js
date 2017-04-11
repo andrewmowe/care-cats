@@ -16,7 +16,8 @@ var browserSyncWatchFiles = [
 // see: https://www.browsersync.io/docs/options/
 var browserSyncOptions = {
     proxy: "localhost/htdocs/CARE/",
-    notify: false
+    notify: false,
+    xip: true
 };
 
 // Defining requirements
@@ -149,7 +150,10 @@ gulp.task('scripts', function() {
 
         // End - All BS4 stuff
 
-        basePaths.dev + 'js/skip-link-focus-fix.js'
+        basePaths.dev + 'js/skip-link-focus-fix.js',
+
+        // add custom js file
+        './js/child-theme-custom.js'
     ];
   gulp.src(scripts)
     .pipe(concat('child-theme.min.js'))

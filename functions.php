@@ -61,3 +61,24 @@ function create_post_type_cats() {
     register_post_type( 'cats', $args );
 
 }
+
+/**
+ * Enqueue TypeKit Fonts
+ */
+function t8_enqueue_scripts() {
+    wp_enqueue_script( 'typekit', '//use.typekit.net/ure0vfn.js' );
+}
+add_action( 'wp_enqueue_scripts', 't8_enqueue_scripts' );
+
+function t8_typekit_inline() {
+    if ( wp_script_is( 'typekit', 'done' ) ) {
+        echo '<script>try{Typekit.load();}catch(e){}</script>';
+    }
+}
+add_action( 'wp_head', 't8_typekit_inline' );
+
+//Enqueue the Dashicons script
+add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
+function load_dashicons_front_end() {
+wp_enqueue_style( 'dashicons' );
+}
