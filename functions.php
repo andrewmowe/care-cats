@@ -58,7 +58,7 @@ function create_post_type_cats() {
 			'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
 		);
 
-    register_post_type( 'cats', $args );
+    register_post_type( 'cat', $args );
 
 }
 
