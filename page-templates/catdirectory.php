@@ -102,13 +102,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 
 				<?php get_template_part('partials/catgrid', 'item'); ?>
-				<?php get_template_part('partials/catgrid', 'item'); ?>
-				<?php get_template_part('partials/catgrid', 'item'); ?>
-				<?php get_template_part('partials/catgrid', 'item'); ?>
-				<?php get_template_part('partials/catgrid', 'item'); ?>
-				<?php get_template_part('partials/catgrid', 'item'); ?>
-				<?php get_template_part('partials/catgrid', 'item'); ?>
-				<?php get_template_part('partials/catgrid', 'item'); ?>
 
 		</div>
 

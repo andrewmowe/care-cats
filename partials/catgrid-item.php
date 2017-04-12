@@ -8,16 +8,49 @@
  */
 ?>
 
-				<article class="grid-cat col-md-6 col-lg-4 py-3">
-					
-					<img src="http://lorempixel.com/600/400/cats" class="w-100" >
+<?php
+				$args = array(
+						'post_type' => 'cats',
+						'posts_per_page'	=> 6,
+						'orderby'	=> 'menu_order',
+						'meta_query'	=> array(
+								array(
+									'key'			=> 'availability',
+									'value'		=> 'available',
+									'compare'	=> '='
+								)
+						),
+				);
 
-					<div class="d-flex justify-content-between align-items-baseline px-3 py-1 bg-gray-lt">
+				$cats = new WP_Query( $args );
 
-						<h2>Gypsy</h2>
+				if ( $cats->have_posts() ) :
 
-						<a class="btn btn-link" href="#" role="button">learn more</a>
+					while ( $cats->have_posts() ) : $cats->the_post();
 
-					</div>
+					$cat_meta = get_post_meta( $post->ID, 'pet_data', true );
 
-				</article>
+					// echo '<pre>';
+					// print_r( $meta );
+					// echo '</pre>';
+			?>
+
+			<article class="grid-cat col-12 col-md-6 col-lg-4 py-3">
+
+				<img src="<?php echo $cat_meta->images[0]->original_url; ?>" class="w-100" >
+
+				<div class="d-flex justify-content-between">
+
+					<h2><?php the_title(); ?></h2>
+
+					<a class="btn btn-link" href="#" role="button">learn more</a>
+
+				</div>
+
+			</article>
+
+			<?php endwhile; ?>
+
+		<?php endif; ?>
+
+		<?php wp_reset_postdata(); ?>
