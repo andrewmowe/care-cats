@@ -77,8 +77,6 @@ function t8_typekit_inline() {
 }
 add_action( 'wp_head', 't8_typekit_inline' );
 
-//Enqueue the Dashicons script
-add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
-function load_dashicons_front_end() {
-wp_enqueue_style( 'dashicons' );
-}
+register_nav_menus( array(
+			'care-secondary-menu' => __( 'Secondary Menu', 'understrap' ),
+		) );
