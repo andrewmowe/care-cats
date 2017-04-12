@@ -21,3 +21,35 @@ section.home-banner {
 
 
 }
+
+section.available-cats {
+
+	> h1 {
+		font-size:1.25em;
+	}
+
+
+}
+
+.featured-cat {
+	h1 {
+		font-size: 1.75em;
+		margin-bottom: 1.5em;
+	}
+
+	.text {
+		max-width: 60ch;
+	}
+}
+
+.grid-sponsor {
+
+	h2 {
+		margin-top: $spacer;
+		font-size: 1em;
+		@include labelfont;
+
+		color: $brand-gray-dk;
+	}
+
+}

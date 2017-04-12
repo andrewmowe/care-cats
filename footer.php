@@ -13,7 +13,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_sidebar( 'footerfull' ); ?>
 
-<div class="wrapper bg-primary text-white mt-5" id="wrapper-footer">
+<div class="wrapper bg-primary text-white py-5" id="wrapper-footer">
 
 	<div class="<?php echo esc_html( $container ); ?>">
 
@@ -27,10 +27,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<h2>OUR LOCATIONS</h2>
 				<p>Cats may be seen during regular store hours.
 				<br>Adoptions arranged by appointment.</p>
-
-				<p>Petco 
-				<br>9051 Staples Mill Road Richmond, VA 23228
-				<br>Adoption events every Saturday 12-3pm</p>
+				<h4>Petco</h4>
+				<p>9051 Staples Mill Road  Richmond, VA 23228
+				<br/>Adoption events every Saturday 12-3pm</p>
 
 			</section><!--col end -->
 
@@ -42,12 +41,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<label class="sr-only" for="inlineFormInput">Email</label>
 					<input type="email" class="form-control col-8 m-0" id="inlineFormInput" placeholder="...enter your email">
 
-					<div class="col-4 pl-2"><button type="submit" class="btn btn-secondary w-100">Sign Up</button></div>
+					<div class="col-4 pl-2"><button type="submit" class="btn btn-gray w-100">Sign Up</button></div>
 				</form>
 
 				<div class="d-flex justify-content-between">
 
-					<a class="btn btn-primary" href="#" role="button">Donate</a>
+					<a class="btn btn-secondary" href="#" role="button">Donate</a>
 
 					<p>[social icons]</p>
 

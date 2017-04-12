@@ -9241,6 +9241,41 @@ h1.navbar-brand a:hover {
   display: block; }
 
 body {
+  background-color: #dedede; }
+
+#page, #wrapper-footer {
+  max-width: 1600px;
+  margin: 0 auto;
+  background: white; }
+
+.cats-grid h2 {
+  font-size: 1.5em; }
+
+.cats-grid .btn-link {
+  text-transform: lowercase;
+  color: #EE4F54; }
+  .cats-grid .btn-link:hover, .cats-grid .btn-link:active {
+    color: #2BB7AE; }
+
+.cats-grid article > div {
+  border-radius: 2px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
+
+.full-text-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+  .full-text-section > article {
+    max-width: 70ch; }
+    .full-text-section > article h2 {
+      margin-bottom: 2rem; }
+    .full-text-section > article p {
+      font-size: 1.125em; }
+
+.bg-gray-lt {
+  background-color: #d4d4d4; }
+
+body {
   color: #404042; }
 
 .navbar, .bg-primary {
@@ -9248,11 +9283,80 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* BUTTONS */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: franklin-gothic-urw, Helvetica, Arial, sans-serif; }
+
+.btn, .wpcf7 input[type=submit], .wpcf7 input[type=submit] {
+  border-width: 2px;
+  border-radius: 2px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.btn-primary:hover, .btn-primary:active {
+  color: white;
+  opacity: 1;
+  background-color: #404042;
+  border-color: #404042; }
+
+.btn-secondary {
+  color: white;
+  background-color: #EE4F54;
+  border-color: #EE4F54;
+  opacity: 1; }
+  .btn-secondary:hover, .btn-secondary:active {
+    color: white;
+    opacity: 1;
+    background-color: #404042;
+    border-color: #404042; }
+
+.btn-gray {
+  color: white;
+  background-color: #404042;
+  border-color: #404042;
+  opacity: 1; }
+  .btn-gray:hover, .btn-gray:active {
+    color: #404042;
+    opacity: 1;
+    background-color: #2BB7AE;
+    border-color: #404042; }
+
+.btn-outline-secondary {
+  color: #888888;
+  background-color: transparent;
+  border-color: #888888;
+  opacity: 1; }
+  .btn-outline-secondary:hover, .btn-outline-secondary:active {
+    color: white;
+    opacity: 1;
+    background-color: #404042;
+    border-color: #404042; }
+
+.bg-primary .btn-outline-secondary, .bg-inverse .btn-outline-secondary {
+  color: white;
+  border-color: white; }
+  .bg-primary .btn-outline-secondary:hover, .bg-primary .btn-outline-secondary:active, .bg-inverse .btn-outline-secondary:hover, .bg-inverse .btn-outline-secondary:active {
+    color: #404042;
+    background-color: white; }
+
 .navbar-brand {
   max-width: 246px; }
 
 .navbar-nav {
-  font-family: franklin-gothic-urw, Helvetica, Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase; }
@@ -9269,7 +9373,7 @@ body {
   #main-menu li {
     background-color: #cccccc; }
   #second-menu li {
-    border: 2px solid #F0F0F0; }
+    border: 2px solid #d4d4d4; }
   .navbar-inverse {
     margin-bottom: 20px; } }
 
@@ -9351,7 +9455,6 @@ header .input-group-btn > .btn, header .wpcf7 .input-group-btn > input[type=subm
   color: #404042;
   border: none;
   border-radius: 2px;
-  font-family: franklin-gothic-urw, Helvetica, Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -9359,6 +9462,23 @@ header .input-group-btn > .btn, header .wpcf7 .input-group-btn > input[type=subm
   header .input-group-btn > .btn:hover, header .wpcf7 .input-group-btn > input[type=submit]:hover, .wpcf7 header .input-group-btn > input[type=submit]:hover {
     background-color: #404042;
     color: white; }
+
+.site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4 {
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase; }
+
+.site-footer h1 {
+  font-size: 1.25em;
+  text-transform: none; }
+
+.site-footer h3 {
+  font-size: 1em; }
+
+.site-footer h4 {
+  font-size: 1em;
+  text-transform: none; }
 
 section.home-banner {
   position: relative; }
@@ -9374,3 +9494,21 @@ section.home-banner {
     section.home-banner {
       padding-top: 10vh;
       padding-bottom: 10vh; } }
+
+section.available-cats > h1 {
+  font-size: 1.25em; }
+
+.featured-cat h1 {
+  font-size: 1.75em;
+  margin-bottom: 1.5em; }
+
+.featured-cat .text {
+  max-width: 60ch; }
+
+.grid-sponsor h2 {
+  margin-top: 1rem;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #404042; }

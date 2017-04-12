@@ -12,7 +12,8 @@
 @import "theme/child_theme";  // <--------- Add your styles into this file
 
 
-@import "theme/base/globals";
+@import "theme/base/layout";
+@import "theme/base/colors";
 @import "theme/base/text";
 
 @import "theme/components/header";

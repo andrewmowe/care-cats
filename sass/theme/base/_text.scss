@@ -3,7 +3,99 @@ body {
 }
 
 .navbar, .bg-primary {
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    @include smoothfont;
+}
+
+h1, h2, h3, h4, h5 {
+	font-weight:700;
+	@include smoothfont;
+}
+
+/* BUTTONS */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: $font-family-sans-serif;
+}
+
+.btn, .wpcf7 input[type=submit] {
+
+    border-width: 2px;
+    border-radius: 2px;
+    @include labelfont;
+	@include smoothfont;
+
+}
+
+.btn-primary {
+
+    &:hover, &:active {
+		color: white;
+		opacity:1;
+		background-color: $brand-gray-dk;
+	    border-color: $brand-gray-dk;
+    }
+}
+
+.btn-secondary {
+    color: white;
+    background-color: $brand-secondary;
+    border-color: $brand-secondary;
+    opacity:1;
+
+    &:hover, &:active {
+    	color: white;
+    	opacity:1;
+    	background-color: $brand-gray-dk;
+	    border-color: $brand-gray-dk;
+    }
+
+}
+
+.btn-gray {
+    color: white;
+    background-color: $brand-gray-dk;
+    border-color: $brand-gray-dk;
+    opacity:1;
+
+    &:hover, &:active {
+    	color: $brand-gray-dk;
+    	opacity:1;
+    	background-color: $brand-primary;
+	    border-color: $brand-gray-dk;
+    }
+
+}
+
+.btn-outline-secondary {
+    color: $brand-gray-dk-2;
+    background-color: transparent;
+    border-color: $brand-gray-dk-2;
+    opacity:1;
+
+    &:hover, &:active {
+    	color: white;
+    	opacity:1;
+    	background-color: $brand-gray-dk;
+	    border-color: $brand-gray-dk;
+    }
+
+}
+
+.bg-primary, .bg-inverse {
+
+	.btn-outline-secondary {
+	    color: white;
+	    border-color: white;
+
+	    &:hover, &:active {
+	    	color: $brand-gray-dk;
+	    	background-color: white;
+	    }
+
+	}
+
 }

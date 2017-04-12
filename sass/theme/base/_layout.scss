@@ -1,0 +1,57 @@
+body {
+	background-color: $brand-gray-lt-2;
+}
+
+#page, #wrapper-footer {
+	max-width: 1600px;
+    margin: 0 auto;
+    background: white;
+}
+
+.cats-grid {
+
+	h2 {
+
+		font-size: 1.5em;
+
+	}
+
+	.btn-link {
+
+		text-transform: lowercase;
+		color: $brand-secondary;
+
+		&:hover, &:active {
+			color: $brand-primary;
+		}
+
+	}
+
+	article > div {
+
+		border-radius: 2px;
+	    border-top-left-radius: 0;
+	    border-top-right-radius: 0;
+
+	}
+
+}
+
+.full-text-section {
+
+	padding-top: 3 * $spacer;	
+	padding-bottom: 3 * $spacer;
+
+	> article {
+		max-width: 70ch;
+
+		h2 {
+			margin-bottom: 2 * $spacer;
+		}
+
+		p {
+			font-size: 1.125em;
+		}
+	}
+
+}

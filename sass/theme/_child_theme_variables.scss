@@ -9,16 +9,23 @@
 $brand-primary:         #2BB7AE; 
 $brand-secondary:       #EE4F54; 
 $brand-gray-dk:			#404042;
+$brand-gray-dk-2:		#888888;
 $brand-gray-md:			#cccccc;
-$brand-gray-lt:			#F0F0F0;
+$brand-gray-lt:			#d4d4d4;
+$brand-gray-lt-2:		#dedede;
 
 $font-family-sans-serif: franklin-gothic-urw, Helvetica, Arial, sans-serif; 
 
 @mixin labelfont {
-	font-family: $font-family-sans-serif;
     font-weight: 700;
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
+}
+
+@mixin smoothfont {
+	text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /*

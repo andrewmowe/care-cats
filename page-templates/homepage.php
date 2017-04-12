@@ -11,7 +11,7 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper pt-0" id="full-width-page-wrapper">
+<div class="wrapper p-0" id="full-width-page-wrapper">
 
 	<section class="home-banner container-fluid bg-inverse text-white" style="background-image: url('http://lorempixel.com/1200/400/cats'); background-size: cover; background-position: center center; background-repeat: no-repeat;"> 
 	<!-- banner bg image would be applied to this container -->
@@ -59,28 +59,28 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<section class="available-cats container-fluid px-0">
 
 			
-		<h1 class="text-center py-3 my-0 bg-primary">Cats Available for Adoption</h1>
+		<h1 class="text-center py-4 my-0 bg-gray-lt">Cats Available for Adoption</h1>
 
-		<article class="container py-0">
+		<article class="featured-cat container-fluid p-0">
 				
-			<div class="row justify-content-between">
+			<div class="row">
 
-					<div class="col-md-7 py-0">
+					<div class="col-md-6 col-lg-7 py-0">
 					  
 						<img src="http://lorempixel.com/600/400/cats" class="w-100" >
 
 					</div>
 
-					<div class="col-md-5 py-5">
+					<div class="text col-md-6 col-lg-5 p-5 p-sm-5">
 					  
 						<h1>Hushpuppy</h1>
 						<p>I was part of a feral colony of kitties. Neighbors, fearful for my survival, live-trapped me and turned me over to CARE. I have been in foster care since mid-May and am about 11 months old and have become the most loveable kitty around. I am an extremely lively boy that enjoys romp and playtime. I can be shy until I feel comfortable but once I get to know you, I am loving. Being in foster care has given me the opportunity to live with multiple kitty personalities so I tend to get along well with other cats/kittens…</p>
 
-						<p>
+						<p class="mt-md-4">
 
 							<a class="btn btn-primary" href="#" role="button">Learn More</a>
 
-							<a class="btn btn-secondary" href="#" role="button">Adopt Me</a>
+							<a class="btn btn-secondary ml-md-4" href="#" role="button">Adopt Me</a>
 
 						</p>
 
@@ -92,15 +92,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</article>
 
-		<section class="cats-grid container mb-5">
+		<section class="cats-grid container-fluid my-5">
 
 			<div class="row">
 
-				<article class="grid-cat col-12 col-md-6 col-lg-4 py-3">
+				<article class="grid-cat col-md-6 col-lg-4 py-3">
 					
 					<img src="http://lorempixel.com/600/400/cats" class="w-100" >
 
-					<div class="d-flex justify-content-between">
+					<div class="d-flex justify-content-between align-items-baseline px-3 py-1 bg-gray-lt">
 
 						<h2>Gypsy</h2>
 
@@ -110,11 +110,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				</article>
 
-				<article class="grid-cat col-12 col-md-6 col-lg-4 py-3">
+				<article class="grid-cat col-md-6 col-lg-4 py-3">
 					
 					<img src="http://lorempixel.com/600/400/cats" class="w-100" >
 
-					<div class="d-flex justify-content-between">
+					<div class="d-flex justify-content-between align-items-baseline px-3 py-1 bg-gray-lt">
 
 						<h2>Gypsy</h2>
 
@@ -124,11 +124,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				</article>
 
-				<article class="grid-cat col-12 col-md-6 col-lg-4 py-3">
+				<article class="grid-cat col-md-6 col-lg-4 py-3">
 					
 					<img src="http://lorempixel.com/600/400/cats" class="w-100" >
 
-					<div class="d-flex justify-content-between">
+					<div class="d-flex justify-content-between align-items-baseline px-3 py-1 bg-gray-lt">
 
 						<h2>Gypsy</h2>
 
@@ -143,11 +143,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</section>
 
-		<h3 class="text-center py-3 my-0 bg-primary"><a class="btn btn-link w-100 text-white" href="#" role="button">See All Available Cats</a></h3>
+		<h3 class="text-center py-3 my-0 bg-primary"><a class="btn btn-outline-secondary" href="#" role="button">See All Available Cats</a></h3>
 
 	</section>
 
-	<section class="home-mission container-fluid bg-faded">
+	<section class="full-text-section container-fluid bg-gray-lt">
 
 		<article class="container py-5 text-center">
 			
@@ -160,6 +160,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</section>
 
 	<section class="home-sponsors container py-5">
+
+		<h3 class="text-center mb-5">Sponsors</h3>
 
 		<div class="row">
 
@@ -230,37 +232,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</div>
 
 	</section>
-
-	<div class="<?php echo esc_html( $container ); ?>" id="content">
-
-		<div class="row">
-
-			<div class="col-md-12 content-area" id="primary">
-
-				<main class="site-main" id="main" role="main">
-
-					<?php while ( have_posts() ) : the_post(); ?>
-
-						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
-
-						<?php
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) :
-
-							comments_template();
-
-						endif;
-						?>
-
-					<?php endwhile; // end of the loop. ?>
-
-				</main><!-- #main -->
-
-			</div><!-- #primary -->
-
-		</div><!-- .row end -->
-
-	</div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 
