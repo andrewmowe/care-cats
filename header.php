@@ -29,14 +29,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<header class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
 
-		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
-		'understrap' ); ?></a>
+		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
 	<!-- ******************* The Navbar Area ******************* -->
 
 		<nav class="navbar navbar-toggleable-md navbar-light bg-faded m-md-0 p-0">
 
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbartoggled" aria-controls="#navbartoggled" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler navbar-toggler-right" id="mainnavtoggle" type="button" data-toggle="collapse" data-target="#navbartoggled" aria-controls="#navbartoggled" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 

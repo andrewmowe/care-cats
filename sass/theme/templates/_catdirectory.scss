@@ -1,0 +1,52 @@
+#togglefilters {
+
+	color: $brand-gray-dk;
+	text-decoration: none;
+	@include labelfont;
+	font-size: 20px;
+
+}
+
+@include media-breakpoint-down(md) {
+
+	.filtercontrols {
+		display: none;
+
+
+		.form-inline .form-control {
+
+			display: block;
+			width:100%;
+			margin-bottom: .5 * $spacer;
+
+		}
+
+
+	}
+
+
+	#togglefilters {
+
+		position: relative;
+    	display: block;
+    	margin-top: 1 * $spacer;
+    	margin-bottom: 1 * $spacer;
+
+		&:after {
+		
+			content: "";
+			border-left: 3px solid #404042;
+			border-bottom: 3px solid #404042;
+			width: 10px;
+			height: 10px;
+			display: block;
+			right: 0;
+			position: absolute;
+			transform: rotate(-45deg);
+			bottom: 3px;
+
+		}
+
+	}
+
+}

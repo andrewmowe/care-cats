@@ -9241,7 +9241,7 @@ h1.navbar-brand a:hover {
   display: block; }
 
 body {
-  background-color: #dedede; }
+  background-color: #eeeeee; }
 
 #page, #wrapper-footer {
   max-width: 1600px;
@@ -9273,7 +9273,10 @@ body {
       font-size: 1.125em; }
 
 .bg-gray-lt {
-  background-color: #d4d4d4; }
+  background-color: #dddddd; }
+
+.bg-gray-md {
+  background-color: #cccccc; }
 
 body {
   color: #404042; }
@@ -9288,6 +9291,12 @@ h1, h2, h3, h4, h5 {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.divider-header {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin: 0;
+  font-size: 1.25em; }
 
 /* BUTTONS */
 button,
@@ -9373,7 +9382,7 @@ textarea {
   #main-menu li {
     background-color: #cccccc; }
   #second-menu li {
-    border: 2px solid #d4d4d4; }
+    border: 2px solid #dddddd; }
   .navbar-inverse {
     margin-bottom: 20px; } }
 
@@ -9495,9 +9504,6 @@ section.home-banner {
       padding-top: 10vh;
       padding-bottom: 10vh; } }
 
-section.available-cats > h1 {
-  font-size: 1.25em; }
-
 .featured-cat h1 {
   font-size: 1.75em;
   margin-bottom: 1.5em; }
@@ -9512,3 +9518,69 @@ section.available-cats > h1 {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #404042; }
+
+#togglefilters {
+  color: #404042;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 20px; }
+
+@media (max-width: 991px) {
+  .filtercontrols {
+    display: none; }
+    .filtercontrols .form-inline .form-control, .filtercontrols .form-inline .wpcf7 input[type=text], .wpcf7 .filtercontrols .form-inline input[type=text], .filtercontrols .form-inline
+    .wpcf7 input[type=search],
+    .wpcf7 .filtercontrols .form-inline input[type=search], .filtercontrols .form-inline
+    .wpcf7 input[type=url],
+    .wpcf7 .filtercontrols .form-inline input[type=url], .filtercontrols .form-inline
+    .wpcf7 input[type=tel],
+    .wpcf7 .filtercontrols .form-inline input[type=tel], .filtercontrols .form-inline
+    .wpcf7 input[type=number],
+    .wpcf7 .filtercontrols .form-inline input[type=number], .filtercontrols .form-inline
+    .wpcf7 input[type=range],
+    .wpcf7 .filtercontrols .form-inline input[type=range], .filtercontrols .form-inline
+    .wpcf7 input[type=date],
+    .wpcf7 .filtercontrols .form-inline input[type=date], .filtercontrols .form-inline
+    .wpcf7 input[type=month],
+    .wpcf7 .filtercontrols .form-inline input[type=month], .filtercontrols .form-inline
+    .wpcf7 input[type=week],
+    .wpcf7 .filtercontrols .form-inline input[type=week], .filtercontrols .form-inline
+    .wpcf7 input[type=time],
+    .wpcf7 .filtercontrols .form-inline input[type=time], .filtercontrols .form-inline
+    .wpcf7 input[type=datetime],
+    .wpcf7 .filtercontrols .form-inline input[type=datetime], .filtercontrols .form-inline
+    .wpcf7 input[type=datetime-local],
+    .wpcf7 .filtercontrols .form-inline input[type=datetime-local], .filtercontrols .form-inline
+    .wpcf7 input[type=color],
+    .wpcf7 .filtercontrols .form-inline input[type=color], .filtercontrols .form-inline
+    .wpcf7 input[type=email],
+    .wpcf7 .filtercontrols .form-inline input[type=email], .filtercontrols .form-inline
+    .wpcf7 input[type=file],
+    .wpcf7 .filtercontrols .form-inline input[type=file], .filtercontrols .form-inline
+    .wpcf7 input[type=submit],
+    .wpcf7 .filtercontrols .form-inline input[type=submit], .filtercontrols .form-inline
+    .wpcf7 select,
+    .wpcf7 .filtercontrols .form-inline select, .filtercontrols .form-inline
+    .wpcf7 textarea,
+    .wpcf7 .filtercontrols .form-inline textarea, .filtercontrols .form-inline .wpcf7 .wpcf7-validation-errors, .wpcf7 .filtercontrols .form-inline .wpcf7-validation-errors {
+      display: block;
+      width: 100%;
+      margin-bottom: 0.5rem; }
+  #togglefilters {
+    position: relative;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+    #togglefilters:after {
+      content: "";
+      border-left: 3px solid #404042;
+      border-bottom: 3px solid #404042;
+      width: 10px;
+      height: 10px;
+      display: block;
+      right: 0;
+      position: absolute;
+      transform: rotate(-45deg);
+      bottom: 3px; } }

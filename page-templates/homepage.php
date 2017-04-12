@@ -59,7 +59,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<section class="available-cats container-fluid px-0">
 
 			
-		<h1 class="text-center py-4 my-0 bg-gray-lt">Cats Available for Adoption</h1>
+		<h1 class="text-center py-4 my-0 bg-gray-lt divider-header">Cats Available for Adoption</h1>
 
 		<article class="featured-cat container-fluid p-0">
 				
@@ -96,54 +96,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="row">
 
-				<article class="grid-cat col-md-6 col-lg-4 py-3">
-					
-					<img src="http://lorempixel.com/600/400/cats" class="w-100" >
-
-					<div class="d-flex justify-content-between align-items-baseline px-3 py-1 bg-gray-lt">
-
-						<h2>Gypsy</h2>
-
-						<a class="btn btn-link" href="#" role="button">learn more</a>
-
-					</div>
-
-				</article>
-
-				<article class="grid-cat col-md-6 col-lg-4 py-3">
-					
-					<img src="http://lorempixel.com/600/400/cats" class="w-100" >
-
-					<div class="d-flex justify-content-between align-items-baseline px-3 py-1 bg-gray-lt">
-
-						<h2>Gypsy</h2>
-
-						<a class="btn btn-link" href="#" role="button">learn more</a>
-
-					</div>
-
-				</article>
-
-				<article class="grid-cat col-md-6 col-lg-4 py-3">
-					
-					<img src="http://lorempixel.com/600/400/cats" class="w-100" >
-
-					<div class="d-flex justify-content-between align-items-baseline px-3 py-1 bg-gray-lt">
-
-						<h2>Gypsy</h2>
-
-						<a class="btn btn-link" href="#" role="button">learn more</a>
-
-					</div>
-
-				</article>
-
+				<?php get_template_part('partials/catgrid', 'item'); ?>
+				<?php get_template_part('partials/catgrid', 'item'); ?>
+				<?php get_template_part('partials/catgrid', 'item'); ?>
 
 			</div>
 
 		</section>
 
-		<h3 class="text-center py-3 my-0 bg-primary"><a class="btn btn-outline-secondary" href="#" role="button">See All Available Cats</a></h3>
+		<h3 class="text-center bg-primary divider-header"><a class="btn btn-outline-secondary" href="#" role="button">See All Available Cats</a></h3>
 
 	</section>
 
