@@ -153,11 +153,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<section class="cats-grid container-fluid my-5">
 
-			<div class="row">
-
 				<?php get_template_part('partials/catgrid', 'item'); ?>
-
-			</div>
 
 		</section>
 

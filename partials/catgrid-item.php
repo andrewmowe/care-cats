@@ -73,7 +73,7 @@
 
 		</div>
 
-		<?php if ( $cats->max_num_pages > 1 ) : ?>
+		<?php if ( $cats->max_num_pages > 1 && !is_front_page()) : ?>
 	    <div class="text-center py-3 load-more">
 	         <?php next_posts_link( 'Load More Cats', $cats ->max_num_pages ); ?>
 	    </div>
