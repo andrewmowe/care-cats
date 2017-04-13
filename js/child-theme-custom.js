@@ -27,4 +27,16 @@
 
 	}
 
+	$('.load-more a').live('click', function(e){
+		e.preventDefault();
+
+		var link = $(this).attr('href');
+		$('.load-more').html('<span class="loader">Loading More Posts...</span>');
+		$.get(link, function(data) {
+			var post = $("#cats-grid .grid-cat ", data);
+			$('#cats-grid .row').append(post);
+		});
+		$('.load-more').load(link+' .load-more a');
+	});
+
 })(jQuery); 

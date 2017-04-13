@@ -10,10 +10,19 @@
 
 <?php
 				
+				if ( get_query_var('paged') ) {
+				    $paged = get_query_var('paged');
+				} else if ( get_query_var('page') ) {
+				    $paged = get_query_var('page');
+				} else {
+				    $paged = 1;
+				}
+
 				$args = array(
 						'post_type' => 'cats',
 						//'posts_per_page'	=> 9,
-						'orderby'	=> 'menu_order',
+						'orderby'	=> 'menu_order', 
+						'paged' => $paged,
 						'meta_query'	=> array(
 								array(
 									'key'		=> 'availability',
@@ -27,7 +36,13 @@
 
 				$cats = new WP_Query( $args );
 
-				if ( $cats->have_posts() ) :
+				if ( $cats->have_posts() ) : 
+
+			?>
+
+		<div class="row">
+
+			<?php
 
 					while ( $cats->have_posts() ) : $cats->the_post();
 
@@ -40,7 +55,7 @@
 
 			<article class="grid-cat col-12 col-md-6 col-lg-4 py-3">
 
-				<div class="imgwrap-4-6"><img src="<?php echo $cat_meta->images[0]->original_url; ?>" alt="<?php the_title(); ?>" ></div>
+				<a href="<?php the_permalink(); ?>" class="imgwrap-4-6"><img src="<?php echo $cat_meta->images[0]->original_url; ?>" alt="<?php the_title(); ?>" ></a>
 
 				<div class="d-flex justify-content-between align-items-baseline bg-gray-lt px-3 py-2">
 
@@ -53,6 +68,16 @@
 			</article>
 
 			<?php endwhile; ?>
+
+			
+
+		</div>
+
+		<?php if ( $cats->max_num_pages > 1 ) : ?>
+	    <div class="text-center py-3 load-more">
+	         <?php next_posts_link( 'Load More Cats', $cats ->max_num_pages ); ?>
+	    </div>
+		<?php endif;  ?>
 
 		<?php endif; ?>
 

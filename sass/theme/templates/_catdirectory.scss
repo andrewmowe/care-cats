@@ -50,3 +50,9 @@
 	}
 
 }
+
+.load-more a, .load-more span {
+	@extend .btn;
+
+	@extend .btn-primary;
+}

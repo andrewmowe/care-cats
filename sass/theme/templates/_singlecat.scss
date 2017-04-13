@@ -1,0 +1,50 @@
+.my-stats {
+
+	background-color: $brand-gray-lt;
+
+
+
+	table {
+		width: 100%;
+	}
+
+	tr {
+		
+		border-bottom: 1px solid $brand-primary;
+
+		&:first-child {
+		
+			border-top: 1px solid $brand-primary;
+
+		}
+	}
+
+	td {
+
+		padding: .25 * $spacer .75 * $spacer ;
+
+		&:not(:last-child) {
+
+			border-right: 1px solid $brand-primary;
+
+		}
+
+		&:first-child {
+
+			font-weight: 700;
+			padding-left: .25 * $spacer;
+
+		}
+
+	}
+
+	ul.stat-list {
+
+		li {
+			margin-left: -20px;
+		}
+
+	}
+
+
+}

@@ -1703,7 +1703,9 @@ select.form-control:focus::-ms-value,
   .wpcf7 .input-group-sm > textarea.form-control-static, .wpcf7 .input-group-sm > .form-control-static.wpcf7-validation-errors,
   .input-group-sm > .form-control-static.input-group-addon,
   .input-group-sm > .input-group-btn > .form-control-static.btn, .wpcf7
-  .input-group-sm > .input-group-btn > input.form-control-static[type=submit], .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, .wpcf7 .input-group-lg > input.form-control-static[type=text],
+  .input-group-sm > .input-group-btn > input.form-control-static[type=submit], .load-more
+  .input-group-sm > .input-group-btn > a.form-control-static, .load-more
+  .input-group-sm > .input-group-btn > span.form-control-static, .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, .wpcf7 .input-group-lg > input.form-control-static[type=text],
   .wpcf7 .input-group-lg > input.form-control-static[type=search],
   .wpcf7 .input-group-lg > input.form-control-static[type=url],
   .wpcf7 .input-group-lg > input.form-control-static[type=tel],
@@ -1723,7 +1725,9 @@ select.form-control:focus::-ms-value,
   .wpcf7 .input-group-lg > textarea.form-control-static, .wpcf7 .input-group-lg > .form-control-static.wpcf7-validation-errors,
   .input-group-lg > .form-control-static.input-group-addon,
   .input-group-lg > .input-group-btn > .form-control-static.btn, .wpcf7
-  .input-group-lg > .input-group-btn > input.form-control-static[type=submit] {
+  .input-group-lg > .input-group-btn > input.form-control-static[type=submit], .load-more
+  .input-group-lg > .input-group-btn > a.form-control-static, .load-more
+  .input-group-lg > .input-group-btn > span.form-control-static {
     padding-right: 0;
     padding-left: 0; }
 
@@ -1747,7 +1751,9 @@ select.form-control:focus::-ms-value,
 .wpcf7 .input-group-sm > textarea, .wpcf7 .input-group-sm > .wpcf7-validation-errors,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn, .wpcf7
-.input-group-sm > .input-group-btn > input[type=submit] {
+.input-group-sm > .input-group-btn > input[type=submit], .load-more
+.input-group-sm > .input-group-btn > a, .load-more
+.input-group-sm > .input-group-btn > span {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
@@ -1778,7 +1784,9 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .wpcf7 .input-group-lg > textarea, .wpcf7 .input-group-lg > .wpcf7-validation-errors,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn, .wpcf7
-.input-group-lg > .input-group-btn > input[type=submit] {
+.input-group-lg > .input-group-btn > input[type=submit], .load-more
+.input-group-lg > .input-group-btn > a, .load-more
+.input-group-lg > .input-group-btn > span {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem; }
@@ -2080,7 +2088,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     .form-inline .has-feedback .form-control-feedback {
       top: 0; } }
 
-.btn, .wpcf7 input[type=submit] {
+.btn, .wpcf7 input[type=submit], .load-more a, .load-more span {
   display: inline-block;
   font-weight: normal;
   line-height: 1.25;
@@ -2093,36 +2101,40 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   font-size: 1rem;
   border-radius: 0.25rem;
   transition: all 0.2s ease-in-out; }
-  .btn:focus, .wpcf7 input[type=submit]:focus, .btn:hover, .wpcf7 input[type=submit]:hover {
+  .btn:focus, .wpcf7 input[type=submit]:focus, .load-more a:focus, .load-more span:focus, .btn:hover, .wpcf7 input[type=submit]:hover, .load-more a:hover, .load-more span:hover {
     text-decoration: none; }
-  .btn:focus, .wpcf7 input[type=submit]:focus, .btn.focus, .wpcf7 input.focus[type=submit] {
+  .btn:focus, .wpcf7 input[type=submit]:focus, .load-more a:focus, .load-more span:focus, .btn.focus, .wpcf7 input.focus[type=submit], .load-more a.focus, .load-more span.focus {
     outline: 0;
     box-shadow: 0 0 0 2px rgba(43, 183, 174, 0.25); }
-  .btn.disabled, .wpcf7 input.disabled[type=submit], .btn:disabled, .wpcf7 input[type=submit]:disabled {
+  .btn.disabled, .wpcf7 input.disabled[type=submit], .load-more a.disabled, .load-more span.disabled, .btn:disabled, .wpcf7 input[type=submit]:disabled, .load-more a:disabled, .load-more span:disabled {
     cursor: not-allowed;
     opacity: .65; }
-  .btn:active, .wpcf7 input[type=submit]:active, .btn.active, .wpcf7 input.active[type=submit] {
+  .btn:active, .wpcf7 input[type=submit]:active, .load-more a:active, .load-more span:active, .btn.active, .wpcf7 input.active[type=submit], .load-more a.active, .load-more span.active {
     background-image: none; }
 
-a.btn.disabled,
-fieldset[disabled] a.btn {
+a.btn.disabled, .load-more a.disabled,
+fieldset[disabled] a.btn,
+fieldset[disabled] .load-more a, .load-more
+fieldset[disabled] a {
   pointer-events: none; }
 
-.btn-primary {
+.btn-primary, .load-more a, .load-more span {
   color: #fff;
   background-color: #2BB7AE;
   border-color: #2BB7AE; }
-  .btn-primary:hover {
+  .btn-primary:hover, .load-more a:hover, .load-more span:hover {
     color: #fff;
     background-color: #218e87;
     border-color: #1f857f; }
-  .btn-primary:focus, .btn-primary.focus {
+  .btn-primary:focus, .load-more a:focus, .load-more span:focus, .btn-primary.focus, .load-more a.focus, .load-more span.focus {
     box-shadow: 0 0 0 2px rgba(43, 183, 174, 0.5); }
-  .btn-primary.disabled, .btn-primary:disabled {
+  .btn-primary.disabled, .load-more a.disabled, .load-more span.disabled, .btn-primary:disabled, .load-more a:disabled, .load-more span:disabled {
     background-color: #2BB7AE;
     border-color: #2BB7AE; }
-  .btn-primary:active, .btn-primary.active,
-  .show > .btn-primary.dropdown-toggle {
+  .btn-primary:active, .load-more a:active, .load-more span:active, .btn-primary.active, .load-more a.active, .load-more span.active,
+  .show > .btn-primary.dropdown-toggle, .load-more
+  .show > a.dropdown-toggle, .load-more
+  .show > span.dropdown-toggle {
     color: #fff;
     background-color: #218e87;
     background-image: none;
@@ -2368,12 +2380,12 @@ fieldset[disabled] a.btn {
     .btn-link:disabled:focus, .btn-link:disabled:hover {
       text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit] {
+.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit], .load-more .btn-group-lg > a, .load-more .btn-group-lg > span {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit] {
+.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit], .load-more .btn-group-sm > a, .load-more .btn-group-sm > span {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
@@ -2524,44 +2536,102 @@ tbody.collapse.show {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .wpcf7 .btn-group > input[type=submit],
+  .btn-group > .btn, .wpcf7 .btn-group > input[type=submit], .load-more .btn-group > a, .load-more .btn-group > span,
   .btn-group-vertical > .btn, .wpcf7
-  .btn-group-vertical > input[type=submit] {
+  .btn-group-vertical > input[type=submit], .load-more
+  .btn-group-vertical > a, .load-more
+  .btn-group-vertical > span {
     position: relative;
     flex: 0 1 auto; }
-    .btn-group > .btn:hover, .wpcf7 .btn-group > input[type=submit]:hover,
+    .btn-group > .btn:hover, .wpcf7 .btn-group > input[type=submit]:hover, .load-more .btn-group > a:hover, .load-more .btn-group > span:hover,
     .btn-group-vertical > .btn:hover, .wpcf7
-    .btn-group-vertical > input[type=submit]:hover {
+    .btn-group-vertical > input[type=submit]:hover, .load-more
+    .btn-group-vertical > a:hover, .load-more
+    .btn-group-vertical > span:hover {
       z-index: 2; }
-    .btn-group > .btn:focus, .wpcf7 .btn-group > input[type=submit]:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input[type=submit]:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit],
+    .btn-group > .btn:focus, .wpcf7 .btn-group > input[type=submit]:focus, .load-more .btn-group > a:focus, .load-more .btn-group > span:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input[type=submit]:active, .load-more .btn-group > a:active, .load-more .btn-group > span:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit], .load-more .btn-group > a.active, .load-more .btn-group > span.active,
     .btn-group-vertical > .btn:focus, .wpcf7
-    .btn-group-vertical > input[type=submit]:focus,
+    .btn-group-vertical > input[type=submit]:focus, .load-more
+    .btn-group-vertical > a:focus, .load-more
+    .btn-group-vertical > span:focus,
     .btn-group-vertical > .btn:active, .wpcf7
-    .btn-group-vertical > input[type=submit]:active,
+    .btn-group-vertical > input[type=submit]:active, .load-more
+    .btn-group-vertical > a:active, .load-more
+    .btn-group-vertical > span:active,
     .btn-group-vertical > .btn.active, .wpcf7
-    .btn-group-vertical > input.active[type=submit] {
+    .btn-group-vertical > input.active[type=submit], .load-more
+    .btn-group-vertical > a.active, .load-more
+    .btn-group-vertical > span.active {
       z-index: 2; }
-  .btn-group .btn + .btn, .btn-group .wpcf7 input[type=submit] + .btn, .wpcf7 .btn-group input[type=submit] + .btn, .btn-group .wpcf7 .btn + input[type=submit], .wpcf7 .btn-group .btn + input[type=submit], .btn-group .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .btn-group input[type=submit] + input[type=submit],
+  .btn-group .btn + .btn, .btn-group .wpcf7 input[type=submit] + .btn, .wpcf7 .btn-group input[type=submit] + .btn, .btn-group .load-more a + .btn, .load-more .btn-group a + .btn, .btn-group .load-more span + .btn, .load-more .btn-group span + .btn, .btn-group .wpcf7 .btn + input[type=submit], .wpcf7 .btn-group .btn + input[type=submit], .btn-group .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .btn-group input[type=submit] + input[type=submit], .btn-group .load-more .wpcf7 a + input[type=submit], .wpcf7 .btn-group .load-more a + input[type=submit], .load-more .btn-group .wpcf7 a + input[type=submit], .wpcf7 .load-more .btn-group a + input[type=submit], .btn-group .load-more .wpcf7 span + input[type=submit], .wpcf7 .btn-group .load-more span + input[type=submit], .load-more .btn-group .wpcf7 span + input[type=submit], .wpcf7 .load-more .btn-group span + input[type=submit], .btn-group .load-more .btn + a, .load-more .btn-group .btn + a, .btn-group .wpcf7 .load-more input[type=submit] + a, .load-more .btn-group .wpcf7 input[type=submit] + a, .wpcf7 .btn-group .load-more input[type=submit] + a, .load-more .wpcf7 .btn-group input[type=submit] + a, .btn-group .load-more a + a, .load-more .btn-group a + a, .btn-group .load-more span + a, .load-more .btn-group span + a, .btn-group .load-more .btn + span, .load-more .btn-group .btn + span, .btn-group .wpcf7 .load-more input[type=submit] + span, .load-more .btn-group .wpcf7 input[type=submit] + span, .wpcf7 .btn-group .load-more input[type=submit] + span, .load-more .wpcf7 .btn-group input[type=submit] + span, .btn-group .load-more a + span, .load-more .btn-group a + span, .btn-group .load-more span + span, .load-more .btn-group span + span,
   .btn-group .btn + .btn-group,
   .btn-group .wpcf7 input[type=submit] + .btn-group, .wpcf7
   .btn-group input[type=submit] + .btn-group,
+  .btn-group .load-more a + .btn-group, .load-more
+  .btn-group a + .btn-group,
+  .btn-group .load-more span + .btn-group, .load-more
+  .btn-group span + .btn-group,
   .btn-group .btn-group + .btn,
   .btn-group .wpcf7 .btn-group + input[type=submit], .wpcf7
   .btn-group .btn-group + input[type=submit],
+  .btn-group .load-more .btn-group + a, .load-more
+  .btn-group .btn-group + a,
+  .btn-group .load-more .btn-group + span, .load-more
+  .btn-group .btn-group + span,
   .btn-group .btn-group + .btn-group,
   .btn-group-vertical .btn + .btn,
   .btn-group-vertical .wpcf7 input[type=submit] + .btn, .wpcf7
   .btn-group-vertical input[type=submit] + .btn,
+  .btn-group-vertical .load-more a + .btn, .load-more
+  .btn-group-vertical a + .btn,
+  .btn-group-vertical .load-more span + .btn, .load-more
+  .btn-group-vertical span + .btn,
   .btn-group-vertical .wpcf7 .btn + input[type=submit], .wpcf7
   .btn-group-vertical .btn + input[type=submit],
   .btn-group-vertical .wpcf7 input[type=submit] + input[type=submit], .wpcf7
   .btn-group-vertical input[type=submit] + input[type=submit],
+  .btn-group-vertical .load-more .wpcf7 a + input[type=submit], .wpcf7
+  .btn-group-vertical .load-more a + input[type=submit], .load-more
+  .btn-group-vertical .wpcf7 a + input[type=submit], .wpcf7 .load-more
+  .btn-group-vertical a + input[type=submit],
+  .btn-group-vertical .load-more .wpcf7 span + input[type=submit], .wpcf7
+  .btn-group-vertical .load-more span + input[type=submit], .load-more
+  .btn-group-vertical .wpcf7 span + input[type=submit], .wpcf7 .load-more
+  .btn-group-vertical span + input[type=submit],
+  .btn-group-vertical .load-more .btn + a, .load-more
+  .btn-group-vertical .btn + a,
+  .btn-group-vertical .wpcf7 .load-more input[type=submit] + a, .load-more
+  .btn-group-vertical .wpcf7 input[type=submit] + a, .wpcf7
+  .btn-group-vertical .load-more input[type=submit] + a, .load-more .wpcf7
+  .btn-group-vertical input[type=submit] + a,
+  .btn-group-vertical .load-more a + a, .load-more
+  .btn-group-vertical a + a,
+  .btn-group-vertical .load-more span + a, .load-more
+  .btn-group-vertical span + a,
+  .btn-group-vertical .load-more .btn + span, .load-more
+  .btn-group-vertical .btn + span,
+  .btn-group-vertical .wpcf7 .load-more input[type=submit] + span, .load-more
+  .btn-group-vertical .wpcf7 input[type=submit] + span, .wpcf7
+  .btn-group-vertical .load-more input[type=submit] + span, .load-more .wpcf7
+  .btn-group-vertical input[type=submit] + span,
+  .btn-group-vertical .load-more a + span, .load-more
+  .btn-group-vertical a + span,
+  .btn-group-vertical .load-more span + span, .load-more
+  .btn-group-vertical span + span,
   .btn-group-vertical .btn + .btn-group,
   .btn-group-vertical .wpcf7 input[type=submit] + .btn-group, .wpcf7
   .btn-group-vertical input[type=submit] + .btn-group,
+  .btn-group-vertical .load-more a + .btn-group, .load-more
+  .btn-group-vertical a + .btn-group,
+  .btn-group-vertical .load-more span + .btn-group, .load-more
+  .btn-group-vertical span + .btn-group,
   .btn-group-vertical .btn-group + .btn,
   .btn-group-vertical .wpcf7 .btn-group + input[type=submit], .wpcf7
   .btn-group-vertical .btn-group + input[type=submit],
+  .btn-group-vertical .load-more .btn-group + a, .load-more
+  .btn-group-vertical .btn-group + a,
+  .btn-group-vertical .load-more .btn-group + span, .load-more
+  .btn-group-vertical .btn-group + span,
   .btn-group-vertical .btn-group + .btn-group {
     margin-left: -1px; }
 
@@ -2571,16 +2641,16 @@ tbody.collapse.show {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:first-child):not(:last-child):not(.dropdown-toggle), .load-more .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), .load-more .btn-group > span:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, .wpcf7 .btn-group > input[type=submit]:first-child {
+.btn-group > .btn:first-child, .wpcf7 .btn-group > input[type=submit]:first-child, .load-more .btn-group > a:first-child, .load-more .btn-group > span:first-child {
   margin-left: 0; }
-  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:first-child:not(:last-child):not(.dropdown-toggle) {
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:first-child:not(:last-child):not(.dropdown-toggle), .load-more .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), .load-more .btn-group > span:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), .wpcf7 .btn-group > input[type=submit]:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .wpcf7 .btn-group > input[type=submit]:last-child:not(:first-child), .load-more .btn-group > a:last-child:not(:first-child), .load-more .btn-group > span:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -2588,15 +2658,15 @@ tbody.collapse.show {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type=submit] {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type=submit], .load-more .btn-group > .btn-group:not(:first-child):not(:last-child) > a, .load-more .btn-group > .btn-group:not(:first-child):not(:last-child) > span {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child, .load-more .btn-group > .btn-group:first-child:not(:last-child) > a:last-child, .load-more .btn-group > .btn-group:first-child:not(:last-child) > span:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child, .load-more .btn-group > .btn-group:last-child:not(:first-child) > a:first-child, .load-more .btn-group > .btn-group:last-child:not(:first-child) > span:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -2604,17 +2674,17 @@ tbody.collapse.show {
 .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn + .dropdown-toggle-split, .wpcf7 input[type=submit] + .dropdown-toggle-split {
+.btn + .dropdown-toggle-split, .wpcf7 input[type=submit] + .dropdown-toggle-split, .load-more a + .dropdown-toggle-split, .load-more span + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
-  .btn + .dropdown-toggle-split::after, .wpcf7 input[type=submit] + .dropdown-toggle-split::after {
+  .btn + .dropdown-toggle-split::after, .wpcf7 input[type=submit] + .dropdown-toggle-split::after, .load-more a + .dropdown-toggle-split::after, .load-more span + .dropdown-toggle-split::after {
     margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split, .load-more .btn-group-sm > a + .dropdown-toggle-split, .load-more .btn-group-sm > span + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split, .load-more .btn-group-lg > a + .dropdown-toggle-split, .load-more .btn-group-lg > span + .dropdown-toggle-split {
   padding-right: 1.125rem;
   padding-left: 1.125rem; }
 
@@ -2623,48 +2693,58 @@ tbody.collapse.show {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical .btn, .btn-group-vertical .wpcf7 input[type=submit], .wpcf7 .btn-group-vertical input[type=submit],
+  .btn-group-vertical .btn, .btn-group-vertical .wpcf7 input[type=submit], .wpcf7 .btn-group-vertical input[type=submit], .btn-group-vertical .load-more a, .load-more .btn-group-vertical a, .btn-group-vertical .load-more span, .load-more .btn-group-vertical span,
   .btn-group-vertical .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn + .btn, .wpcf7 .btn-group-vertical > input[type=submit] + .btn, .wpcf7 .btn-group-vertical > .btn + input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] + input[type=submit],
+  .btn-group-vertical > .btn + .btn, .wpcf7 .btn-group-vertical > input[type=submit] + .btn, .load-more .btn-group-vertical > a + .btn, .load-more .btn-group-vertical > span + .btn, .wpcf7 .btn-group-vertical > .btn + input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] + input[type=submit], .load-more .wpcf7 .btn-group-vertical > a + input[type=submit], .wpcf7 .load-more .btn-group-vertical > a + input[type=submit], .load-more .wpcf7 .btn-group-vertical > span + input[type=submit], .wpcf7 .load-more .btn-group-vertical > span + input[type=submit], .load-more .btn-group-vertical > .btn + a, .wpcf7 .load-more .btn-group-vertical > input[type=submit] + a, .load-more .wpcf7 .btn-group-vertical > input[type=submit] + a, .load-more .btn-group-vertical > a + a, .load-more .btn-group-vertical > span + a, .load-more .btn-group-vertical > .btn + span, .wpcf7 .load-more .btn-group-vertical > input[type=submit] + span, .load-more .wpcf7 .btn-group-vertical > input[type=submit] + span, .load-more .btn-group-vertical > a + span, .load-more .btn-group-vertical > span + span,
   .btn-group-vertical > .btn + .btn-group, .wpcf7
-  .btn-group-vertical > input[type=submit] + .btn-group,
+  .btn-group-vertical > input[type=submit] + .btn-group, .load-more
+  .btn-group-vertical > a + .btn-group, .load-more
+  .btn-group-vertical > span + .btn-group,
   .btn-group-vertical > .btn-group + .btn, .wpcf7
-  .btn-group-vertical > .btn-group + input[type=submit],
+  .btn-group-vertical > .btn-group + input[type=submit], .load-more
+  .btn-group-vertical > .btn-group + a, .load-more
+  .btn-group-vertical > .btn-group + span,
   .btn-group-vertical > .btn-group + .btn-group {
     margin-top: -1px;
     margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child):not(:last-child), .load-more .btn-group-vertical > a:not(:first-child):not(:last-child), .load-more .btn-group-vertical > span:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
-.btn-group-vertical > .btn:first-child:not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:first-child:not(:last-child), .load-more .btn-group-vertical > a:first-child:not(:last-child), .load-more .btn-group-vertical > span:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn:last-child:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:last-child:not(:first-child), .load-more .btn-group-vertical > a:last-child:not(:first-child), .load-more .btn-group-vertical > span:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type=submit] {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type=submit], .load-more .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, .load-more .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > span {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child, .load-more .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child, .load-more .btn-group-vertical > .btn-group:first-child:not(:last-child) > span:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child, .load-more .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child, .load-more .btn-group-vertical > .btn-group:last-child:not(:first-child) > span:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-[data-toggle="buttons"] > .btn input[type="radio"], .wpcf7 [data-toggle="buttons"] > input[type=submit] input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], .wpcf7 [data-toggle="buttons"] > input[type=submit] input[type="radio"], .load-more [data-toggle="buttons"] > a input[type="radio"], .load-more [data-toggle="buttons"] > span input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"], .wpcf7
-[data-toggle="buttons"] > input[type=submit] input[type="checkbox"],
+[data-toggle="buttons"] > input[type=submit] input[type="checkbox"], .load-more
+[data-toggle="buttons"] > a input[type="checkbox"], .load-more
+[data-toggle="buttons"] > span input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"], .wpcf7
-[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="radio"],
+[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="radio"], .load-more
+[data-toggle="buttons"] > .btn-group > a input[type="radio"], .load-more
+[data-toggle="buttons"] > .btn-group > span input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], .wpcf7
-[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="checkbox"] {
+[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="checkbox"], .load-more
+[data-toggle="buttons"] > .btn-group > a input[type="checkbox"], .load-more
+[data-toggle="buttons"] > .btn-group > span input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none; }
@@ -3009,7 +3089,9 @@ tbody.collapse.show {
   .wpcf7 .input-group-sm > textarea.input-group-addon, .wpcf7 .input-group-sm > .input-group-addon.wpcf7-validation-errors,
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn, .wpcf7
-  .input-group-sm > .input-group-btn > input.input-group-addon[type=submit] {
+  .input-group-sm > .input-group-btn > input.input-group-addon[type=submit], .load-more
+  .input-group-sm > .input-group-btn > a.input-group-addon, .load-more
+  .input-group-sm > .input-group-btn > span.input-group-addon {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
     border-radius: 0.2rem; }
@@ -3033,7 +3115,9 @@ tbody.collapse.show {
   .wpcf7 .input-group-lg > textarea.input-group-addon, .wpcf7 .input-group-lg > .input-group-addon.wpcf7-validation-errors,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn, .wpcf7
-  .input-group-lg > .input-group-btn > input.input-group-addon[type=submit] {
+  .input-group-lg > .input-group-btn > input.input-group-addon[type=submit], .load-more
+  .input-group-lg > .input-group-btn > a.input-group-addon, .load-more
+  .input-group-lg > .input-group-btn > span.input-group-addon {
     padding: 0.75rem 1.5rem;
     font-size: 1.25rem;
     border-radius: 0.3rem; }
@@ -3078,14 +3162,22 @@ tbody.collapse.show {
 .wpcf7 .input-group textarea:not(:last-child), .input-group .wpcf7 .wpcf7-validation-errors:not(:last-child), .wpcf7 .input-group .wpcf7-validation-errors:not(:last-child),
 .input-group-addon:not(:last-child),
 .input-group-btn:not(:last-child) > .btn, .wpcf7
-.input-group-btn:not(:last-child) > input[type=submit],
+.input-group-btn:not(:last-child) > input[type=submit], .load-more
+.input-group-btn:not(:last-child) > a, .load-more
+.input-group-btn:not(:last-child) > span,
 .input-group-btn:not(:last-child) > .btn-group > .btn, .wpcf7
-.input-group-btn:not(:last-child) > .btn-group > input[type=submit],
+.input-group-btn:not(:last-child) > .btn-group > input[type=submit], .load-more
+.input-group-btn:not(:last-child) > .btn-group > a, .load-more
+.input-group-btn:not(:last-child) > .btn-group > span,
 .input-group-btn:not(:last-child) > .dropdown-toggle,
 .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7
-.input-group-btn:not(:first-child) > input[type=submit]:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > input[type=submit]:not(:last-child):not(.dropdown-toggle), .load-more
+.input-group-btn:not(:first-child) > a:not(:last-child):not(.dropdown-toggle), .load-more
+.input-group-btn:not(:first-child) > span:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn, .wpcf7
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type=submit] {
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type=submit], .load-more
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > a, .load-more
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > span {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
@@ -3129,14 +3221,22 @@ tbody.collapse.show {
 .wpcf7 .input-group textarea:not(:first-child), .input-group .wpcf7 .wpcf7-validation-errors:not(:first-child), .wpcf7 .input-group .wpcf7-validation-errors:not(:first-child),
 .input-group-addon:not(:first-child),
 .input-group-btn:not(:first-child) > .btn, .wpcf7
-.input-group-btn:not(:first-child) > input[type=submit],
+.input-group-btn:not(:first-child) > input[type=submit], .load-more
+.input-group-btn:not(:first-child) > a, .load-more
+.input-group-btn:not(:first-child) > span,
 .input-group-btn:not(:first-child) > .btn-group > .btn, .wpcf7
-.input-group-btn:not(:first-child) > .btn-group > input[type=submit],
+.input-group-btn:not(:first-child) > .btn-group > input[type=submit], .load-more
+.input-group-btn:not(:first-child) > .btn-group > a, .load-more
+.input-group-btn:not(:first-child) > .btn-group > span,
 .input-group-btn:not(:first-child) > .dropdown-toggle,
 .input-group-btn:not(:last-child) > .btn:not(:first-child), .wpcf7
-.input-group-btn:not(:last-child) > input[type=submit]:not(:first-child),
+.input-group-btn:not(:last-child) > input[type=submit]:not(:first-child), .load-more
+.input-group-btn:not(:last-child) > a:not(:first-child), .load-more
+.input-group-btn:not(:last-child) > span:not(:first-child),
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn, .wpcf7
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type=submit] {
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type=submit], .load-more
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > a, .load-more
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > span {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -3164,21 +3264,21 @@ tbody.collapse.show {
   position: relative;
   font-size: 0;
   white-space: nowrap; }
-  .input-group-btn > .btn, .wpcf7 .input-group-btn > input[type=submit] {
+  .input-group-btn > .btn, .wpcf7 .input-group-btn > input[type=submit], .load-more .input-group-btn > a, .load-more .input-group-btn > span {
     position: relative;
     flex: 1; }
-    .input-group-btn > .btn + .btn, .wpcf7 .input-group-btn > input[type=submit] + .btn, .wpcf7 .input-group-btn > .btn + input[type=submit], .wpcf7 .input-group-btn > input[type=submit] + input[type=submit] {
+    .input-group-btn > .btn + .btn, .wpcf7 .input-group-btn > input[type=submit] + .btn, .load-more .input-group-btn > a + .btn, .load-more .input-group-btn > span + .btn, .wpcf7 .input-group-btn > .btn + input[type=submit], .wpcf7 .input-group-btn > input[type=submit] + input[type=submit], .load-more .wpcf7 .input-group-btn > a + input[type=submit], .wpcf7 .load-more .input-group-btn > a + input[type=submit], .load-more .wpcf7 .input-group-btn > span + input[type=submit], .wpcf7 .load-more .input-group-btn > span + input[type=submit], .load-more .input-group-btn > .btn + a, .wpcf7 .load-more .input-group-btn > input[type=submit] + a, .load-more .wpcf7 .input-group-btn > input[type=submit] + a, .load-more .input-group-btn > a + a, .load-more .input-group-btn > span + a, .load-more .input-group-btn > .btn + span, .wpcf7 .load-more .input-group-btn > input[type=submit] + span, .load-more .wpcf7 .input-group-btn > input[type=submit] + span, .load-more .input-group-btn > a + span, .load-more .input-group-btn > span + span {
       margin-left: -1px; }
-    .input-group-btn > .btn:focus, .wpcf7 .input-group-btn > input[type=submit]:focus, .input-group-btn > .btn:active, .wpcf7 .input-group-btn > input[type=submit]:active, .input-group-btn > .btn:hover, .wpcf7 .input-group-btn > input[type=submit]:hover {
+    .input-group-btn > .btn:focus, .wpcf7 .input-group-btn > input[type=submit]:focus, .load-more .input-group-btn > a:focus, .load-more .input-group-btn > span:focus, .input-group-btn > .btn:active, .wpcf7 .input-group-btn > input[type=submit]:active, .load-more .input-group-btn > a:active, .load-more .input-group-btn > span:active, .input-group-btn > .btn:hover, .wpcf7 .input-group-btn > input[type=submit]:hover, .load-more .input-group-btn > a:hover, .load-more .input-group-btn > span:hover {
       z-index: 3; }
-  .input-group-btn:not(:last-child) > .btn, .wpcf7 .input-group-btn:not(:last-child) > input[type=submit],
+  .input-group-btn:not(:last-child) > .btn, .wpcf7 .input-group-btn:not(:last-child) > input[type=submit], .load-more .input-group-btn:not(:last-child) > a, .load-more .input-group-btn:not(:last-child) > span,
   .input-group-btn:not(:last-child) > .btn-group {
     margin-right: -1px; }
-  .input-group-btn:not(:first-child) > .btn, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit],
+  .input-group-btn:not(:first-child) > .btn, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit], .load-more .input-group-btn:not(:first-child) > a, .load-more .input-group-btn:not(:first-child) > span,
   .input-group-btn:not(:first-child) > .btn-group {
     z-index: 2;
     margin-left: -1px; }
-    .input-group-btn:not(:first-child) > .btn:focus, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:focus, .input-group-btn:not(:first-child) > .btn:active, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:active, .input-group-btn:not(:first-child) > .btn:hover, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:hover,
+    .input-group-btn:not(:first-child) > .btn:focus, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:focus, .load-more .input-group-btn:not(:first-child) > a:focus, .load-more .input-group-btn:not(:first-child) > span:focus, .input-group-btn:not(:first-child) > .btn:active, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:active, .load-more .input-group-btn:not(:first-child) > a:active, .load-more .input-group-btn:not(:first-child) > span:active, .input-group-btn:not(:first-child) > .btn:hover, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:hover, .load-more .input-group-btn:not(:first-child) > a:hover, .load-more .input-group-btn:not(:first-child) > span:hover,
     .input-group-btn:not(:first-child) > .btn-group:focus,
     .input-group-btn:not(:first-child) > .btn-group:active,
     .input-group-btn:not(:first-child) > .btn-group:hover {
@@ -3971,7 +4071,7 @@ tbody.collapse.show {
   .badge:empty {
     display: none; }
 
-.btn .badge, .wpcf7 input[type=submit] .badge {
+.btn .badge, .wpcf7 input[type=submit] .badge, .load-more a .badge, .load-more span .badge {
   position: relative;
   top: -1px; }
 
@@ -9277,14 +9377,16 @@ body {
   width: 100%;
   padding-bottom: 66.666%;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  display: block; }
   .imgwrap-4-6 > img {
     position: absolute;
     width: 111%;
     height: auto;
-    top: -3%;
+    top: 50%;
     left: -5.5%;
-    max-width: none; }
+    max-width: none;
+    transform: translateY(-50%); }
 
 .bg-gray-lt {
   background-color: #dddddd; }
@@ -9320,7 +9422,7 @@ select,
 textarea {
   font-family: franklin-gothic-urw, Helvetica, Arial, sans-serif; }
 
-.btn, .wpcf7 input[type=submit], .wpcf7 input[type=submit] {
+.btn, .wpcf7 input[type=submit], .load-more a, .load-more span, .wpcf7 input[type=submit] {
   border-width: 2px;
   border-radius: 2px;
   font-weight: 700;
@@ -9330,7 +9432,7 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.btn-primary:hover, .btn-primary:active {
+.btn-primary:hover, .load-more a:hover, .load-more span:hover, .btn-primary:active, .load-more a:active, .load-more span:active {
   color: white;
   opacity: 1;
   background-color: #404042;
@@ -9387,18 +9489,35 @@ textarea {
 .navbar-toggler {
   z-index: 10; }
 
+.dropdown-menu {
+  border: none;
+  background-color: #888888;
+  padding: 0; }
+  .dropdown-menu .menu-item a.nav-link {
+    background-color: #888888;
+    color: white; }
+    .dropdown-menu .menu-item a.nav-link:hover, .dropdown-menu .menu-item a.nav-link:active {
+      background-color: white;
+      color: #404042; }
+
+.dropdown-toggle > span, .dropdown-toggle:after {
+  display: none; }
+
 @media (max-width: 991px) {
-  .navbar-nav li {
+  .navbar-nav > li {
     margin-top: 4px;
     margin-bottom: 4px;
     text-align: center;
     border-radius: 2px; }
-  #main-menu li {
+  #main-menu > li {
     background-color: #cccccc; }
-  #second-menu li {
+  #second-menu > li {
     border: 2px solid #dddddd; }
   .navbar-inverse {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .navbar-toggleable-md .navbar-nav .dropdown-menu {
+    width: 100%;
+    text-align: center; } }
 
 @media (min-width: 992px) {
   .navbar-nav a {
@@ -9473,7 +9592,7 @@ header .form-control, header .wpcf7 input[type=text], .wpcf7 header input[type=t
   border: none;
   border-radius: 2px; }
 
-header .input-group-btn > .btn, header .wpcf7 .input-group-btn > input[type=submit], .wpcf7 header .input-group-btn > input[type=submit] {
+header .input-group-btn > .btn, header .wpcf7 .input-group-btn > input[type=submit], .wpcf7 header .input-group-btn > input[type=submit], header .load-more .input-group-btn > a, .load-more header .input-group-btn > a, header .load-more .input-group-btn > span, .load-more header .input-group-btn > span {
   background-color: #cccccc;
   color: #404042;
   border: none;
@@ -9482,9 +9601,13 @@ header .input-group-btn > .btn, header .wpcf7 .input-group-btn > input[type=subm
   letter-spacing: 1.5px;
   text-transform: uppercase;
   font-size: 14px; }
-  header .input-group-btn > .btn:hover, header .wpcf7 .input-group-btn > input[type=submit]:hover, .wpcf7 header .input-group-btn > input[type=submit]:hover {
+  header .input-group-btn > .btn:hover, header .wpcf7 .input-group-btn > input[type=submit]:hover, .wpcf7 header .input-group-btn > input[type=submit]:hover, header .load-more .input-group-btn > a:hover, .load-more header .input-group-btn > a:hover, header .load-more .input-group-btn > span:hover, .load-more header .input-group-btn > span:hover {
     background-color: #404042;
     color: white; }
+
+.bg-primary .dropdown-menu {
+  background-color: #888888;
+  border-radius: 2px; }
 
 .site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4 {
   font-size: 1.125em;
@@ -9610,3 +9733,21 @@ section.home-banner {
       position: absolute;
       transform: rotate(-45deg);
       bottom: 3px; } }
+
+.my-stats {
+  background-color: #dddddd; }
+  .my-stats table {
+    width: 100%; }
+  .my-stats tr {
+    border-bottom: 1px solid #2BB7AE; }
+    .my-stats tr:first-child {
+      border-top: 1px solid #2BB7AE; }
+  .my-stats td {
+    padding: 0.25rem 0.75rem; }
+    .my-stats td:not(:last-child) {
+      border-right: 1px solid #2BB7AE; }
+    .my-stats td:first-child {
+      font-weight: 700;
+      padding-left: 0.25rem; }
+  .my-stats ul.stat-list li {
+    margin-left: -20px; }

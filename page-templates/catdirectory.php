@@ -97,15 +97,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	</section>
 
-	<section class="cats-grid container my-5">
+	<section class="cats-grid container my-5" id="cats-grid">
 
-		<div class="row">
-
-				<?php get_template_part('partials/catgrid', 'item'); ?>
-
-		</div>
-
-		<div class="text-center py-3"><a class="btn btn-primary" href="#" role="button">Load More Cats</a></div>
+		<?php get_template_part('partials/catgrid', 'item'); ?>
 
 	</section>
 

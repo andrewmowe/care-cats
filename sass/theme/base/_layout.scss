@@ -63,15 +63,17 @@ body {
 	padding-bottom: 66.666%;
 	position: relative;
 	overflow: hidden;
+	display: block;
 
 	> img {
 
 		position: absolute;
 		width: 111%;
 		height: auto;
-		top: -3%;
+		top: 50%;
 		left: -5.5%;
 		max-width: none;
+		transform: translateY(-50%);
 
 	}
 
