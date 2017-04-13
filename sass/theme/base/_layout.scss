@@ -40,7 +40,7 @@ body {
 .full-text-section {
 
 	padding-top: 3 * $spacer;	
-	padding-bottom: 3 * $spacer;
+	padding-bottom: 3 * $spacer; 
 
 	> article {
 		max-width: 70ch;
@@ -55,3 +55,26 @@ body {
 	}
 
 }
+
+.imgwrap-4-6 {
+
+	height:0;
+	width: 100%;
+	padding-bottom: 66.666%;
+	position: relative;
+	overflow: hidden;
+
+	> img {
+
+		position: absolute;
+		width: 111%;
+		height: auto;
+		top: -3%;
+		left: -5.5%;
+		max-width: none;
+
+	}
+
+}
+
+

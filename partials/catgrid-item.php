@@ -9,18 +9,21 @@
 ?>
 
 <?php
+				
 				$args = array(
 						'post_type' => 'cats',
-						'posts_per_page'	=> 6,
+						//'posts_per_page'	=> 9,
 						'orderby'	=> 'menu_order',
 						'meta_query'	=> array(
 								array(
-									'key'			=> 'availability',
+									'key'		=> 'availability',
 									'value'		=> 'available',
 									'compare'	=> '='
 								)
 						),
 				);
+
+				if(!is_front_page()) $args["posts_per_page"] = 9;
 
 				$cats = new WP_Query( $args );
 
@@ -31,19 +34,19 @@
 					$cat_meta = get_post_meta( $post->ID, 'pet_data', true );
 
 					// echo '<pre>';
-					// print_r( $meta );
+					// print_r( $cat_meta );
 					// echo '</pre>';
 			?>
 
 			<article class="grid-cat col-12 col-md-6 col-lg-4 py-3">
 
-				<img src="<?php echo $cat_meta->images[0]->original_url; ?>" class="w-100" >
+				<div class="imgwrap-4-6"><img src="<?php echo $cat_meta->images[0]->original_url; ?>" alt="<?php the_title(); ?>" ></div>
 
-				<div class="d-flex justify-content-between">
+				<div class="d-flex justify-content-between align-items-baseline bg-gray-lt px-3 py-2">
 
 					<h2><?php the_title(); ?></h2>
 
-					<a class="btn btn-link" href="#" role="button">learn more</a>
+					<a class="btn btn-link" href="<?php the_permalink(); ?>" role="button">learn more</a>
 
 				</div>
 
