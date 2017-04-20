@@ -31,7 +31,7 @@
 		e.preventDefault();
 
 		var link = $(this).attr('href');
-		$('.load-more').html('<span class="loader">Loading More Posts...</span>');
+		$('.load-more').html('<span class="loader">Loading More Cats...</span>');
 		$.get(link, function(data) {
 			var post = $("#cats-grid .grid-cat ", data);
 			$('#cats-grid .row').append(post);
