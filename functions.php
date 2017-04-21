@@ -79,4 +79,5 @@ add_action( 'wp_head', 't8_typekit_inline' );
 
 register_nav_menus( array(
 			'care-secondary-menu' => __( 'Secondary Menu', 'understrap' ),
+			'care-news-menu' => __( 'News Menu', 'understrap' ),
 		) );

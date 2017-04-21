@@ -48,3 +48,8 @@
 
 
 }
+
+.related-cats-header {
+	@include labelfont;
+	color: white;
+}

@@ -32,7 +32,16 @@
 						),
 				);
 
-				if(!is_front_page()) $args["posts_per_page"] = 9;
+				if(!is_front_page()) {
+				
+					if(is_single()) {
+						$args["posts_per_page"] = 3;
+					} else {
+						$args["posts_per_page"] = 9;
+					}
+
+				
+				}
 
 				$cats = new WP_Query( $args );
 

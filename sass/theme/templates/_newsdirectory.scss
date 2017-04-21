@@ -1,0 +1,93 @@
+.category-nav {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    li {
+    	font-size: 1.125em;
+
+    	&:not(:first-child) a:before {
+		    content: '\2022';
+		    position: absolute;
+		    left: -.25em;
+		}
+
+    	a {
+    		color: $brand-gray-dk;
+			padding: 12px 2em;
+			position: relative;
+
+			&:hover, &:active {
+				text-decoration:underline;
+			}
+    	}
+    }
+}
+
+.news-list {
+
+	article:not(:last-child) {
+		margin-bottom: 5*$spacer;
+	}
+
+	.understrap-read-more-link {
+	    border: none;
+	    background: transparent;
+	    color: $brand-secondary;
+	    padding: 0;
+	    text-transform: lowercase;
+
+		&:hover, &:active {
+			color: $brand-primary;
+		}
+	}
+
+	h2 {
+		font-size: 1.375em;
+
+		a {
+			color:$brand-gray-dk;
+		}
+
+		&:hover, &:active {
+			text-decoration:underline;
+		}
+	}
+
+	.e-date-container {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: $brand-primary;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		padding: 0 2.5em;
+		text-align: center;
+		color: white;
+
+		h4 {
+			font-weight: 400;
+			font-size: 1em;
+			text-transform: uppercase;
+
+			span.day {
+				font-size:2em;
+			}
+			span.month {
+				font-size: 1.25em;
+   				letter-spacing: 1.5px;
+			}
+		}
+	}
+
+	.text-columns .entry-content > p:first-child {
+	    -webkit-columns: 2 40ch;
+	    -moz-columns: 2 40ch;
+	    columns: 2 40ch;
+		-webkit-column-gap: 3em;
+		-moz-column-gap: 3em;
+		column-gap: 3em;
+	}
+
+}
