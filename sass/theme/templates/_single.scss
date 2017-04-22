@@ -1,0 +1,74 @@
+.single .site-main {
+
+	@include media-breakpoint-up(md) {
+
+		padding-right: 6 * $spacer;	
+
+	}
+
+	.entry-header {
+
+		margin-top: 3 * $spacer;
+		margin-bottom: 1 * $spacer;
+
+		h1 {
+			font-size: 1.5em;
+		}
+
+	}
+
+	.entry-content {
+
+		margin-top: 3 * $spacer;
+
+	}
+
+	.e-date-container {
+		background-color: $brand-primary;
+		color:white;
+		padding:1 * $spacer;
+		text-align:right;
+		margin: 0;
+
+		h4 {
+			@include labelfont;
+			padding: 0;
+			margin: 0;
+			font-size: 1.25em;
+		}
+	}
+
+}
+
+.nav-links {
+	background-color: $brand-primary;
+	color:white;
+	padding:1 * $spacer;
+	margin-bottom:3 * $spacer;
+
+	a {
+		color:white;
+
+		&:hover, &:active {
+			text-decoration: underline;
+		}
+	}
+}
+
+.widget-area {
+
+	margin-top: 3.5 * $spacer;
+
+
+	.widget-title {
+
+		@include labelfont;
+		font-size: 1em;
+
+	}
+
+	ul {
+		padding-left: 1.125em;
+	}
+
+}
