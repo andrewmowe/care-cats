@@ -45,6 +45,14 @@
 	color:white;
 	padding:1 * $spacer;
 	margin-bottom:3 * $spacer;
+	display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(md) {
+
+    	flex-direction: column;
+
+    }
 
 	a {
 		color:white;

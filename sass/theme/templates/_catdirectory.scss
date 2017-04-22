@@ -51,7 +51,7 @@
 
 }
 
-.load-more a, .load-more span {
+.load-more a, .load-more span, .load-more-news a, .load-more-news span {
 	@extend .btn;
 
 	@extend .btn-primary;

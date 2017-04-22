@@ -79,4 +79,19 @@ body {
 
 }
 
+.no-crop {
+
+	> img {
+
+		position: absolute;
+		width: 100%;
+		height: auto;
+		top: 50%;
+		left: 50%;
+		max-width: none;
+		transform: translate(-50%, -50%);
+
+	}
+}
+
 
