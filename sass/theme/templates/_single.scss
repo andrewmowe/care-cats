@@ -76,8 +76,11 @@
 
 	.grid-cat {
 
+		margin-bottom: 1.5 * $spacer;
+
 		h3 {
 			font-size: 1em;
+			margin-bottom: 0;
 		}
 		.text-link {
 			text-align: right;

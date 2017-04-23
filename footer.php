@@ -8,28 +8,25 @@
  */
 
 $the_theme = wp_get_theme();
-$container = get_theme_mod( 'understrap_container_type' );
 ?>
-
-<?php get_sidebar( 'footerfull' ); ?>
 
 <div class="wrapper bg-primary text-white py-5" id="wrapper-footer">
 
-	<div class="<?php echo esc_html( $container ); ?>">
+	<div class="container">
 
 		<footer class="site-footer row justify-content-between" id="colophon">
 
 			<section class="col-12 col-md-5">
 
-				<h2>Adoption Event Updates</h2>
-				<p>No Adoption event Saturday 3/14
-				<br>Cat caretakers needed Sundays</p>
-				<h2>OUR LOCATIONS</h2>
-				<p>Cats may be seen during regular store hours.
-				<br>Adoptions arranged by appointment.</p>
-				<h4>Petco</h4>
-				<p>9051 Staples Mill Road  Richmond, VA 23228
-				<br/>Adoption events every Saturday 12-3pm</p>
+				<?php 
+
+				if ( is_active_sidebar( 'footerleft' ) ) :
+
+					dynamic_sidebar( 'footerleft' );
+
+				endif; 
+
+				?>
 
 			</section><!--col end -->
 

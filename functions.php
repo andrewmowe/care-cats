@@ -82,6 +82,68 @@ register_nav_menus( array(
 	'care-news-menu' => __( 'News Menu', 'understrap' ),
 ) );
 
+
+
+if ( ! function_exists( 'understrap_widgets_init' ) ) {
+	/**
+	 * Initializes themes widgets.
+	 */
+	function understrap_widgets_init() {
+		register_sidebar( array(
+			'name'          => __( 'Right Sidebar', 'understrap' ),
+			'id'            => 'right-sidebar',
+			'description'   => 'Right sidebar widget area',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		) );
+
+		register_sidebar( array(
+			'name'          => __( 'Left Sidebar', 'understrap' ),
+			'id'            => 'left-sidebar',
+			'description'   => 'Left sidebar widget area',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		) );
+
+		register_sidebar( array(
+			'name'          => __( 'Hero Slider', 'understrap' ),
+			'id'            => 'hero',
+			'description'   => 'Hero slider area. Place two or more widgets here and they will slide!',
+			'before_widget' => '<div class="carousel-item">',
+			'after_widget'  => '</div>',
+			'before_title'  => '',
+			'after_title'   => '',
+		) );
+
+		register_sidebar( array(
+			'name'          => __( 'Hero Static', 'understrap' ),
+			'id'            => 'statichero',
+			'description'   => 'Static Hero widget. no slider functionallity',
+		    'before_widget'  => '<div id="%1$s" class="static-hero-widget %2$s '. slbd_count_widgets( 'statichero' ) .'">', 
+		    'after_widget'   => '</div><!-- .static-hero-widget -->', 
+		    'before_title'   => '<h3 class="widget-title">', 
+		    'after_title'    => '</h3>',
+		) );
+
+		register_sidebar( array(
+			'name'          => __( 'Footer Left', 'understrap' ),
+			'id'            => 'footerleft',
+			'description'   => 'Left side of footer. Use this area for adoption event updates and adoption locations.',
+		    'before_widget'  => '', 
+		    'after_widget'   => '', 
+		    'before_title'   => '<h2 class="widget-title">', 
+		    'after_title'    => '</h2>', 
+		) );
+
+	}
+} // endif function_exists( 'understrap_widgets_init' ).
+add_action( 'widgets_init', 'understrap_widgets_init' );
+
+
 // Enable shortcodes in text widgets
 add_filter('widget_text','do_shortcode');
 
@@ -123,7 +185,7 @@ function t8_cats_widget($atts){
 				$image_class .= " no-crop ";
 			}
 
-			$return_string .= '<div class="grid-cat my-4">';
+			$return_string .= '<div class="grid-cat">';
 
 				$return_string .= '<a href="' . get_the_permalink() . '" class="' . $image_class . '">' . $featured_image . '</a>';
 
