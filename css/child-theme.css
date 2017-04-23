@@ -10021,6 +10021,15 @@ section.home-banner {
     font-size: 1em; }
   .widget-area ul {
     padding-left: 1.125em; }
+  .widget-area .grid-cat h3 {
+    font-size: 1em; }
+  .widget-area .grid-cat .text-link {
+    text-align: right;
+    display: block;
+    width: 100%;
+    font-size: .875em; }
+    .widget-area .grid-cat .text-link:after {
+      content: '\00BB'; }
 
 .page-template-fullwidthpage #page > .wrapper {
   margin-top: 0;

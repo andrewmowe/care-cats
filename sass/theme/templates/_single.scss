@@ -74,4 +74,22 @@
 		padding-left: 1.125em;
 	}
 
+	.grid-cat {
+
+		h3 {
+			font-size: 1em;
+		}
+		.text-link {
+			text-align: right;
+			display:block;
+			width: 100%;
+			font-size: .875em;
+
+			&:after {
+				content:'\00BB';
+			}
+
+		}
+	}
+
 }
