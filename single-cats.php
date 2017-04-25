@@ -8,9 +8,9 @@
 get_header();
 ?>
 
-<?php 
+<?php
 
-	while ( have_posts() ) : the_post(); 
+	while ( have_posts() ) : the_post();
 
 		$cat_meta = get_post_meta( $post->ID, 'pet_data', true );
 
@@ -25,20 +25,19 @@ get_header();
 ?>
 
 <article class="featured-cat container-fluid p-0">
-			
+
 	<div class="row">
 
 		<div class="col-md-6 col-lg-7 py-0">
-		  
+
 			<div class="<?php echo $image_class; ?>"><?php echo $featured_image; ?></div>
 
 		</div>
 
 		<div class="text col-md-6 col-lg-5 p-5 p-sm-5">
-		  
-			
+
 			<h1><?php the_title(); ?></h1>
-			
+
 			<p class="mt-md-4">
 
 				<a class="btn btn-secondary mr-md-4" href="#" role="button">Adopt Me</a>
@@ -46,7 +45,7 @@ get_header();
 				<a class="btn btn-gray" href="#" role="button">SHARE</a>
 
 			</p>
-			
+
 			<p><?php echo $cat_meta->description; ?></p>
 
 		</div>
@@ -56,9 +55,9 @@ get_header();
 	<div class="row my-5 mb-5">
 
 		<div class="col-md-6 pl-md-5 mb-5">
-		  
+
 			<div class="my-stats p-5">
-			
+
 				<h2>My Stats</h2>
 
 				<?php 
@@ -67,7 +66,7 @@ get_header();
 					if($cat_meta->secondary_breed !== NULL) $breed .= ", " . $cat_meta->secondary_breed;
 
 				?>
-				
+
 				<table>
 					<tbody>
 						<tr>
@@ -132,7 +131,6 @@ get_header();
 				<?php } ?>
 
 				</ul>
-				
 
 			</div>
 		</div>
@@ -141,7 +139,7 @@ get_header();
 
 		<div class="col-md-6">
 			<div class="embed-responsive embed-responsive-4by3">
-			  
+
 				<div class=""><?php echo wp_oembed_get( $cat_meta->video_url ); ?></div>
 
 			</div>
@@ -156,8 +154,13 @@ get_header();
 					<div class="row img-thumbs px-3">
 
 						<?php foreach ($cat_meta->images as $key => $image) { ?>
-							
-							<div class="col-sm-6 col-xl-4 mb-3"><img src="<?php echo $image->original_url; ?>" alt="<?php the_title(); ?>" ></div>
+
+				<?php
+				$content = '<a class="col-md-6 col-md-4 col-lg-3" href="' . $image->original_url .'"><img src="'. $image->original_url .'" alt="' . get_the_title() . '" title="' . get_the_title() . '"></a>';
+				?>
+				<?php if ( function_exists('slb_activate') ) ?>
+				<?php $content = slb_activate($content); ?>
+				<?php echo $content; ?>
 						<?php } ?>
 
 					</div>
@@ -178,8 +181,14 @@ get_header();
 		<div class="row img-thumbs px-3">
 
 			<?php foreach ($cat_meta->images as $key => $image) { ?>
-				
-				<div class="col-md-6 col-md-4 col-lg-3"><img src="<?php echo $image->original_url; ?>" alt="<?php the_title(); ?>" ></div>
+
+				<?php
+				$content = '<a class="col-md-6 col-md-4 col-lg-3" href="' . $image->original_url .'"><img src="'. $image->original_url .'" alt="' . get_the_title() . '" title="' . get_the_title() . '"></a>';
+				?>
+				<?php if ( function_exists('slb_activate') ) ?>
+				<?php $content = slb_activate($content); ?>
+				<?php echo $content; ?>
+
 			<?php } ?>
 
 		</div>
@@ -202,11 +211,11 @@ get_header();
 
 <section class="cats-grid container mt-3 mb-5" id="cats-grid">
 
-	
+
 <?php
 
 				$exclude_ids = array( $post->ID );
-				
+
 				$args = array(
 						'post_type' => 'cats',
 						'posts_per_page'	=> 3,
