@@ -199,9 +199,9 @@ get_header();
 
 <?php
 
-	echo '<pre>';
-	print_r( $cat_meta );
-	echo '</pre>';
+	// echo '<pre>';
+	// print_r( $cat_meta );
+	// echo '</pre>';
 
 ?>
 
