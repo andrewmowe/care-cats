@@ -156,7 +156,7 @@ get_header();
 						<?php foreach ($cat_meta->images as $key => $image) { ?>
 
 				<?php
-				$content = '<a class="col-md-6 col-md-4 col-lg-3" href="' . $image->original_url .'"><img src="'. $image->original_url .'" alt="' . get_the_title() . '" title="' . get_the_title() . '"></a>';
+				$content = '<a class="col-sm-6 col-xl-4 mb-3" href="' . $image->original_url .'"><img src="'. $image->original_url .'" alt="' . get_the_title() . '" title="' . get_the_title() . '"></a>';
 				?>
 				<?php if ( function_exists('slb_activate') ) ?>
 				<?php $content = slb_activate($content); ?>
@@ -199,9 +199,9 @@ get_header();
 
 <?php
 
-	// echo '<pre>';
-	// print_r( $cat_meta );
-	// echo '</pre>';
+	echo '<pre>';
+	print_r( $cat_meta );
+	echo '</pre>';
 
 ?>
 
