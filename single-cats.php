@@ -14,6 +14,14 @@ get_header();
 
 		$cat_meta = get_post_meta( $post->ID, 'pet_data', true );
 
+		$featured_image = '<img src="' . $cat_meta->images[0]->original_url .'" alt="' . get_the_title() . '" >';
+		$image_class = 'imgwrap-4-6';
+
+		if(has_post_thumbnail()){
+			$featured_image = get_the_post_thumbnail( $post->ID, 'large' );
+			$image_class .= " no-crop ";
+		}
+
 ?>
 
 <article class="featured-cat container-fluid p-0">
@@ -22,7 +30,7 @@ get_header();
 
 		<div class="col-md-6 col-lg-7 py-0">
 		  
-			<div class="imgwrap-4-6"><img src="<?php echo $cat_meta->images[0]->original_url; ?>" alt="<?php the_title(); ?>" ></div>
+			<div class="<?php echo $image_class; ?>"><?php echo $featured_image; ?></div>
 
 		</div>
 

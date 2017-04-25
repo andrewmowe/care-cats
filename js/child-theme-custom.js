@@ -39,4 +39,16 @@
 		$('.load-more').load(link+' .load-more a');
 	});
 
+	$('.load-more-news a').live('click', function(e){
+		e.preventDefault();
+
+		var link = $(this).attr('href');
+		$('.load-more-news').html('<span class="loader">Loading More News...</span>');
+		$.get(link, function(data) {
+			var post = $(".news-list .post", data);
+			$('.news-list').append(post);
+		});
+		$('.load-more-news').load(link+' .load-more-news a');
+	});
+
 })(jQuery); 

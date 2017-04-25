@@ -78,6 +78,95 @@ function t8_typekit_inline() {
 add_action( 'wp_head', 't8_typekit_inline' );
 
 register_nav_menus( array(
-			'care-secondary-menu' => __( 'Secondary Menu', 'understrap' ),
-			'care-news-menu' => __( 'News Menu', 'understrap' ),
+	'care-secondary-menu' => __( 'Secondary Menu', 'understrap' ),
+	'care-news-menu' => __( 'News Menu', 'understrap' ),
+) );
+
+
+
+if ( ! function_exists( 'care_widgets_init' ) ) {
+	/**
+	 * Initializes themes widgets.
+	 */
+	function care_widgets_init() {
+
+		register_sidebar( array(
+			'name'          => __( 'Footer Left', 'understrap' ),
+			'id'            => 'footerleft',
+			'description'   => 'Left side of footer. Use this area for adoption event updates and adoption locations.',
+		    'before_widget'  => '', 
+		    'after_widget'   => '', 
+		    'before_title'   => '<h2 class="widget-title">', 
+		    'after_title'    => '</h2>', 
 		) );
+
+	}
+} // endif function_exists( 'understrap_widgets_init' ).
+add_action( 'widgets_init', 'care_widgets_init' );
+
+
+// Enable shortcodes in text widgets
+add_filter('widget_text','do_shortcode');
+
+
+function t8_cats_widget($atts){
+	extract(shortcode_atts(array(
+	  'count' => 3,
+	), $atts));
+
+	$args = array(
+			'post_type' => 'cats',
+			'posts_per_page'	=> $count,
+			'orderby'	=> 'menu_order',
+			'meta_query'	=> array(
+					array(
+						'key'		=> 'availability',
+						'value'		=> 'available',
+						'compare'	=> '='
+					)
+			),
+	);
+
+	$cats = new WP_Query( $args );
+
+	if ( $cats->have_posts() ) : 
+
+		$return_string =  '';
+
+
+		while ( $cats->have_posts() ) : $cats->the_post();
+
+			$cat_meta = get_post_meta( get_the_ID(), 'pet_data', true );
+
+			$featured_image = '<img src="' . $cat_meta->images[0]->original_url .'" alt="' . get_the_title() . '" >';
+			$image_class = 'imgwrap-4-6';
+
+			if(has_post_thumbnail()){
+				$featured_image = get_the_post_thumbnail( $post->ID, 'medium' );
+				$image_class .= " no-crop ";
+			}
+
+			$return_string .= '<div class="grid-cat">';
+
+				$return_string .= '<a href="' . get_the_permalink() . '" class="' . $image_class . '">' . $featured_image . '</a>';
+
+				$return_string .= '<div class="d-flex justify-content-between align-items-baseline bg-gray-lt px-3 py-2">';
+
+					$return_string .= '<h3>' . get_the_title() . '</h3>';
+
+					$return_string .= '<a class="text-link" href="' . get_the_permalink() . '">learn more</a>';
+
+				$return_string .= '</div>';
+
+			$return_string .= '</div>';
+
+		endwhile;
+
+	endif;
+
+	wp_reset_postdata();
+
+	return $return_string;
+
+}
+add_shortcode( 't8-cats-widget', 't8_cats_widget' );

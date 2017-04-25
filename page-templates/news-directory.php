@@ -15,7 +15,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<h1 class="text-center bg-gray-lt divider-header">C.A.R.E. News</h1>
 
-	<section class="available-cats container-fluid px-0 bg-gray-md">
+	<section class="container-fluid px-0 bg-gray-md">
 
 		<?php wp_nav_menu(
 			array(

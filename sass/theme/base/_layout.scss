@@ -79,4 +79,48 @@ body {
 
 }
 
+.no-crop {
+
+	> img {
+
+		position: absolute;
+		width: 100%;
+		height: auto;
+		top: 50%;
+		left: 50%;
+		max-width: none;
+		transform: translate(-50%, -50%);
+
+	}
+}
+
+@include media-breakpoint-up(md) {
+
+	#right-sidebar {
+
+		padding-left: 3 * $spacer;	
+
+	}
+	#left-sidebar {
+
+		padding-right: 3 * $spacer;	
+
+	}
+
+}
+
+@include media-breakpoint-up(lg) {
+
+	#right-sidebar {
+
+		padding-left: 6 * $spacer;	
+
+	}
+	#left-sidebar {
+
+		padding-right: 6 * $spacer;	
+
+	}
+
+}
 

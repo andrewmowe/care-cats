@@ -1,0 +1,38 @@
+#page {
+
+
+}
+
+.page-template-fullwidthpage {
+
+	#page > .wrapper {
+		margin-top: 0;
+		padding-top:0;
+	}
+
+	.entry-header {
+		@extend .divider-header;
+		background: $brand-gray-lt;
+		
+		text-align: center;
+		margin-bottom: 3 * $spacer;
+
+		h1 {
+			@extend .container;
+			font-size:1.125em;
+		}
+	}
+
+	.content-area {
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+
+	.entry-content, .entry-footer {
+
+		@extend .container;
+		max-width:85ch;
+
+	}
+
+}
