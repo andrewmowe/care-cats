@@ -188,7 +188,7 @@ get_header();
 
 			<h4 class="px-3">More images of <?php the_title(); ?></h4>
 
-			<div class="row img-thumbs px-3">
+			<div class="row img-thumbs px-3 mb-5">
 
 				<?php foreach ($cat_meta->images as $key => $image) { ?>
 
@@ -285,12 +285,6 @@ get_header();
 			
 
 		</div>
-
-		<?php if ( $cats->max_num_pages > 1 && !is_front_page()) : ?>
-	    <div class="text-center py-3 load-more">
-	         <?php next_posts_link( 'Load More Cats', $cats ->max_num_pages ); ?>
-	    </div>
-		<?php endif;  ?>
 
 		<?php endif; ?>
 
