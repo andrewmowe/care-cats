@@ -9,7 +9,7 @@
 ?>
 
 <?php
-				
+
 				if ( get_query_var('paged') ) {
 				    $paged = get_query_var('paged');
 				} else if ( get_query_var('page') ) {
@@ -20,12 +20,13 @@
 
 				$args = array(
 						'post_type' => 'cats',
-						//'posts_per_page'	=> 9,
-						'orderby'	=> 'menu_order', 
-						'paged' => $paged,
+						'orderby'			=> 'meta_value',
+						'order'				=> 'DESC',
+						'meta_key'		=> 'pet_id',
+						'paged' 			=> $paged,
 						'meta_query'	=> array(
 								array(
-									'key'		=> 'availability',
+									'key'			=> 'availability',
 									'value'		=> 'available',
 									'compare'	=> '='
 								)
@@ -33,19 +34,19 @@
 				);
 
 				if(!is_front_page()) {
-				
+
 					if(is_single()) {
 						$args["posts_per_page"] = 3;
 					} else {
 						$args["posts_per_page"] = 9;
 					}
 
-				
+
 				}
 
 				$cats = new WP_Query( $args );
 
-				if ( $cats->have_posts() ) : 
+				if ( $cats->have_posts() ) :
 
 			?>
 
@@ -85,8 +86,6 @@
 			</article>
 
 			<?php endwhile; ?>
-
-			
 
 		</div>
 

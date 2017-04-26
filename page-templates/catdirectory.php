@@ -48,7 +48,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 					    </select>
 
 					</div>
-					
 
 				</div>
 
@@ -73,7 +72,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 					    </select>
 
 					</div>
-					
 
 				</div>
 
