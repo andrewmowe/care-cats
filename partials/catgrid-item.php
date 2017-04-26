@@ -1,8 +1,6 @@
 <?php
 /**
- * Template Name: Home Page
  *
- * Template for displaying the HOME page without sidebar even if a sidebar widget is published.
  *
  * @package understrap
  */
@@ -33,7 +31,8 @@
 						),
 				);
 
-				if(is_front_page()) {
+
+				if(is_page_template('page-templates/homepage.php')) {
 
 					$args["posts_per_page"] = get_theme_mod("cat_num");
 

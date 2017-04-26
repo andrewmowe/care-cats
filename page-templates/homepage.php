@@ -112,7 +112,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					// echo '</pre>';
 			?>
 
-			<article class="featured-cat container-fluid p-0">
+			<article class="featured-cat container p-0">
 				
 				<div class="row">
 
@@ -150,7 +150,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<?php wp_reset_postdata(); ?>
 
 
-		<section class="cats-grid container-fluid my-5">
+		<section class="cats-grid container my-5">
 
 				<?php get_template_part('partials/catgrid', 'item'); ?>
 
