@@ -9903,7 +9903,8 @@ section.home-banner {
 
 .category-nav {
   text-align: center;
-  display: inherit; }
+  display: inherit;
+  padding: 0; }
   .category-nav li {
     font-size: 1.125em;
     display: block;
@@ -9917,9 +9918,6 @@ section.home-banner {
       position: relative; }
       .category-nav li a:hover, .category-nav li a:active {
         text-decoration: underline; }
-  @media (max-width: 991px) {
-    .category-nav {
-      padding: 0; } }
   @media (min-width: 768px) {
     .category-nav {
       display: flex;

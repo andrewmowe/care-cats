@@ -24,6 +24,7 @@
 
     text-align: center;
     display: inherit;
+	padding:0;
 
 	li {
     	font-size: 1.125em;
@@ -32,7 +33,7 @@
 
     	&.current-menu-item {
     		text-decoration:underline;
-    		opacity:.5;
+    		opacity:.5; 
     	}
 
     	a {
@@ -44,11 +45,6 @@
 				text-decoration:underline;
 			}
     	}
-    }
-    @include media-breakpoint-down(md) {
-
-    	padding:0;
-
     }
 
 	@include media-breakpoint-up(md) {
