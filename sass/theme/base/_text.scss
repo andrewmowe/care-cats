@@ -24,6 +24,13 @@ h1, h2, h3, h4, h5 {
 
 /* BUTTONS */
 
+.navbar-toggler-right {
+    right: .25rem;
+    top: 3 * $spacer;
+    border-radius: 0;
+    border: none;
+}
+
 button,
 input,
 optgroup,

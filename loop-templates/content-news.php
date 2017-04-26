@@ -11,7 +11,7 @@
 
 		<?php if(has_post_thumbnail() || in_category('events')){ ?>
 
-		<div class="col-md-4 col-lg-5 p-0">
+		<div class="col-md-4 col-lg-5 p-0 mb-3">
 
 			<a class="imgwrap-4-6" href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail( $post->ID, 'large' ); 
 

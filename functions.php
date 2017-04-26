@@ -170,3 +170,29 @@ function t8_cats_widget($atts){
 
 }
 add_shortcode( 't8-cats-widget', 't8_cats_widget' );
+
+function t8_customize_register($wp_customize)  {
+
+	$wp_customize->add_section("cats_home", array(
+		"title" => __("Cats in Home list", "customizer_cats_sections"),
+		"priority" => 30,
+	));
+
+	$wp_customize->add_setting("cat_num", array(
+		"default" => "3",
+		"transport" => "refresh",
+	));
+
+	$wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		"cat_num",
+		array(
+			"label" => __("Enter number of cats on homepage", "customizer_cat_num_label"),
+			"section" => "cats_home",
+			"settings" => "cat_num",
+			"type" => "text",
+		)
+	));
+}
+
+add_action("customize_register","t8_customize_register");

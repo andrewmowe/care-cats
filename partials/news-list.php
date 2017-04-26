@@ -51,7 +51,7 @@
 		</div>
 
 			<?php if ( $news->max_num_pages > 1 ) : ?>
-		    <div class="text-center py-3 load-more-news">
+		    <div class="text-center py-3 mb-5 load-more-news">
 		         <?php next_posts_link( 'Load More News', $news ->max_num_pages ); ?>
 		    </div>
 			<?php endif;  ?>

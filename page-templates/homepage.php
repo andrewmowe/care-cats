@@ -88,8 +88,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			$args = array(
 						'post_type' => 'cats',
 						'posts_per_page'	=> 1,
-						'offset' 	=> 5,
-						'orderby'	=> 'menu_order',
+						'orderby'	=> 'rand',
 						'meta_query'	=> array(
 								array(
 									'key'		=> 'availability',
