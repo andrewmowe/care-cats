@@ -9,6 +9,10 @@
 
 get_header();
 $container = get_theme_mod( 'understrap_container_type' );
+
+$page_id = get_queried_object_id();
+$p_uri = get_page_uri($page_id);
+
 ?>
 
 <div class="wrapper pt-0" id="full-width-page-wrapper">
@@ -19,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="container">
 
-			<form class="cat-filters row py-4 align-items-center">
+			<form class="cat-filters row py-4 align-items-center" method="post">
 
 				<div class="col-12 col-md-2">
 
@@ -32,9 +36,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="form-group">
 
 						<label clafor="sexSelect">Sex</label>
-					    <select class="form-control form-control-sm" id="sexSelect">
-					      <option>Female</option>
-					      <option>Male</option>
+					    <select class="form-control form-control-sm" id="sexSelect" name="sexSelect">
+					      <option value="">Select...</option>
+					      <option value="Female">Female</option>
+					      <option value="Male">Male</option>
 					    </select>
 
 					</div>
@@ -42,9 +47,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="form-group">
 
 						<label for="ageSelect">Age</label>
-					    <select class="form-control form-control-sm" id="ageSelect">
-					      <option>kitten</option>
-					      <option>adult</option>
+					    <select class="form-control form-control-sm" id="ageSelect" name="ageSelect">
+					      <option value="">Select...</option>
+					      <option value="Kitten">Kitten</option>
+					      <option value="Young">Young</option>
+					      <option value="Adult">Adult</option>
+					      <option value="Senior">Senior</option>
 					    </select>
 
 					</div>
@@ -56,9 +64,44 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="form-group">
 
 						<label for="colorSelect">color</label>
-					    <select class="form-control form-control-sm" id="colorSelect">
-					      <option>brown tabby</option>
-					      <option>calico</option>
+						<?php
+							$catcolors = array(
+
+								"Black (All)",
+								"Black (Mostly)",
+								"Black &amp; White or Tuxedo",
+								"Brown or Chocolate",
+								"Brown or Chocolate (Mostly)",
+								"Brown Tabby",
+								"Calico or Dilute Calico",
+								"Cream or Ivory",
+								"Cream or Ivory (Mostly)",
+								"Gray or Blue",
+								"Gray or Blue (Mostly)",
+								"Gray, Blue or Silver Tabby",
+								"Orange or Red",
+								"Orange or Red (Mostly)",
+								"Orange or Red Tabby",
+								"Spotted Tabby/Leopard Spotted",
+								"Tan or Fawn",
+								"Tan or Fawn (Mostly)",
+								"Tan or Fawn Tabby",
+								"Tiger Striped",
+								"Tortoiseshell",
+								"White",
+								"White (Mostly)",
+
+							);
+						?>
+					    <select class="form-control form-control-sm" id="colorSelect" name="colorSelect">
+							<option value="">Select...</option>
+							<?php 
+
+								foreach ($catcolors as $key => $value) {
+									echo '<option value="'. $value .'">'. $value .'</option>';
+								}
+
+							?> 
 					    </select>
 
 					</div>
@@ -66,9 +109,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="form-group">
 
 						<label for="hairSelect">Hair Length</label>
-					    <select class="form-control form-control-sm" id="hairSelect">
-					      <option>short</option>
-					      <option>long</option>
+					    <select class="form-control form-control-sm" id="hairSelect" name="hairSelect">
+					      <option value="">Select...</option>
+					      <option value="Short">Short</option>
+					      <option value="Medium">Medium</option>
+					      <option value="Long">Long</option>            
 					    </select>
 
 					</div>
@@ -81,7 +126,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<label class="sr-only" for="inlineFormInput">description</label>
 
-						<input type="text" class="form-control col-md-7 col-lg-8" id="inlineFormInput" placeholder="...enter description text">
+						<input type="text" class="form-control col-md-7 col-lg-8" id="inlineFormInput" name="inlineFormInput" placeholder="...enter description text">
+
+						<input type="hidden" name="catsearch" value="true">
 
 						<div class="col-md-5 col-lg-4"><button type="submit" class="btn btn-primary w-100">Search</button></div>
 
@@ -90,7 +137,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div><!--col end -->
 
 			</form>
+			<?php 
+				// if(!empty($_POST)) {
 
+				// 	var_dump($_POST);
+
+				// }
+
+			?>
 		</div>
 
 	</section>

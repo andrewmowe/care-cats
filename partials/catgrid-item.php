@@ -7,7 +7,6 @@
 ?>
 
 <?php
-
 				if ( get_query_var('paged') ) {
 				    $paged = get_query_var('paged');
 				} else if ( get_query_var('page') ) {
@@ -16,29 +15,114 @@
 				    $paged = 1;
 				}
 
-				$args = array(
-						'post_type' => 'cats',
-						'orderby'			=> 'meta_value',
-						'order'				=> 'DESC',
-						'meta_key'		=> 'pet_id',
-						'paged' 			=> $paged,
-						'meta_query'	=> array(
-								array(
-									'key'			=> 'availability',
-									'value'		=> 'available',
-									'compare'	=> '='
-								)
-						),
-				);
+				if (isset($_POST["catsearch"]) && !empty($_POST["catsearch"])) {
 
 
-				if(is_page_template('page-templates/homepage.php')) {
+					// color
+					// sex
+					// age
+					// hair
+					// description
 
-					$args["posts_per_page"] = get_theme_mod("cat_num");
+					$meta_query_vars = array(
+							'relation' => 'AND',
+							array(
+								'key'			=> 'availability',
+								'value'		=> 'available',
+								'compare'	=> '='
+							)
+					);
 
-				}elseif(is_single()) {
-					$args["posts_per_page"] = 3;
+
+					if (isset($_POST["colorSelect"]) && !empty($_POST["colorSelect"])) {
+						
+						$meta_query_vars[] = array(
+							'key'			=> 'color',
+							'value'		=> $_POST["colorSelect"],
+							'compare'	=> '='
+						);
+					
+					}
+
+					if (isset($_POST["sexSelect"]) && !empty($_POST["sexSelect"])) {
+						
+						$meta_query_vars[] = array(
+							'key'			=> 'sex',
+							'value'		=> $_POST["sexSelect"],
+							'compare'	=> '='
+						);
+					
+					}
+
+					if (isset($_POST["hairSelect"]) && !empty($_POST["hairSelect"])) {
+						
+						$meta_query_vars[] = array(
+							'key'			=> 'hair',
+							'value'		=> $_POST["hairSelect"],
+							'compare'	=> '='
+						);
+					
+					}
+
+					if (isset($_POST["ageSelect"]) && !empty($_POST["ageSelect"])) {
+						
+						$meta_query_vars[] = array(
+							'key'			=> 'age',
+							'value'		=> $_POST["ageSelect"],
+							'compare'	=> '='
+						);
+					
+					}
+
+					// if (isset($_POST["inlineFormInput"]) && !empty($_POST["inlineFormInput"])) {
+						
+					// 	$meta_query_vars[] = array(
+					// 		'key'			=> 'description',
+					// 		'value'		=> '%'.$_POST["inlineFormInput"].'%',
+					// 		'compare'	=> 'LIKE'
+					// 	);
+					
+					// }
+
+					$args = array(
+							'post_type' 	=> 'cats',
+							'orderby'		=> 'meta_value',
+							'meta_key'		=> 'pet_id',
+							'order'			=> 'DESC',
+							'paged' 		=> $paged,
+							'meta_query'	=> $meta_query_vars,
+					);
+
+				}else{
+
+					$args = array(
+							'post_type' => 'cats',
+							'orderby'			=> 'meta_value',
+							'order'				=> 'DESC',
+							'meta_key'		=> 'pet_id',
+							'paged' 			=> $paged,
+							'meta_query'	=> array(
+									array(
+										'key'			=> 'availability',
+										'value'		=> 'available',
+										'compare'	=> '='
+									)
+							),
+					);
+
+
+					if(is_page_template('page-templates/homepage.php')) {
+
+						$args["posts_per_page"] = get_theme_mod("cat_num");
+
+					}elseif(is_single()) {
+						$args["posts_per_page"] = 3;
+					}
 				}
+					// echo "<pre>";
+					// var_dump($args);
+
+					// echo "</pre>";
 
 				$cats = new WP_Query( $args );
 

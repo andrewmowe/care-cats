@@ -12,12 +12,16 @@ get_header();
 
 	while ( have_posts() ) : the_post();
 
-		// $all_meta = get_post_meta( $post->ID, '', true );
+		$all_meta = get_post_meta( $post->ID, '', true );
 		// echo '<pre>';
 		// print_r($all_meta);
 		// echo '</pre>';
 
 		$cat_meta = get_post_meta( $post->ID, 'pet_data', true );
+
+		// echo '<pre>';
+		// print_r($cat_meta);
+		// echo '</pre>';
 
 		$featured_image = '<img src="' . $cat_meta->images[0]->original_url .'" alt="' . get_the_title() . '" >';
 		$image_class = 'imgwrap-4-6';
