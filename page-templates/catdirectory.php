@@ -43,6 +43,8 @@ $p_uri = get_page_uri($page_id);
 					    </select>
 
 					</div>
+				</div>
+				<div class="col-12 col-md-2 filtercontrols">
 
 					<div class="form-group">
 
@@ -106,6 +108,9 @@ $p_uri = get_page_uri($page_id);
 
 					</div>
 
+				</div>
+				<div class="col-12 col-md-2 filtercontrols">
+
 					<div class="form-group">
 
 						<label for="hairSelect">Hair Length</label>
@@ -120,17 +125,13 @@ $p_uri = get_page_uri($page_id);
 
 				</div>
 
-				<div class="col-12 col-md-6 pl-md-4 filtercontrols">
+				<div class="col-12 col-md-2 filtercontrols">
 
 					<div class="form-inline row mx-0">
 
-						<label class="sr-only" for="inlineFormInput">description</label>
-
-						<input type="text" class="form-control col-md-7 col-lg-8" id="inlineFormInput" name="inlineFormInput" placeholder="...enter description text">
-
 						<input type="hidden" name="catsearch" value="true">
 
-						<div class="col-md-5 col-lg-4"><button type="submit" class="btn btn-primary w-100">Search</button></div>
+						<button type="submit" class="btn btn-primary w-100">Search</button>
 
 					</div>
 

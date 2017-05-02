@@ -34,14 +34,6 @@
 
 }
 
-.dropdown-toggle {
-
-	> span, &:after {
-		display:none;
-	}
-
-}
-
 @include media-breakpoint-down(md) {
 
 	.navbar-nav > li {
@@ -80,13 +72,6 @@
 
 		a {
 			position: relative;
-		}
-
-		li:not(:first-child) a:before {
-			content: '\2022';
-			position: absolute;
-			left: -.4rem;
-			color: $brand-gray-dk;
 		}
 
 	}

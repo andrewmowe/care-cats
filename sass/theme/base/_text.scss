@@ -56,6 +56,9 @@ textarea {
 		background-color: $brand-gray-dk;
 	    border-color: $brand-gray-dk;
     }
+    &:focus{
+        color:white;
+    }
 }
 
 .btn-secondary {
@@ -69,6 +72,9 @@ textarea {
     	opacity:1;
     	background-color: $brand-gray-dk;
 	    border-color: $brand-gray-dk;
+    }
+    &:focus{
+        color:white;
     }
 
 }
@@ -84,6 +90,9 @@ textarea {
     	opacity:1;
     	background-color: $brand-primary;
 	    border-color: $brand-gray-dk;
+    }
+    &:focus{
+        color:white;
     }
 
 }
@@ -116,4 +125,9 @@ textarea {
 
 	}
 
+}
+
+.addtoany_share_save {
+    @extend .btn;
+    @extend .btn-gray;
 }

@@ -49,13 +49,14 @@ get_header();
 
 				<h1><?php the_title(); ?></h1>
 
-				<p class="mt-md-4">
+				<div class="mt-md-4 mb-3">
 
 					<a class="btn btn-secondary mr-md-4" href="#" role="button">Adopt Me</a>
 
-					<a class="btn btn-gray" href="#" role="button">SHARE</a>
+				<!-- 	<a class="btn btn-gray" href="#" role="button">SHARE</a> -->
+					<?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { ADDTOANY_SHARE_SAVE_KIT(); } ?>
 
-				</p>
+				</div>
 
 				<p><?php echo $cat_meta->description; ?></p>
 

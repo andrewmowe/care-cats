@@ -1703,7 +1703,8 @@ select.form-control:focus::-ms-value,
   .wpcf7 .input-group-sm > textarea.form-control-static, .wpcf7 .input-group-sm > .form-control-static.wpcf7-validation-errors,
   .input-group-sm > .form-control-static.input-group-addon,
   .input-group-sm > .input-group-btn > .form-control-static.btn, .wpcf7
-  .input-group-sm > .input-group-btn > input.form-control-static[type=submit], .load-more
+  .input-group-sm > .input-group-btn > input.form-control-static[type=submit],
+  .input-group-sm > .input-group-btn > .form-control-static.addtoany_share_save, .load-more
   .input-group-sm > .input-group-btn > a.form-control-static, .load-more
   .input-group-sm > .input-group-btn > span.form-control-static, .load-more-news
   .input-group-sm > .input-group-btn > a.form-control-static, .load-more-news
@@ -1727,7 +1728,8 @@ select.form-control:focus::-ms-value,
   .wpcf7 .input-group-lg > textarea.form-control-static, .wpcf7 .input-group-lg > .form-control-static.wpcf7-validation-errors,
   .input-group-lg > .form-control-static.input-group-addon,
   .input-group-lg > .input-group-btn > .form-control-static.btn, .wpcf7
-  .input-group-lg > .input-group-btn > input.form-control-static[type=submit], .load-more
+  .input-group-lg > .input-group-btn > input.form-control-static[type=submit],
+  .input-group-lg > .input-group-btn > .form-control-static.addtoany_share_save, .load-more
   .input-group-lg > .input-group-btn > a.form-control-static, .load-more
   .input-group-lg > .input-group-btn > span.form-control-static, .load-more-news
   .input-group-lg > .input-group-btn > a.form-control-static, .load-more-news
@@ -1755,7 +1757,8 @@ select.form-control:focus::-ms-value,
 .wpcf7 .input-group-sm > textarea, .wpcf7 .input-group-sm > .wpcf7-validation-errors,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn, .wpcf7
-.input-group-sm > .input-group-btn > input[type=submit], .load-more
+.input-group-sm > .input-group-btn > input[type=submit],
+.input-group-sm > .input-group-btn > .addtoany_share_save, .load-more
 .input-group-sm > .input-group-btn > a, .load-more
 .input-group-sm > .input-group-btn > span, .load-more-news
 .input-group-sm > .input-group-btn > a, .load-more-news
@@ -1767,7 +1770,8 @@ select.form-control:focus::-ms-value,
 select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]),
 .wpcf7 .input-group-sm > select:not([size]):not([multiple]),
 .input-group-sm > select.input-group-addon:not([size]):not([multiple]),
-.input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]) {
+.input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]),
+.input-group-sm > .input-group-btn > select.addtoany_share_save:not([size]):not([multiple]) {
   height: 1.8125rem; }
 
 .form-control-lg, .input-group-lg > .form-control, .wpcf7 .input-group-lg > input[type=text],
@@ -1790,7 +1794,8 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .wpcf7 .input-group-lg > textarea, .wpcf7 .input-group-lg > .wpcf7-validation-errors,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn, .wpcf7
-.input-group-lg > .input-group-btn > input[type=submit], .load-more
+.input-group-lg > .input-group-btn > input[type=submit],
+.input-group-lg > .input-group-btn > .addtoany_share_save, .load-more
 .input-group-lg > .input-group-btn > a, .load-more
 .input-group-lg > .input-group-btn > span, .load-more-news
 .input-group-lg > .input-group-btn > a, .load-more-news
@@ -1802,7 +1807,8 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]),
 .wpcf7 .input-group-lg > select:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
-.input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]) {
+.input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]),
+.input-group-lg > .input-group-btn > select.addtoany_share_save:not([size]):not([multiple]) {
   height: 3.16667rem; }
 
 .form-group, .wpcf7 .wpcf7-form p {
@@ -2096,7 +2102,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     .form-inline .has-feedback .form-control-feedback {
       top: 0; } }
 
-.btn, .wpcf7 input[type=submit], .load-more a, .load-more span, .load-more-news a, .load-more-news span {
+.btn, .wpcf7 input[type=submit], .addtoany_share_save, .load-more a, .load-more span, .load-more-news a, .load-more-news span {
   display: inline-block;
   font-weight: normal;
   line-height: 1.25;
@@ -2109,19 +2115,20 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   font-size: 1rem;
   border-radius: 0.25rem;
   transition: all 0.2s ease-in-out; }
-  .btn:focus, .wpcf7 input[type=submit]:focus, .load-more a:focus, .load-more span:focus, .load-more-news a:focus, .load-more-news span:focus, .btn:hover, .wpcf7 input[type=submit]:hover, .load-more a:hover, .load-more span:hover, .load-more-news a:hover, .load-more-news span:hover {
+  .btn:focus, .wpcf7 input[type=submit]:focus, .addtoany_share_save:focus, .load-more a:focus, .load-more span:focus, .load-more-news a:focus, .load-more-news span:focus, .btn:hover, .wpcf7 input[type=submit]:hover, .addtoany_share_save:hover, .load-more a:hover, .load-more span:hover, .load-more-news a:hover, .load-more-news span:hover {
     text-decoration: none; }
-  .btn:focus, .wpcf7 input[type=submit]:focus, .load-more a:focus, .load-more span:focus, .load-more-news a:focus, .load-more-news span:focus, .btn.focus, .wpcf7 input.focus[type=submit], .load-more a.focus, .load-more span.focus, .load-more-news a.focus, .load-more-news span.focus {
+  .btn:focus, .wpcf7 input[type=submit]:focus, .addtoany_share_save:focus, .load-more a:focus, .load-more span:focus, .load-more-news a:focus, .load-more-news span:focus, .btn.focus, .wpcf7 input.focus[type=submit], .focus.addtoany_share_save, .load-more a.focus, .load-more span.focus, .load-more-news a.focus, .load-more-news span.focus {
     outline: 0;
     box-shadow: 0 0 0 2px rgba(43, 183, 174, 0.25); }
-  .btn.disabled, .wpcf7 input.disabled[type=submit], .load-more a.disabled, .load-more span.disabled, .load-more-news a.disabled, .load-more-news span.disabled, .btn:disabled, .wpcf7 input[type=submit]:disabled, .load-more a:disabled, .load-more span:disabled, .load-more-news a:disabled, .load-more-news span:disabled {
+  .btn.disabled, .wpcf7 input.disabled[type=submit], .disabled.addtoany_share_save, .load-more a.disabled, .load-more span.disabled, .load-more-news a.disabled, .load-more-news span.disabled, .btn:disabled, .wpcf7 input[type=submit]:disabled, .addtoany_share_save:disabled, .load-more a:disabled, .load-more span:disabled, .load-more-news a:disabled, .load-more-news span:disabled {
     cursor: not-allowed;
     opacity: .65; }
-  .btn:active, .wpcf7 input[type=submit]:active, .load-more a:active, .load-more span:active, .load-more-news a:active, .load-more-news span:active, .btn.active, .wpcf7 input.active[type=submit], .load-more a.active, .load-more span.active, .load-more-news a.active, .load-more-news span.active {
+  .btn:active, .wpcf7 input[type=submit]:active, .addtoany_share_save:active, .load-more a:active, .load-more span:active, .load-more-news a:active, .load-more-news span:active, .btn.active, .wpcf7 input.active[type=submit], .active.addtoany_share_save, .load-more a.active, .load-more span.active, .load-more-news a.active, .load-more-news span.active {
     background-image: none; }
 
-a.btn.disabled, .load-more a.disabled, .load-more-news a.disabled,
+a.btn.disabled, a.disabled.addtoany_share_save, .load-more a.disabled, .load-more-news a.disabled,
 fieldset[disabled] a.btn,
+fieldset[disabled] a.addtoany_share_save,
 fieldset[disabled] .load-more a, .load-more
 fieldset[disabled] a,
 fieldset[disabled] .load-more-news a, .load-more-news
@@ -2392,12 +2399,12 @@ fieldset[disabled] a {
     .btn-link:disabled:focus, .btn-link:disabled:hover {
       text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit], .load-more .btn-group-lg > a, .load-more .btn-group-lg > span, .load-more-news .btn-group-lg > a, .load-more-news .btn-group-lg > span {
+.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit], .btn-group-lg > .addtoany_share_save, .load-more .btn-group-lg > a, .load-more .btn-group-lg > span, .load-more-news .btn-group-lg > a, .load-more-news .btn-group-lg > span {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit], .load-more .btn-group-sm > a, .load-more .btn-group-sm > span, .load-more-news .btn-group-sm > a, .load-more-news .btn-group-sm > span {
+.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit], .btn-group-sm > .addtoany_share_save, .load-more .btn-group-sm > a, .load-more .btn-group-sm > span, .load-more-news .btn-group-sm > a, .load-more-news .btn-group-sm > span {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
@@ -2548,47 +2555,53 @@ tbody.collapse.show {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .wpcf7 .btn-group > input[type=submit], .load-more .btn-group > a, .load-more .btn-group > span, .load-more-news .btn-group > a, .load-more-news .btn-group > span,
+  .btn-group > .btn, .wpcf7 .btn-group > input[type=submit], .btn-group > .addtoany_share_save, .load-more .btn-group > a, .load-more .btn-group > span, .load-more-news .btn-group > a, .load-more-news .btn-group > span,
   .btn-group-vertical > .btn, .wpcf7
-  .btn-group-vertical > input[type=submit], .load-more
+  .btn-group-vertical > input[type=submit],
+  .btn-group-vertical > .addtoany_share_save, .load-more
   .btn-group-vertical > a, .load-more
   .btn-group-vertical > span, .load-more-news
   .btn-group-vertical > a, .load-more-news
   .btn-group-vertical > span {
     position: relative;
     flex: 0 1 auto; }
-    .btn-group > .btn:hover, .wpcf7 .btn-group > input[type=submit]:hover, .load-more .btn-group > a:hover, .load-more .btn-group > span:hover, .load-more-news .btn-group > a:hover, .load-more-news .btn-group > span:hover,
+    .btn-group > .btn:hover, .wpcf7 .btn-group > input[type=submit]:hover, .btn-group > .addtoany_share_save:hover, .load-more .btn-group > a:hover, .load-more .btn-group > span:hover, .load-more-news .btn-group > a:hover, .load-more-news .btn-group > span:hover,
     .btn-group-vertical > .btn:hover, .wpcf7
-    .btn-group-vertical > input[type=submit]:hover, .load-more
+    .btn-group-vertical > input[type=submit]:hover,
+    .btn-group-vertical > .addtoany_share_save:hover, .load-more
     .btn-group-vertical > a:hover, .load-more
     .btn-group-vertical > span:hover, .load-more-news
     .btn-group-vertical > a:hover, .load-more-news
     .btn-group-vertical > span:hover {
       z-index: 2; }
-    .btn-group > .btn:focus, .wpcf7 .btn-group > input[type=submit]:focus, .load-more .btn-group > a:focus, .load-more .btn-group > span:focus, .load-more-news .btn-group > a:focus, .load-more-news .btn-group > span:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input[type=submit]:active, .load-more .btn-group > a:active, .load-more .btn-group > span:active, .load-more-news .btn-group > a:active, .load-more-news .btn-group > span:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit], .load-more .btn-group > a.active, .load-more .btn-group > span.active, .load-more-news .btn-group > a.active, .load-more-news .btn-group > span.active,
+    .btn-group > .btn:focus, .wpcf7 .btn-group > input[type=submit]:focus, .btn-group > .addtoany_share_save:focus, .load-more .btn-group > a:focus, .load-more .btn-group > span:focus, .load-more-news .btn-group > a:focus, .load-more-news .btn-group > span:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input[type=submit]:active, .btn-group > .addtoany_share_save:active, .load-more .btn-group > a:active, .load-more .btn-group > span:active, .load-more-news .btn-group > a:active, .load-more-news .btn-group > span:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit], .btn-group > .active.addtoany_share_save, .load-more .btn-group > a.active, .load-more .btn-group > span.active, .load-more-news .btn-group > a.active, .load-more-news .btn-group > span.active,
     .btn-group-vertical > .btn:focus, .wpcf7
-    .btn-group-vertical > input[type=submit]:focus, .load-more
+    .btn-group-vertical > input[type=submit]:focus,
+    .btn-group-vertical > .addtoany_share_save:focus, .load-more
     .btn-group-vertical > a:focus, .load-more
     .btn-group-vertical > span:focus, .load-more-news
     .btn-group-vertical > a:focus, .load-more-news
     .btn-group-vertical > span:focus,
     .btn-group-vertical > .btn:active, .wpcf7
-    .btn-group-vertical > input[type=submit]:active, .load-more
+    .btn-group-vertical > input[type=submit]:active,
+    .btn-group-vertical > .addtoany_share_save:active, .load-more
     .btn-group-vertical > a:active, .load-more
     .btn-group-vertical > span:active, .load-more-news
     .btn-group-vertical > a:active, .load-more-news
     .btn-group-vertical > span:active,
     .btn-group-vertical > .btn.active, .wpcf7
-    .btn-group-vertical > input.active[type=submit], .load-more
+    .btn-group-vertical > input.active[type=submit],
+    .btn-group-vertical > .active.addtoany_share_save, .load-more
     .btn-group-vertical > a.active, .load-more
     .btn-group-vertical > span.active, .load-more-news
     .btn-group-vertical > a.active, .load-more-news
     .btn-group-vertical > span.active {
       z-index: 2; }
-  .btn-group .btn + .btn, .btn-group .wpcf7 input[type=submit] + .btn, .wpcf7 .btn-group input[type=submit] + .btn, .btn-group .load-more a + .btn, .load-more .btn-group a + .btn, .btn-group .load-more span + .btn, .load-more .btn-group span + .btn, .btn-group .load-more-news a + .btn, .load-more-news .btn-group a + .btn, .btn-group .load-more-news span + .btn, .load-more-news .btn-group span + .btn, .btn-group .wpcf7 .btn + input[type=submit], .wpcf7 .btn-group .btn + input[type=submit], .btn-group .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .btn-group input[type=submit] + input[type=submit], .btn-group .load-more .wpcf7 a + input[type=submit], .wpcf7 .btn-group .load-more a + input[type=submit], .load-more .btn-group .wpcf7 a + input[type=submit], .wpcf7 .load-more .btn-group a + input[type=submit], .btn-group .load-more .wpcf7 span + input[type=submit], .wpcf7 .btn-group .load-more span + input[type=submit], .load-more .btn-group .wpcf7 span + input[type=submit], .wpcf7 .load-more .btn-group span + input[type=submit], .btn-group .load-more-news .wpcf7 a + input[type=submit], .wpcf7 .btn-group .load-more-news a + input[type=submit], .load-more-news .btn-group .wpcf7 a + input[type=submit], .wpcf7 .load-more-news .btn-group a + input[type=submit], .btn-group .load-more-news .wpcf7 span + input[type=submit], .wpcf7 .btn-group .load-more-news span + input[type=submit], .load-more-news .btn-group .wpcf7 span + input[type=submit], .wpcf7 .load-more-news .btn-group span + input[type=submit], .btn-group .load-more .btn + a, .load-more .btn-group .btn + a, .btn-group .wpcf7 .load-more input[type=submit] + a, .load-more .btn-group .wpcf7 input[type=submit] + a, .wpcf7 .btn-group .load-more input[type=submit] + a, .load-more .wpcf7 .btn-group input[type=submit] + a, .btn-group .load-more a + a, .load-more .btn-group a + a, .btn-group .load-more span + a, .load-more .btn-group span + a, .btn-group .load-more-news .load-more a + a, .load-more .load-more-news .btn-group a + a, .btn-group .load-more-news .load-more span + a, .load-more .load-more-news .btn-group span + a, .btn-group .load-more .btn + span, .load-more .btn-group .btn + span, .btn-group .wpcf7 .load-more input[type=submit] + span, .load-more .btn-group .wpcf7 input[type=submit] + span, .wpcf7 .btn-group .load-more input[type=submit] + span, .load-more .wpcf7 .btn-group input[type=submit] + span, .btn-group .load-more a + span, .load-more .btn-group a + span, .btn-group .load-more span + span, .load-more .btn-group span + span, .btn-group .load-more-news .load-more a + span, .load-more .load-more-news .btn-group a + span, .btn-group .load-more-news .load-more span + span, .load-more .load-more-news .btn-group span + span, .btn-group .load-more-news .btn + a, .load-more-news .btn-group .btn + a, .btn-group .wpcf7 .load-more-news input[type=submit] + a, .load-more-news .btn-group .wpcf7 input[type=submit] + a, .wpcf7 .btn-group .load-more-news input[type=submit] + a, .load-more-news .wpcf7 .btn-group input[type=submit] + a, .btn-group .load-more .load-more-news a + a, .load-more-news .btn-group .load-more a + a, .load-more .btn-group .load-more-news a + a, .load-more-news .load-more .btn-group a + a, .btn-group .load-more .load-more-news span + a, .load-more-news .btn-group .load-more span + a, .load-more .btn-group .load-more-news span + a, .load-more-news .load-more .btn-group span + a, .btn-group .load-more-news a + a, .load-more-news .btn-group a + a, .btn-group .load-more-news span + a, .load-more-news .btn-group span + a, .btn-group .load-more-news .btn + span, .load-more-news .btn-group .btn + span, .btn-group .wpcf7 .load-more-news input[type=submit] + span, .load-more-news .btn-group .wpcf7 input[type=submit] + span, .wpcf7 .btn-group .load-more-news input[type=submit] + span, .load-more-news .wpcf7 .btn-group input[type=submit] + span, .btn-group .load-more .load-more-news a + span, .load-more-news .btn-group .load-more a + span, .load-more .btn-group .load-more-news a + span, .load-more-news .load-more .btn-group a + span, .btn-group .load-more .load-more-news span + span, .load-more-news .btn-group .load-more span + span, .load-more .btn-group .load-more-news span + span, .load-more-news .load-more .btn-group span + span, .btn-group .load-more-news a + span, .load-more-news .btn-group a + span, .btn-group .load-more-news span + span, .load-more-news .btn-group span + span,
+  .btn-group .btn + .btn, .btn-group .wpcf7 input[type=submit] + .btn, .wpcf7 .btn-group input[type=submit] + .btn, .btn-group .addtoany_share_save + .btn, .btn-group .load-more a + .btn, .load-more .btn-group a + .btn, .btn-group .load-more span + .btn, .load-more .btn-group span + .btn, .btn-group .load-more-news a + .btn, .load-more-news .btn-group a + .btn, .btn-group .load-more-news span + .btn, .load-more-news .btn-group span + .btn, .btn-group .wpcf7 .btn + input[type=submit], .wpcf7 .btn-group .btn + input[type=submit], .btn-group .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .btn-group input[type=submit] + input[type=submit], .btn-group .wpcf7 .addtoany_share_save + input[type=submit], .wpcf7 .btn-group .addtoany_share_save + input[type=submit], .btn-group .load-more .wpcf7 a + input[type=submit], .wpcf7 .btn-group .load-more a + input[type=submit], .load-more .btn-group .wpcf7 a + input[type=submit], .wpcf7 .load-more .btn-group a + input[type=submit], .btn-group .load-more .wpcf7 span + input[type=submit], .wpcf7 .btn-group .load-more span + input[type=submit], .load-more .btn-group .wpcf7 span + input[type=submit], .wpcf7 .load-more .btn-group span + input[type=submit], .btn-group .load-more-news .wpcf7 a + input[type=submit], .wpcf7 .btn-group .load-more-news a + input[type=submit], .load-more-news .btn-group .wpcf7 a + input[type=submit], .wpcf7 .load-more-news .btn-group a + input[type=submit], .btn-group .load-more-news .wpcf7 span + input[type=submit], .wpcf7 .btn-group .load-more-news span + input[type=submit], .load-more-news .btn-group .wpcf7 span + input[type=submit], .wpcf7 .load-more-news .btn-group span + input[type=submit], .btn-group .btn + .addtoany_share_save, .btn-group .wpcf7 input[type=submit] + .addtoany_share_save, .wpcf7 .btn-group input[type=submit] + .addtoany_share_save, .btn-group .addtoany_share_save + .addtoany_share_save, .btn-group .load-more a + .addtoany_share_save, .load-more .btn-group a + .addtoany_share_save, .btn-group .load-more span + .addtoany_share_save, .load-more .btn-group span + .addtoany_share_save, .btn-group .load-more-news a + .addtoany_share_save, .load-more-news .btn-group a + .addtoany_share_save, .btn-group .load-more-news span + .addtoany_share_save, .load-more-news .btn-group span + .addtoany_share_save, .btn-group .load-more .btn + a, .load-more .btn-group .btn + a, .btn-group .wpcf7 .load-more input[type=submit] + a, .load-more .btn-group .wpcf7 input[type=submit] + a, .wpcf7 .btn-group .load-more input[type=submit] + a, .load-more .wpcf7 .btn-group input[type=submit] + a, .btn-group .load-more .addtoany_share_save + a, .load-more .btn-group .addtoany_share_save + a, .btn-group .load-more a + a, .load-more .btn-group a + a, .btn-group .load-more span + a, .load-more .btn-group span + a, .btn-group .load-more-news .load-more a + a, .load-more .load-more-news .btn-group a + a, .btn-group .load-more-news .load-more span + a, .load-more .load-more-news .btn-group span + a, .btn-group .load-more .btn + span, .load-more .btn-group .btn + span, .btn-group .wpcf7 .load-more input[type=submit] + span, .load-more .btn-group .wpcf7 input[type=submit] + span, .wpcf7 .btn-group .load-more input[type=submit] + span, .load-more .wpcf7 .btn-group input[type=submit] + span, .btn-group .load-more .addtoany_share_save + span, .load-more .btn-group .addtoany_share_save + span, .btn-group .load-more a + span, .load-more .btn-group a + span, .btn-group .load-more span + span, .load-more .btn-group span + span, .btn-group .load-more-news .load-more a + span, .load-more .load-more-news .btn-group a + span, .btn-group .load-more-news .load-more span + span, .load-more .load-more-news .btn-group span + span, .btn-group .load-more-news .btn + a, .load-more-news .btn-group .btn + a, .btn-group .wpcf7 .load-more-news input[type=submit] + a, .load-more-news .btn-group .wpcf7 input[type=submit] + a, .wpcf7 .btn-group .load-more-news input[type=submit] + a, .load-more-news .wpcf7 .btn-group input[type=submit] + a, .btn-group .load-more-news .addtoany_share_save + a, .load-more-news .btn-group .addtoany_share_save + a, .btn-group .load-more .load-more-news a + a, .load-more-news .btn-group .load-more a + a, .load-more .btn-group .load-more-news a + a, .load-more-news .load-more .btn-group a + a, .btn-group .load-more .load-more-news span + a, .load-more-news .btn-group .load-more span + a, .load-more .btn-group .load-more-news span + a, .load-more-news .load-more .btn-group span + a, .btn-group .load-more-news a + a, .load-more-news .btn-group a + a, .btn-group .load-more-news span + a, .load-more-news .btn-group span + a, .btn-group .load-more-news .btn + span, .load-more-news .btn-group .btn + span, .btn-group .wpcf7 .load-more-news input[type=submit] + span, .load-more-news .btn-group .wpcf7 input[type=submit] + span, .wpcf7 .btn-group .load-more-news input[type=submit] + span, .load-more-news .wpcf7 .btn-group input[type=submit] + span, .btn-group .load-more-news .addtoany_share_save + span, .load-more-news .btn-group .addtoany_share_save + span, .btn-group .load-more .load-more-news a + span, .load-more-news .btn-group .load-more a + span, .load-more .btn-group .load-more-news a + span, .load-more-news .load-more .btn-group a + span, .btn-group .load-more .load-more-news span + span, .load-more-news .btn-group .load-more span + span, .load-more .btn-group .load-more-news span + span, .load-more-news .load-more .btn-group span + span, .btn-group .load-more-news a + span, .load-more-news .btn-group a + span, .btn-group .load-more-news span + span, .load-more-news .btn-group span + span,
   .btn-group .btn + .btn-group,
   .btn-group .wpcf7 input[type=submit] + .btn-group, .wpcf7
   .btn-group input[type=submit] + .btn-group,
+  .btn-group .addtoany_share_save + .btn-group,
   .btn-group .load-more a + .btn-group, .load-more
   .btn-group a + .btn-group,
   .btn-group .load-more span + .btn-group, .load-more
@@ -2600,6 +2613,7 @@ tbody.collapse.show {
   .btn-group .btn-group + .btn,
   .btn-group .wpcf7 .btn-group + input[type=submit], .wpcf7
   .btn-group .btn-group + input[type=submit],
+  .btn-group .btn-group + .addtoany_share_save,
   .btn-group .load-more .btn-group + a, .load-more
   .btn-group .btn-group + a,
   .btn-group .load-more .btn-group + span, .load-more
@@ -2612,6 +2626,7 @@ tbody.collapse.show {
   .btn-group-vertical .btn + .btn,
   .btn-group-vertical .wpcf7 input[type=submit] + .btn, .wpcf7
   .btn-group-vertical input[type=submit] + .btn,
+  .btn-group-vertical .addtoany_share_save + .btn,
   .btn-group-vertical .load-more a + .btn, .load-more
   .btn-group-vertical a + .btn,
   .btn-group-vertical .load-more span + .btn, .load-more
@@ -2624,6 +2639,8 @@ tbody.collapse.show {
   .btn-group-vertical .btn + input[type=submit],
   .btn-group-vertical .wpcf7 input[type=submit] + input[type=submit], .wpcf7
   .btn-group-vertical input[type=submit] + input[type=submit],
+  .btn-group-vertical .wpcf7 .addtoany_share_save + input[type=submit], .wpcf7
+  .btn-group-vertical .addtoany_share_save + input[type=submit],
   .btn-group-vertical .load-more .wpcf7 a + input[type=submit], .wpcf7
   .btn-group-vertical .load-more a + input[type=submit], .load-more
   .btn-group-vertical .wpcf7 a + input[type=submit], .wpcf7 .load-more
@@ -2640,12 +2657,26 @@ tbody.collapse.show {
   .btn-group-vertical .load-more-news span + input[type=submit], .load-more-news
   .btn-group-vertical .wpcf7 span + input[type=submit], .wpcf7 .load-more-news
   .btn-group-vertical span + input[type=submit],
+  .btn-group-vertical .btn + .addtoany_share_save,
+  .btn-group-vertical .wpcf7 input[type=submit] + .addtoany_share_save, .wpcf7
+  .btn-group-vertical input[type=submit] + .addtoany_share_save,
+  .btn-group-vertical .addtoany_share_save + .addtoany_share_save,
+  .btn-group-vertical .load-more a + .addtoany_share_save, .load-more
+  .btn-group-vertical a + .addtoany_share_save,
+  .btn-group-vertical .load-more span + .addtoany_share_save, .load-more
+  .btn-group-vertical span + .addtoany_share_save,
+  .btn-group-vertical .load-more-news a + .addtoany_share_save, .load-more-news
+  .btn-group-vertical a + .addtoany_share_save,
+  .btn-group-vertical .load-more-news span + .addtoany_share_save, .load-more-news
+  .btn-group-vertical span + .addtoany_share_save,
   .btn-group-vertical .load-more .btn + a, .load-more
   .btn-group-vertical .btn + a,
   .btn-group-vertical .wpcf7 .load-more input[type=submit] + a, .load-more
   .btn-group-vertical .wpcf7 input[type=submit] + a, .wpcf7
   .btn-group-vertical .load-more input[type=submit] + a, .load-more .wpcf7
   .btn-group-vertical input[type=submit] + a,
+  .btn-group-vertical .load-more .addtoany_share_save + a, .load-more
+  .btn-group-vertical .addtoany_share_save + a,
   .btn-group-vertical .load-more a + a, .load-more
   .btn-group-vertical a + a,
   .btn-group-vertical .load-more span + a, .load-more
@@ -2660,6 +2691,8 @@ tbody.collapse.show {
   .btn-group-vertical .wpcf7 input[type=submit] + span, .wpcf7
   .btn-group-vertical .load-more input[type=submit] + span, .load-more .wpcf7
   .btn-group-vertical input[type=submit] + span,
+  .btn-group-vertical .load-more .addtoany_share_save + span, .load-more
+  .btn-group-vertical .addtoany_share_save + span,
   .btn-group-vertical .load-more a + span, .load-more
   .btn-group-vertical a + span,
   .btn-group-vertical .load-more span + span, .load-more
@@ -2674,6 +2707,8 @@ tbody.collapse.show {
   .btn-group-vertical .wpcf7 input[type=submit] + a, .wpcf7
   .btn-group-vertical .load-more-news input[type=submit] + a, .load-more-news .wpcf7
   .btn-group-vertical input[type=submit] + a,
+  .btn-group-vertical .load-more-news .addtoany_share_save + a, .load-more-news
+  .btn-group-vertical .addtoany_share_save + a,
   .btn-group-vertical .load-more .load-more-news a + a, .load-more-news
   .btn-group-vertical .load-more a + a, .load-more
   .btn-group-vertical .load-more-news a + a, .load-more-news .load-more
@@ -2692,6 +2727,8 @@ tbody.collapse.show {
   .btn-group-vertical .wpcf7 input[type=submit] + span, .wpcf7
   .btn-group-vertical .load-more-news input[type=submit] + span, .load-more-news .wpcf7
   .btn-group-vertical input[type=submit] + span,
+  .btn-group-vertical .load-more-news .addtoany_share_save + span, .load-more-news
+  .btn-group-vertical .addtoany_share_save + span,
   .btn-group-vertical .load-more .load-more-news a + span, .load-more-news
   .btn-group-vertical .load-more a + span, .load-more
   .btn-group-vertical .load-more-news a + span, .load-more-news .load-more
@@ -2707,6 +2744,7 @@ tbody.collapse.show {
   .btn-group-vertical .btn + .btn-group,
   .btn-group-vertical .wpcf7 input[type=submit] + .btn-group, .wpcf7
   .btn-group-vertical input[type=submit] + .btn-group,
+  .btn-group-vertical .addtoany_share_save + .btn-group,
   .btn-group-vertical .load-more a + .btn-group, .load-more
   .btn-group-vertical a + .btn-group,
   .btn-group-vertical .load-more span + .btn-group, .load-more
@@ -2718,6 +2756,7 @@ tbody.collapse.show {
   .btn-group-vertical .btn-group + .btn,
   .btn-group-vertical .wpcf7 .btn-group + input[type=submit], .wpcf7
   .btn-group-vertical .btn-group + input[type=submit],
+  .btn-group-vertical .btn-group + .addtoany_share_save,
   .btn-group-vertical .load-more .btn-group + a, .load-more
   .btn-group-vertical .btn-group + a,
   .btn-group-vertical .load-more .btn-group + span, .load-more
@@ -2735,16 +2774,16 @@ tbody.collapse.show {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:first-child):not(:last-child):not(.dropdown-toggle), .load-more .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), .load-more .btn-group > span:not(:first-child):not(:last-child):not(.dropdown-toggle), .load-more-news .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), .load-more-news .btn-group > span:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .addtoany_share_save:not(:first-child):not(:last-child):not(.dropdown-toggle), .load-more .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), .load-more .btn-group > span:not(:first-child):not(:last-child):not(.dropdown-toggle), .load-more-news .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), .load-more-news .btn-group > span:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, .wpcf7 .btn-group > input[type=submit]:first-child, .load-more .btn-group > a:first-child, .load-more .btn-group > span:first-child, .load-more-news .btn-group > a:first-child, .load-more-news .btn-group > span:first-child {
+.btn-group > .btn:first-child, .wpcf7 .btn-group > input[type=submit]:first-child, .btn-group > .addtoany_share_save:first-child, .load-more .btn-group > a:first-child, .load-more .btn-group > span:first-child, .load-more-news .btn-group > a:first-child, .load-more-news .btn-group > span:first-child {
   margin-left: 0; }
-  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:first-child:not(:last-child):not(.dropdown-toggle), .load-more .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), .load-more .btn-group > span:first-child:not(:last-child):not(.dropdown-toggle), .load-more-news .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), .load-more-news .btn-group > span:first-child:not(:last-child):not(.dropdown-toggle) {
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .addtoany_share_save:first-child:not(:last-child):not(.dropdown-toggle), .load-more .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), .load-more .btn-group > span:first-child:not(:last-child):not(.dropdown-toggle), .load-more-news .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), .load-more-news .btn-group > span:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), .wpcf7 .btn-group > input[type=submit]:last-child:not(:first-child), .load-more .btn-group > a:last-child:not(:first-child), .load-more .btn-group > span:last-child:not(:first-child), .load-more-news .btn-group > a:last-child:not(:first-child), .load-more-news .btn-group > span:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .wpcf7 .btn-group > input[type=submit]:last-child:not(:first-child), .btn-group > .addtoany_share_save:last-child:not(:first-child), .load-more .btn-group > a:last-child:not(:first-child), .load-more .btn-group > span:last-child:not(:first-child), .load-more-news .btn-group > a:last-child:not(:first-child), .load-more-news .btn-group > span:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -2752,15 +2791,15 @@ tbody.collapse.show {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type=submit], .load-more .btn-group > .btn-group:not(:first-child):not(:last-child) > a, .load-more .btn-group > .btn-group:not(:first-child):not(:last-child) > span, .load-more-news .btn-group > .btn-group:not(:first-child):not(:last-child) > a, .load-more-news .btn-group > .btn-group:not(:first-child):not(:last-child) > span {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type=submit], .btn-group > .btn-group:not(:first-child):not(:last-child) > .addtoany_share_save, .load-more .btn-group > .btn-group:not(:first-child):not(:last-child) > a, .load-more .btn-group > .btn-group:not(:first-child):not(:last-child) > span, .load-more-news .btn-group > .btn-group:not(:first-child):not(:last-child) > a, .load-more-news .btn-group > .btn-group:not(:first-child):not(:last-child) > span {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child, .load-more .btn-group > .btn-group:first-child:not(:last-child) > a:last-child, .load-more .btn-group > .btn-group:first-child:not(:last-child) > span:last-child, .load-more-news .btn-group > .btn-group:first-child:not(:last-child) > a:last-child, .load-more-news .btn-group > .btn-group:first-child:not(:last-child) > span:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .addtoany_share_save:last-child, .load-more .btn-group > .btn-group:first-child:not(:last-child) > a:last-child, .load-more .btn-group > .btn-group:first-child:not(:last-child) > span:last-child, .load-more-news .btn-group > .btn-group:first-child:not(:last-child) > a:last-child, .load-more-news .btn-group > .btn-group:first-child:not(:last-child) > span:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child, .load-more .btn-group > .btn-group:last-child:not(:first-child) > a:first-child, .load-more .btn-group > .btn-group:last-child:not(:first-child) > span:first-child, .load-more-news .btn-group > .btn-group:last-child:not(:first-child) > a:first-child, .load-more-news .btn-group > .btn-group:last-child:not(:first-child) > span:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .addtoany_share_save:first-child, .load-more .btn-group > .btn-group:last-child:not(:first-child) > a:first-child, .load-more .btn-group > .btn-group:last-child:not(:first-child) > span:first-child, .load-more-news .btn-group > .btn-group:last-child:not(:first-child) > a:first-child, .load-more-news .btn-group > .btn-group:last-child:not(:first-child) > span:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -2768,17 +2807,17 @@ tbody.collapse.show {
 .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn + .dropdown-toggle-split, .wpcf7 input[type=submit] + .dropdown-toggle-split, .load-more a + .dropdown-toggle-split, .load-more span + .dropdown-toggle-split, .load-more-news a + .dropdown-toggle-split, .load-more-news span + .dropdown-toggle-split {
+.btn + .dropdown-toggle-split, .wpcf7 input[type=submit] + .dropdown-toggle-split, .addtoany_share_save + .dropdown-toggle-split, .load-more a + .dropdown-toggle-split, .load-more span + .dropdown-toggle-split, .load-more-news a + .dropdown-toggle-split, .load-more-news span + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
-  .btn + .dropdown-toggle-split::after, .wpcf7 input[type=submit] + .dropdown-toggle-split::after, .load-more a + .dropdown-toggle-split::after, .load-more span + .dropdown-toggle-split::after, .load-more-news a + .dropdown-toggle-split::after, .load-more-news span + .dropdown-toggle-split::after {
+  .btn + .dropdown-toggle-split::after, .wpcf7 input[type=submit] + .dropdown-toggle-split::after, .addtoany_share_save + .dropdown-toggle-split::after, .load-more a + .dropdown-toggle-split::after, .load-more span + .dropdown-toggle-split::after, .load-more-news a + .dropdown-toggle-split::after, .load-more-news span + .dropdown-toggle-split::after {
     margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split, .load-more .btn-group-sm > a + .dropdown-toggle-split, .load-more .btn-group-sm > span + .dropdown-toggle-split, .load-more-news .btn-group-sm > a + .dropdown-toggle-split, .load-more-news .btn-group-sm > span + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split, .btn-group-sm > .addtoany_share_save + .dropdown-toggle-split, .load-more .btn-group-sm > a + .dropdown-toggle-split, .load-more .btn-group-sm > span + .dropdown-toggle-split, .load-more-news .btn-group-sm > a + .dropdown-toggle-split, .load-more-news .btn-group-sm > span + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split, .load-more .btn-group-lg > a + .dropdown-toggle-split, .load-more .btn-group-lg > span + .dropdown-toggle-split, .load-more-news .btn-group-lg > a + .dropdown-toggle-split, .load-more-news .btn-group-lg > span + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split, .btn-group-lg > .addtoany_share_save + .dropdown-toggle-split, .load-more .btn-group-lg > a + .dropdown-toggle-split, .load-more .btn-group-lg > span + .dropdown-toggle-split, .load-more-news .btn-group-lg > a + .dropdown-toggle-split, .load-more-news .btn-group-lg > span + .dropdown-toggle-split {
   padding-right: 1.125rem;
   padding-left: 1.125rem; }
 
@@ -2787,18 +2826,20 @@ tbody.collapse.show {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical .btn, .btn-group-vertical .wpcf7 input[type=submit], .wpcf7 .btn-group-vertical input[type=submit], .btn-group-vertical .load-more a, .load-more .btn-group-vertical a, .btn-group-vertical .load-more span, .load-more .btn-group-vertical span, .btn-group-vertical .load-more-news a, .load-more-news .btn-group-vertical a, .btn-group-vertical .load-more-news span, .load-more-news .btn-group-vertical span,
+  .btn-group-vertical .btn, .btn-group-vertical .wpcf7 input[type=submit], .wpcf7 .btn-group-vertical input[type=submit], .btn-group-vertical .addtoany_share_save, .btn-group-vertical .load-more a, .load-more .btn-group-vertical a, .btn-group-vertical .load-more span, .load-more .btn-group-vertical span, .btn-group-vertical .load-more-news a, .load-more-news .btn-group-vertical a, .btn-group-vertical .load-more-news span, .load-more-news .btn-group-vertical span,
   .btn-group-vertical .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn + .btn, .wpcf7 .btn-group-vertical > input[type=submit] + .btn, .load-more .btn-group-vertical > a + .btn, .load-more .btn-group-vertical > span + .btn, .load-more-news .btn-group-vertical > a + .btn, .load-more-news .btn-group-vertical > span + .btn, .wpcf7 .btn-group-vertical > .btn + input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] + input[type=submit], .load-more .wpcf7 .btn-group-vertical > a + input[type=submit], .wpcf7 .load-more .btn-group-vertical > a + input[type=submit], .load-more .wpcf7 .btn-group-vertical > span + input[type=submit], .wpcf7 .load-more .btn-group-vertical > span + input[type=submit], .load-more-news .wpcf7 .btn-group-vertical > a + input[type=submit], .wpcf7 .load-more-news .btn-group-vertical > a + input[type=submit], .load-more-news .wpcf7 .btn-group-vertical > span + input[type=submit], .wpcf7 .load-more-news .btn-group-vertical > span + input[type=submit], .load-more .btn-group-vertical > .btn + a, .wpcf7 .load-more .btn-group-vertical > input[type=submit] + a, .load-more .wpcf7 .btn-group-vertical > input[type=submit] + a, .load-more .btn-group-vertical > a + a, .load-more .btn-group-vertical > span + a, .load-more .btn-group-vertical > .btn + span, .wpcf7 .load-more .btn-group-vertical > input[type=submit] + span, .load-more .wpcf7 .btn-group-vertical > input[type=submit] + span, .load-more .btn-group-vertical > a + span, .load-more .btn-group-vertical > span + span, .load-more-news .btn-group-vertical > .btn + a, .wpcf7 .load-more-news .btn-group-vertical > input[type=submit] + a, .load-more-news .wpcf7 .btn-group-vertical > input[type=submit] + a, .load-more .load-more-news .btn-group-vertical > a + a, .load-more-news .load-more .btn-group-vertical > a + a, .load-more .load-more-news .btn-group-vertical > span + a, .load-more-news .load-more .btn-group-vertical > span + a, .load-more-news .btn-group-vertical > a + a, .load-more-news .btn-group-vertical > span + a, .load-more-news .btn-group-vertical > .btn + span, .wpcf7 .load-more-news .btn-group-vertical > input[type=submit] + span, .load-more-news .wpcf7 .btn-group-vertical > input[type=submit] + span, .load-more .load-more-news .btn-group-vertical > a + span, .load-more-news .load-more .btn-group-vertical > a + span, .load-more .load-more-news .btn-group-vertical > span + span, .load-more-news .load-more .btn-group-vertical > span + span, .load-more-news .btn-group-vertical > a + span, .load-more-news .btn-group-vertical > span + span,
+  .btn-group-vertical > .btn + .btn, .wpcf7 .btn-group-vertical > input[type=submit] + .btn, .btn-group-vertical > .addtoany_share_save + .btn, .load-more .btn-group-vertical > a + .btn, .load-more .btn-group-vertical > span + .btn, .load-more-news .btn-group-vertical > a + .btn, .load-more-news .btn-group-vertical > span + .btn, .wpcf7 .btn-group-vertical > .btn + input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] + input[type=submit], .wpcf7 .btn-group-vertical > .addtoany_share_save + input[type=submit], .load-more .wpcf7 .btn-group-vertical > a + input[type=submit], .wpcf7 .load-more .btn-group-vertical > a + input[type=submit], .load-more .wpcf7 .btn-group-vertical > span + input[type=submit], .wpcf7 .load-more .btn-group-vertical > span + input[type=submit], .load-more-news .wpcf7 .btn-group-vertical > a + input[type=submit], .wpcf7 .load-more-news .btn-group-vertical > a + input[type=submit], .load-more-news .wpcf7 .btn-group-vertical > span + input[type=submit], .wpcf7 .load-more-news .btn-group-vertical > span + input[type=submit], .btn-group-vertical > .btn + .addtoany_share_save, .wpcf7 .btn-group-vertical > input[type=submit] + .addtoany_share_save, .btn-group-vertical > .addtoany_share_save + .addtoany_share_save, .load-more .btn-group-vertical > a + .addtoany_share_save, .load-more .btn-group-vertical > span + .addtoany_share_save, .load-more-news .btn-group-vertical > a + .addtoany_share_save, .load-more-news .btn-group-vertical > span + .addtoany_share_save, .load-more .btn-group-vertical > .btn + a, .wpcf7 .load-more .btn-group-vertical > input[type=submit] + a, .load-more .wpcf7 .btn-group-vertical > input[type=submit] + a, .load-more .btn-group-vertical > .addtoany_share_save + a, .load-more .btn-group-vertical > a + a, .load-more .btn-group-vertical > span + a, .load-more .btn-group-vertical > .btn + span, .wpcf7 .load-more .btn-group-vertical > input[type=submit] + span, .load-more .wpcf7 .btn-group-vertical > input[type=submit] + span, .load-more .btn-group-vertical > .addtoany_share_save + span, .load-more .btn-group-vertical > a + span, .load-more .btn-group-vertical > span + span, .load-more-news .btn-group-vertical > .btn + a, .wpcf7 .load-more-news .btn-group-vertical > input[type=submit] + a, .load-more-news .wpcf7 .btn-group-vertical > input[type=submit] + a, .load-more-news .btn-group-vertical > .addtoany_share_save + a, .load-more .load-more-news .btn-group-vertical > a + a, .load-more-news .load-more .btn-group-vertical > a + a, .load-more .load-more-news .btn-group-vertical > span + a, .load-more-news .load-more .btn-group-vertical > span + a, .load-more-news .btn-group-vertical > a + a, .load-more-news .btn-group-vertical > span + a, .load-more-news .btn-group-vertical > .btn + span, .wpcf7 .load-more-news .btn-group-vertical > input[type=submit] + span, .load-more-news .wpcf7 .btn-group-vertical > input[type=submit] + span, .load-more-news .btn-group-vertical > .addtoany_share_save + span, .load-more .load-more-news .btn-group-vertical > a + span, .load-more-news .load-more .btn-group-vertical > a + span, .load-more .load-more-news .btn-group-vertical > span + span, .load-more-news .load-more .btn-group-vertical > span + span, .load-more-news .btn-group-vertical > a + span, .load-more-news .btn-group-vertical > span + span,
   .btn-group-vertical > .btn + .btn-group, .wpcf7
-  .btn-group-vertical > input[type=submit] + .btn-group, .load-more
+  .btn-group-vertical > input[type=submit] + .btn-group,
+  .btn-group-vertical > .addtoany_share_save + .btn-group, .load-more
   .btn-group-vertical > a + .btn-group, .load-more
   .btn-group-vertical > span + .btn-group, .load-more-news
   .btn-group-vertical > a + .btn-group, .load-more-news
   .btn-group-vertical > span + .btn-group,
   .btn-group-vertical > .btn-group + .btn, .wpcf7
-  .btn-group-vertical > .btn-group + input[type=submit], .load-more
+  .btn-group-vertical > .btn-group + input[type=submit],
+  .btn-group-vertical > .btn-group + .addtoany_share_save, .load-more
   .btn-group-vertical > .btn-group + a, .load-more
   .btn-group-vertical > .btn-group + span, .load-more-news
   .btn-group-vertical > .btn-group + a, .load-more-news
@@ -2807,44 +2848,47 @@ tbody.collapse.show {
     margin-top: -1px;
     margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child):not(:last-child), .load-more .btn-group-vertical > a:not(:first-child):not(:last-child), .load-more .btn-group-vertical > span:not(:first-child):not(:last-child), .load-more-news .btn-group-vertical > a:not(:first-child):not(:last-child), .load-more-news .btn-group-vertical > span:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child):not(:last-child), .btn-group-vertical > .addtoany_share_save:not(:first-child):not(:last-child), .load-more .btn-group-vertical > a:not(:first-child):not(:last-child), .load-more .btn-group-vertical > span:not(:first-child):not(:last-child), .load-more-news .btn-group-vertical > a:not(:first-child):not(:last-child), .load-more-news .btn-group-vertical > span:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
-.btn-group-vertical > .btn:first-child:not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:first-child:not(:last-child), .load-more .btn-group-vertical > a:first-child:not(:last-child), .load-more .btn-group-vertical > span:first-child:not(:last-child), .load-more-news .btn-group-vertical > a:first-child:not(:last-child), .load-more-news .btn-group-vertical > span:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:first-child:not(:last-child), .btn-group-vertical > .addtoany_share_save:first-child:not(:last-child), .load-more .btn-group-vertical > a:first-child:not(:last-child), .load-more .btn-group-vertical > span:first-child:not(:last-child), .load-more-news .btn-group-vertical > a:first-child:not(:last-child), .load-more-news .btn-group-vertical > span:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn:last-child:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:last-child:not(:first-child), .load-more .btn-group-vertical > a:last-child:not(:first-child), .load-more .btn-group-vertical > span:last-child:not(:first-child), .load-more-news .btn-group-vertical > a:last-child:not(:first-child), .load-more-news .btn-group-vertical > span:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:last-child:not(:first-child), .btn-group-vertical > .addtoany_share_save:last-child:not(:first-child), .load-more .btn-group-vertical > a:last-child:not(:first-child), .load-more .btn-group-vertical > span:last-child:not(:first-child), .load-more-news .btn-group-vertical > a:last-child:not(:first-child), .load-more-news .btn-group-vertical > span:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type=submit], .load-more .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, .load-more .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > span, .load-more-news .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, .load-more-news .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > span {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type=submit], .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .addtoany_share_save, .load-more .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, .load-more .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > span, .load-more-news .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, .load-more-news .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > span {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child, .load-more .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child, .load-more .btn-group-vertical > .btn-group:first-child:not(:last-child) > span:last-child, .load-more-news .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child, .load-more-news .btn-group-vertical > .btn-group:first-child:not(:last-child) > span:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .addtoany_share_save:last-child, .load-more .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child, .load-more .btn-group-vertical > .btn-group:first-child:not(:last-child) > span:last-child, .load-more-news .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child, .load-more-news .btn-group-vertical > .btn-group:first-child:not(:last-child) > span:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child, .load-more .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child, .load-more .btn-group-vertical > .btn-group:last-child:not(:first-child) > span:first-child, .load-more-news .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child, .load-more-news .btn-group-vertical > .btn-group:last-child:not(:first-child) > span:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .addtoany_share_save:first-child, .load-more .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child, .load-more .btn-group-vertical > .btn-group:last-child:not(:first-child) > span:first-child, .load-more-news .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child, .load-more-news .btn-group-vertical > .btn-group:last-child:not(:first-child) > span:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-[data-toggle="buttons"] > .btn input[type="radio"], .wpcf7 [data-toggle="buttons"] > input[type=submit] input[type="radio"], .load-more [data-toggle="buttons"] > a input[type="radio"], .load-more [data-toggle="buttons"] > span input[type="radio"], .load-more-news [data-toggle="buttons"] > a input[type="radio"], .load-more-news [data-toggle="buttons"] > span input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], .wpcf7 [data-toggle="buttons"] > input[type=submit] input[type="radio"], [data-toggle="buttons"] > .addtoany_share_save input[type="radio"], .load-more [data-toggle="buttons"] > a input[type="radio"], .load-more [data-toggle="buttons"] > span input[type="radio"], .load-more-news [data-toggle="buttons"] > a input[type="radio"], .load-more-news [data-toggle="buttons"] > span input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"], .wpcf7
-[data-toggle="buttons"] > input[type=submit] input[type="checkbox"], .load-more
+[data-toggle="buttons"] > input[type=submit] input[type="checkbox"],
+[data-toggle="buttons"] > .addtoany_share_save input[type="checkbox"], .load-more
 [data-toggle="buttons"] > a input[type="checkbox"], .load-more
 [data-toggle="buttons"] > span input[type="checkbox"], .load-more-news
 [data-toggle="buttons"] > a input[type="checkbox"], .load-more-news
 [data-toggle="buttons"] > span input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"], .wpcf7
-[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="radio"], .load-more
+[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .addtoany_share_save input[type="radio"], .load-more
 [data-toggle="buttons"] > .btn-group > a input[type="radio"], .load-more
 [data-toggle="buttons"] > .btn-group > span input[type="radio"], .load-more-news
 [data-toggle="buttons"] > .btn-group > a input[type="radio"], .load-more-news
 [data-toggle="buttons"] > .btn-group > span input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], .wpcf7
-[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="checkbox"], .load-more
+[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .addtoany_share_save input[type="checkbox"], .load-more
 [data-toggle="buttons"] > .btn-group > a input[type="checkbox"], .load-more
 [data-toggle="buttons"] > .btn-group > span input[type="checkbox"], .load-more-news
 [data-toggle="buttons"] > .btn-group > a input[type="checkbox"], .load-more-news
@@ -3193,7 +3237,8 @@ tbody.collapse.show {
   .wpcf7 .input-group-sm > textarea.input-group-addon, .wpcf7 .input-group-sm > .input-group-addon.wpcf7-validation-errors,
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn, .wpcf7
-  .input-group-sm > .input-group-btn > input.input-group-addon[type=submit], .load-more
+  .input-group-sm > .input-group-btn > input.input-group-addon[type=submit],
+  .input-group-sm > .input-group-btn > .input-group-addon.addtoany_share_save, .load-more
   .input-group-sm > .input-group-btn > a.input-group-addon, .load-more
   .input-group-sm > .input-group-btn > span.input-group-addon, .load-more-news
   .input-group-sm > .input-group-btn > a.input-group-addon, .load-more-news
@@ -3221,7 +3266,8 @@ tbody.collapse.show {
   .wpcf7 .input-group-lg > textarea.input-group-addon, .wpcf7 .input-group-lg > .input-group-addon.wpcf7-validation-errors,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn, .wpcf7
-  .input-group-lg > .input-group-btn > input.input-group-addon[type=submit], .load-more
+  .input-group-lg > .input-group-btn > input.input-group-addon[type=submit],
+  .input-group-lg > .input-group-btn > .input-group-addon.addtoany_share_save, .load-more
   .input-group-lg > .input-group-btn > a.input-group-addon, .load-more
   .input-group-lg > .input-group-btn > span.input-group-addon, .load-more-news
   .input-group-lg > .input-group-btn > a.input-group-addon, .load-more-news
@@ -3270,26 +3316,30 @@ tbody.collapse.show {
 .wpcf7 .input-group textarea:not(:last-child), .input-group .wpcf7 .wpcf7-validation-errors:not(:last-child), .wpcf7 .input-group .wpcf7-validation-errors:not(:last-child),
 .input-group-addon:not(:last-child),
 .input-group-btn:not(:last-child) > .btn, .wpcf7
-.input-group-btn:not(:last-child) > input[type=submit], .load-more
+.input-group-btn:not(:last-child) > input[type=submit],
+.input-group-btn:not(:last-child) > .addtoany_share_save, .load-more
 .input-group-btn:not(:last-child) > a, .load-more
 .input-group-btn:not(:last-child) > span, .load-more-news
 .input-group-btn:not(:last-child) > a, .load-more-news
 .input-group-btn:not(:last-child) > span,
 .input-group-btn:not(:last-child) > .btn-group > .btn, .wpcf7
-.input-group-btn:not(:last-child) > .btn-group > input[type=submit], .load-more
+.input-group-btn:not(:last-child) > .btn-group > input[type=submit],
+.input-group-btn:not(:last-child) > .btn-group > .addtoany_share_save, .load-more
 .input-group-btn:not(:last-child) > .btn-group > a, .load-more
 .input-group-btn:not(:last-child) > .btn-group > span, .load-more-news
 .input-group-btn:not(:last-child) > .btn-group > a, .load-more-news
 .input-group-btn:not(:last-child) > .btn-group > span,
 .input-group-btn:not(:last-child) > .dropdown-toggle,
 .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7
-.input-group-btn:not(:first-child) > input[type=submit]:not(:last-child):not(.dropdown-toggle), .load-more
+.input-group-btn:not(:first-child) > input[type=submit]:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > .addtoany_share_save:not(:last-child):not(.dropdown-toggle), .load-more
 .input-group-btn:not(:first-child) > a:not(:last-child):not(.dropdown-toggle), .load-more
 .input-group-btn:not(:first-child) > span:not(:last-child):not(.dropdown-toggle), .load-more-news
 .input-group-btn:not(:first-child) > a:not(:last-child):not(.dropdown-toggle), .load-more-news
 .input-group-btn:not(:first-child) > span:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn, .wpcf7
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type=submit], .load-more
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type=submit],
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .addtoany_share_save, .load-more
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > a, .load-more
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > span, .load-more-news
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > a, .load-more-news
@@ -3337,26 +3387,30 @@ tbody.collapse.show {
 .wpcf7 .input-group textarea:not(:first-child), .input-group .wpcf7 .wpcf7-validation-errors:not(:first-child), .wpcf7 .input-group .wpcf7-validation-errors:not(:first-child),
 .input-group-addon:not(:first-child),
 .input-group-btn:not(:first-child) > .btn, .wpcf7
-.input-group-btn:not(:first-child) > input[type=submit], .load-more
+.input-group-btn:not(:first-child) > input[type=submit],
+.input-group-btn:not(:first-child) > .addtoany_share_save, .load-more
 .input-group-btn:not(:first-child) > a, .load-more
 .input-group-btn:not(:first-child) > span, .load-more-news
 .input-group-btn:not(:first-child) > a, .load-more-news
 .input-group-btn:not(:first-child) > span,
 .input-group-btn:not(:first-child) > .btn-group > .btn, .wpcf7
-.input-group-btn:not(:first-child) > .btn-group > input[type=submit], .load-more
+.input-group-btn:not(:first-child) > .btn-group > input[type=submit],
+.input-group-btn:not(:first-child) > .btn-group > .addtoany_share_save, .load-more
 .input-group-btn:not(:first-child) > .btn-group > a, .load-more
 .input-group-btn:not(:first-child) > .btn-group > span, .load-more-news
 .input-group-btn:not(:first-child) > .btn-group > a, .load-more-news
 .input-group-btn:not(:first-child) > .btn-group > span,
 .input-group-btn:not(:first-child) > .dropdown-toggle,
 .input-group-btn:not(:last-child) > .btn:not(:first-child), .wpcf7
-.input-group-btn:not(:last-child) > input[type=submit]:not(:first-child), .load-more
+.input-group-btn:not(:last-child) > input[type=submit]:not(:first-child),
+.input-group-btn:not(:last-child) > .addtoany_share_save:not(:first-child), .load-more
 .input-group-btn:not(:last-child) > a:not(:first-child), .load-more
 .input-group-btn:not(:last-child) > span:not(:first-child), .load-more-news
 .input-group-btn:not(:last-child) > a:not(:first-child), .load-more-news
 .input-group-btn:not(:last-child) > span:not(:first-child),
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn, .wpcf7
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type=submit], .load-more
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type=submit],
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .addtoany_share_save, .load-more
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > a, .load-more
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > span, .load-more-news
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > a, .load-more-news
@@ -3388,21 +3442,21 @@ tbody.collapse.show {
   position: relative;
   font-size: 0;
   white-space: nowrap; }
-  .input-group-btn > .btn, .wpcf7 .input-group-btn > input[type=submit], .load-more .input-group-btn > a, .load-more .input-group-btn > span, .load-more-news .input-group-btn > a, .load-more-news .input-group-btn > span {
+  .input-group-btn > .btn, .wpcf7 .input-group-btn > input[type=submit], .input-group-btn > .addtoany_share_save, .load-more .input-group-btn > a, .load-more .input-group-btn > span, .load-more-news .input-group-btn > a, .load-more-news .input-group-btn > span {
     position: relative;
     flex: 1; }
-    .input-group-btn > .btn + .btn, .wpcf7 .input-group-btn > input[type=submit] + .btn, .load-more .input-group-btn > a + .btn, .load-more .input-group-btn > span + .btn, .load-more-news .input-group-btn > a + .btn, .load-more-news .input-group-btn > span + .btn, .wpcf7 .input-group-btn > .btn + input[type=submit], .wpcf7 .input-group-btn > input[type=submit] + input[type=submit], .load-more .wpcf7 .input-group-btn > a + input[type=submit], .wpcf7 .load-more .input-group-btn > a + input[type=submit], .load-more .wpcf7 .input-group-btn > span + input[type=submit], .wpcf7 .load-more .input-group-btn > span + input[type=submit], .load-more-news .wpcf7 .input-group-btn > a + input[type=submit], .wpcf7 .load-more-news .input-group-btn > a + input[type=submit], .load-more-news .wpcf7 .input-group-btn > span + input[type=submit], .wpcf7 .load-more-news .input-group-btn > span + input[type=submit], .load-more .input-group-btn > .btn + a, .wpcf7 .load-more .input-group-btn > input[type=submit] + a, .load-more .wpcf7 .input-group-btn > input[type=submit] + a, .load-more .input-group-btn > a + a, .load-more .input-group-btn > span + a, .load-more .input-group-btn > .btn + span, .wpcf7 .load-more .input-group-btn > input[type=submit] + span, .load-more .wpcf7 .input-group-btn > input[type=submit] + span, .load-more .input-group-btn > a + span, .load-more .input-group-btn > span + span, .load-more-news .input-group-btn > .btn + a, .wpcf7 .load-more-news .input-group-btn > input[type=submit] + a, .load-more-news .wpcf7 .input-group-btn > input[type=submit] + a, .load-more .load-more-news .input-group-btn > a + a, .load-more-news .load-more .input-group-btn > a + a, .load-more .load-more-news .input-group-btn > span + a, .load-more-news .load-more .input-group-btn > span + a, .load-more-news .input-group-btn > a + a, .load-more-news .input-group-btn > span + a, .load-more-news .input-group-btn > .btn + span, .wpcf7 .load-more-news .input-group-btn > input[type=submit] + span, .load-more-news .wpcf7 .input-group-btn > input[type=submit] + span, .load-more .load-more-news .input-group-btn > a + span, .load-more-news .load-more .input-group-btn > a + span, .load-more .load-more-news .input-group-btn > span + span, .load-more-news .load-more .input-group-btn > span + span, .load-more-news .input-group-btn > a + span, .load-more-news .input-group-btn > span + span {
+    .input-group-btn > .btn + .btn, .wpcf7 .input-group-btn > input[type=submit] + .btn, .input-group-btn > .addtoany_share_save + .btn, .load-more .input-group-btn > a + .btn, .load-more .input-group-btn > span + .btn, .load-more-news .input-group-btn > a + .btn, .load-more-news .input-group-btn > span + .btn, .wpcf7 .input-group-btn > .btn + input[type=submit], .wpcf7 .input-group-btn > input[type=submit] + input[type=submit], .wpcf7 .input-group-btn > .addtoany_share_save + input[type=submit], .load-more .wpcf7 .input-group-btn > a + input[type=submit], .wpcf7 .load-more .input-group-btn > a + input[type=submit], .load-more .wpcf7 .input-group-btn > span + input[type=submit], .wpcf7 .load-more .input-group-btn > span + input[type=submit], .load-more-news .wpcf7 .input-group-btn > a + input[type=submit], .wpcf7 .load-more-news .input-group-btn > a + input[type=submit], .load-more-news .wpcf7 .input-group-btn > span + input[type=submit], .wpcf7 .load-more-news .input-group-btn > span + input[type=submit], .input-group-btn > .btn + .addtoany_share_save, .wpcf7 .input-group-btn > input[type=submit] + .addtoany_share_save, .input-group-btn > .addtoany_share_save + .addtoany_share_save, .load-more .input-group-btn > a + .addtoany_share_save, .load-more .input-group-btn > span + .addtoany_share_save, .load-more-news .input-group-btn > a + .addtoany_share_save, .load-more-news .input-group-btn > span + .addtoany_share_save, .load-more .input-group-btn > .btn + a, .wpcf7 .load-more .input-group-btn > input[type=submit] + a, .load-more .wpcf7 .input-group-btn > input[type=submit] + a, .load-more .input-group-btn > .addtoany_share_save + a, .load-more .input-group-btn > a + a, .load-more .input-group-btn > span + a, .load-more .input-group-btn > .btn + span, .wpcf7 .load-more .input-group-btn > input[type=submit] + span, .load-more .wpcf7 .input-group-btn > input[type=submit] + span, .load-more .input-group-btn > .addtoany_share_save + span, .load-more .input-group-btn > a + span, .load-more .input-group-btn > span + span, .load-more-news .input-group-btn > .btn + a, .wpcf7 .load-more-news .input-group-btn > input[type=submit] + a, .load-more-news .wpcf7 .input-group-btn > input[type=submit] + a, .load-more-news .input-group-btn > .addtoany_share_save + a, .load-more .load-more-news .input-group-btn > a + a, .load-more-news .load-more .input-group-btn > a + a, .load-more .load-more-news .input-group-btn > span + a, .load-more-news .load-more .input-group-btn > span + a, .load-more-news .input-group-btn > a + a, .load-more-news .input-group-btn > span + a, .load-more-news .input-group-btn > .btn + span, .wpcf7 .load-more-news .input-group-btn > input[type=submit] + span, .load-more-news .wpcf7 .input-group-btn > input[type=submit] + span, .load-more-news .input-group-btn > .addtoany_share_save + span, .load-more .load-more-news .input-group-btn > a + span, .load-more-news .load-more .input-group-btn > a + span, .load-more .load-more-news .input-group-btn > span + span, .load-more-news .load-more .input-group-btn > span + span, .load-more-news .input-group-btn > a + span, .load-more-news .input-group-btn > span + span {
       margin-left: -1px; }
-    .input-group-btn > .btn:focus, .wpcf7 .input-group-btn > input[type=submit]:focus, .load-more .input-group-btn > a:focus, .load-more .input-group-btn > span:focus, .load-more-news .input-group-btn > a:focus, .load-more-news .input-group-btn > span:focus, .input-group-btn > .btn:active, .wpcf7 .input-group-btn > input[type=submit]:active, .load-more .input-group-btn > a:active, .load-more .input-group-btn > span:active, .load-more-news .input-group-btn > a:active, .load-more-news .input-group-btn > span:active, .input-group-btn > .btn:hover, .wpcf7 .input-group-btn > input[type=submit]:hover, .load-more .input-group-btn > a:hover, .load-more .input-group-btn > span:hover, .load-more-news .input-group-btn > a:hover, .load-more-news .input-group-btn > span:hover {
+    .input-group-btn > .btn:focus, .wpcf7 .input-group-btn > input[type=submit]:focus, .input-group-btn > .addtoany_share_save:focus, .load-more .input-group-btn > a:focus, .load-more .input-group-btn > span:focus, .load-more-news .input-group-btn > a:focus, .load-more-news .input-group-btn > span:focus, .input-group-btn > .btn:active, .wpcf7 .input-group-btn > input[type=submit]:active, .input-group-btn > .addtoany_share_save:active, .load-more .input-group-btn > a:active, .load-more .input-group-btn > span:active, .load-more-news .input-group-btn > a:active, .load-more-news .input-group-btn > span:active, .input-group-btn > .btn:hover, .wpcf7 .input-group-btn > input[type=submit]:hover, .input-group-btn > .addtoany_share_save:hover, .load-more .input-group-btn > a:hover, .load-more .input-group-btn > span:hover, .load-more-news .input-group-btn > a:hover, .load-more-news .input-group-btn > span:hover {
       z-index: 3; }
-  .input-group-btn:not(:last-child) > .btn, .wpcf7 .input-group-btn:not(:last-child) > input[type=submit], .load-more .input-group-btn:not(:last-child) > a, .load-more .input-group-btn:not(:last-child) > span, .load-more-news .input-group-btn:not(:last-child) > a, .load-more-news .input-group-btn:not(:last-child) > span,
+  .input-group-btn:not(:last-child) > .btn, .wpcf7 .input-group-btn:not(:last-child) > input[type=submit], .input-group-btn:not(:last-child) > .addtoany_share_save, .load-more .input-group-btn:not(:last-child) > a, .load-more .input-group-btn:not(:last-child) > span, .load-more-news .input-group-btn:not(:last-child) > a, .load-more-news .input-group-btn:not(:last-child) > span,
   .input-group-btn:not(:last-child) > .btn-group {
     margin-right: -1px; }
-  .input-group-btn:not(:first-child) > .btn, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit], .load-more .input-group-btn:not(:first-child) > a, .load-more .input-group-btn:not(:first-child) > span, .load-more-news .input-group-btn:not(:first-child) > a, .load-more-news .input-group-btn:not(:first-child) > span,
+  .input-group-btn:not(:first-child) > .btn, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit], .input-group-btn:not(:first-child) > .addtoany_share_save, .load-more .input-group-btn:not(:first-child) > a, .load-more .input-group-btn:not(:first-child) > span, .load-more-news .input-group-btn:not(:first-child) > a, .load-more-news .input-group-btn:not(:first-child) > span,
   .input-group-btn:not(:first-child) > .btn-group {
     z-index: 2;
     margin-left: -1px; }
-    .input-group-btn:not(:first-child) > .btn:focus, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:focus, .load-more .input-group-btn:not(:first-child) > a:focus, .load-more .input-group-btn:not(:first-child) > span:focus, .load-more-news .input-group-btn:not(:first-child) > a:focus, .load-more-news .input-group-btn:not(:first-child) > span:focus, .input-group-btn:not(:first-child) > .btn:active, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:active, .load-more .input-group-btn:not(:first-child) > a:active, .load-more .input-group-btn:not(:first-child) > span:active, .load-more-news .input-group-btn:not(:first-child) > a:active, .load-more-news .input-group-btn:not(:first-child) > span:active, .input-group-btn:not(:first-child) > .btn:hover, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:hover, .load-more .input-group-btn:not(:first-child) > a:hover, .load-more .input-group-btn:not(:first-child) > span:hover, .load-more-news .input-group-btn:not(:first-child) > a:hover, .load-more-news .input-group-btn:not(:first-child) > span:hover,
+    .input-group-btn:not(:first-child) > .btn:focus, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:focus, .input-group-btn:not(:first-child) > .addtoany_share_save:focus, .load-more .input-group-btn:not(:first-child) > a:focus, .load-more .input-group-btn:not(:first-child) > span:focus, .load-more-news .input-group-btn:not(:first-child) > a:focus, .load-more-news .input-group-btn:not(:first-child) > span:focus, .input-group-btn:not(:first-child) > .btn:active, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:active, .input-group-btn:not(:first-child) > .addtoany_share_save:active, .load-more .input-group-btn:not(:first-child) > a:active, .load-more .input-group-btn:not(:first-child) > span:active, .load-more-news .input-group-btn:not(:first-child) > a:active, .load-more-news .input-group-btn:not(:first-child) > span:active, .input-group-btn:not(:first-child) > .btn:hover, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:hover, .input-group-btn:not(:first-child) > .addtoany_share_save:hover, .load-more .input-group-btn:not(:first-child) > a:hover, .load-more .input-group-btn:not(:first-child) > span:hover, .load-more-news .input-group-btn:not(:first-child) > a:hover, .load-more-news .input-group-btn:not(:first-child) > span:hover,
     .input-group-btn:not(:first-child) > .btn-group:focus,
     .input-group-btn:not(:first-child) > .btn-group:active,
     .input-group-btn:not(:first-child) > .btn-group:hover {
@@ -4195,7 +4249,7 @@ tbody.collapse.show {
   .badge:empty {
     display: none; }
 
-.btn .badge, .wpcf7 input[type=submit] .badge, .load-more a .badge, .load-more span .badge, .load-more-news a .badge, .load-more-news span .badge {
+.btn .badge, .wpcf7 input[type=submit] .badge, .addtoany_share_save .badge, .load-more a .badge, .load-more span .badge, .load-more-news a .badge, .load-more-news span .badge {
   position: relative;
   top: -1px; }
 
@@ -9573,7 +9627,7 @@ select,
 textarea {
   font-family: franklin-gothic-urw, Helvetica, Arial, sans-serif; }
 
-.btn, .wpcf7 input[type=submit], .load-more a, .load-more span, .load-more-news a, .load-more-news span, .wpcf7 input[type=submit] {
+.btn, .wpcf7 input[type=submit], .addtoany_share_save, .load-more a, .load-more span, .load-more-news a, .load-more-news span, .wpcf7 input[type=submit] {
   border-width: 2px;
   border-radius: 2px;
   font-weight: 700;
@@ -9589,6 +9643,9 @@ textarea {
   background-color: #404042;
   border-color: #404042; }
 
+.btn-primary:focus, .load-more a:focus, .load-more span:focus, .load-more-news a:focus, .load-more-news span:focus {
+  color: white; }
+
 .btn-secondary {
   color: white;
   background-color: #EE4F54;
@@ -9599,17 +9656,21 @@ textarea {
     opacity: 1;
     background-color: #404042;
     border-color: #404042; }
+  .btn-secondary:focus {
+    color: white; }
 
-.btn-gray {
+.btn-gray, .addtoany_share_save {
   color: white;
   background-color: #404042;
   border-color: #404042;
   opacity: 1; }
-  .btn-gray:hover, .btn-gray:active {
+  .btn-gray:hover, .addtoany_share_save:hover, .btn-gray:active, .addtoany_share_save:active {
     color: #404042;
     opacity: 1;
     background-color: #2BB7AE;
     border-color: #404042; }
+  .btn-gray:focus, .addtoany_share_save:focus {
+    color: white; }
 
 .btn-outline-secondary {
   color: #888888;
@@ -9651,9 +9712,6 @@ textarea {
       background-color: white;
       color: #404042; }
 
-.dropdown-toggle > span, .dropdown-toggle:after {
-  display: none; }
-
 @media (max-width: 991px) {
   .navbar-nav > li {
     margin-top: 4px;
@@ -9673,11 +9731,6 @@ textarea {
 @media (min-width: 992px) {
   .navbar-nav a {
     position: relative; }
-  .navbar-nav li:not(:first-child) a:before {
-    content: '\2022';
-    position: absolute;
-    left: -.4rem;
-    color: #404042; }
   .navbar-inverse {
     margin-left: -1.5em; }
   .navbar-inverse .navbar-nav li:not(:first-child) a:before {
@@ -9743,7 +9796,7 @@ header .form-control, header .wpcf7 input[type=text], .wpcf7 header input[type=t
   border: none;
   border-radius: 2px; }
 
-header .input-group-btn > .btn, header .wpcf7 .input-group-btn > input[type=submit], .wpcf7 header .input-group-btn > input[type=submit], header .load-more .input-group-btn > a, .load-more header .input-group-btn > a, header .load-more .input-group-btn > span, .load-more header .input-group-btn > span, header .load-more-news .input-group-btn > a, .load-more-news header .input-group-btn > a, header .load-more-news .input-group-btn > span, .load-more-news header .input-group-btn > span {
+header .input-group-btn > .btn, header .wpcf7 .input-group-btn > input[type=submit], .wpcf7 header .input-group-btn > input[type=submit], header .input-group-btn > .addtoany_share_save, header .load-more .input-group-btn > a, .load-more header .input-group-btn > a, header .load-more .input-group-btn > span, .load-more header .input-group-btn > span, header .load-more-news .input-group-btn > a, .load-more-news header .input-group-btn > a, header .load-more-news .input-group-btn > span, .load-more-news header .input-group-btn > span {
   background-color: #cccccc;
   color: #404042;
   border: none;
@@ -9752,7 +9805,7 @@ header .input-group-btn > .btn, header .wpcf7 .input-group-btn > input[type=subm
   letter-spacing: 1.5px;
   text-transform: uppercase;
   font-size: 14px; }
-  header .input-group-btn > .btn:hover, header .wpcf7 .input-group-btn > input[type=submit]:hover, .wpcf7 header .input-group-btn > input[type=submit]:hover, header .load-more .input-group-btn > a:hover, .load-more header .input-group-btn > a:hover, header .load-more .input-group-btn > span:hover, .load-more header .input-group-btn > span:hover, header .load-more-news .input-group-btn > a:hover, .load-more-news header .input-group-btn > a:hover, header .load-more-news .input-group-btn > span:hover, .load-more-news header .input-group-btn > span:hover {
+  header .input-group-btn > .btn:hover, header .wpcf7 .input-group-btn > input[type=submit]:hover, .wpcf7 header .input-group-btn > input[type=submit]:hover, header .input-group-btn > .addtoany_share_save:hover, header .load-more .input-group-btn > a:hover, .load-more header .input-group-btn > a:hover, header .load-more .input-group-btn > span:hover, .load-more header .input-group-btn > span:hover, header .load-more-news .input-group-btn > a:hover, .load-more-news header .input-group-btn > a:hover, header .load-more-news .input-group-btn > span:hover, .load-more-news header .input-group-btn > span:hover {
     background-color: #404042;
     color: white; }
 

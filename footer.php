@@ -38,14 +38,14 @@ $the_theme = wp_get_theme();
 					<label class="sr-only" for="inlineFormInput">Email</label>
 					<input type="email" class="form-control col-8 m-0" id="inlineFormInput" placeholder="...enter your email">
 
-					<div class="col-4 pl-2"><button type="submit" class="btn btn-gray w-100">Sign Up</button></div>
+					<div class="col-4 pl-2 pr-0"><button type="submit" class="btn btn-gray w-100">Sign Up</button></div>
 				</form>
 
 				<div class="d-flex justify-content-between">
 
 					<a class="btn btn-secondary" href="#" role="button">Donate</a>
 
-					<p>[social icons]</p>
+					<?php if ( function_exists('cn_social_icon') ) echo cn_social_icon(); ?>
 
 				</div>
 

@@ -27,7 +27,7 @@
 					$meta_query_vars = array(
 							'relation' => 'AND',
 							array(
-								'key'			=> 'availability',
+								'key'		=> 'availability',
 								'value'		=> 'available',
 								'compare'	=> '='
 							)
@@ -38,7 +38,7 @@
 						
 						$meta_query_vars[] = array(
 							'key'			=> 'color',
-							'value'		=> $_POST["colorSelect"],
+							'value'		=> sanitize_text_field($_POST["colorSelect"]),
 							'compare'	=> '='
 						);
 					
@@ -47,8 +47,8 @@
 					if (isset($_POST["sexSelect"]) && !empty($_POST["sexSelect"])) {
 						
 						$meta_query_vars[] = array(
-							'key'			=> 'sex',
-							'value'		=> $_POST["sexSelect"],
+							'key'		=> 'sex',
+							'value'		=> sanitize_text_field($_POST["sexSelect"]),
 							'compare'	=> '='
 						);
 					
@@ -58,7 +58,7 @@
 						
 						$meta_query_vars[] = array(
 							'key'			=> 'hair',
-							'value'		=> $_POST["hairSelect"],
+							'value'		=> sanitize_text_field($_POST["hairSelect"]),
 							'compare'	=> '='
 						);
 					
@@ -68,7 +68,7 @@
 						
 						$meta_query_vars[] = array(
 							'key'			=> 'age',
-							'value'		=> $_POST["ageSelect"],
+							'value'		=> sanitize_text_field($_POST["ageSelect"]),
 							'compare'	=> '='
 						);
 					
