@@ -81,7 +81,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<section class="available-cats container-fluid px-0">
 
 			
-		<h1 class="text-center py-4 my-0 bg-gray-lt divider-header">Cats Available for Adoption</h1>
+		<h1 class="text-center py-4 my-0 bg-gray-lt divider-header">Featured Cats Available for Adoption</h1>
 
 		<?php
 
@@ -107,7 +107,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					$cat_meta = get_post_meta( $post->ID, 'pet_data', true );
 
-					$featured_image = '<img src="' . $cat_meta->images[0]->original_url .'" alt="' . get_the_title() . '" >';
+					$featured_image = '<img src="' . str_replace("p://","ps://", $cat_meta->images[0]->original_url) .'" alt="' . get_the_title() . '" >';
 					$image_class = 'imgwrap-4-6';
 
 					if(has_post_thumbnail()){
@@ -120,7 +120,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					// echo '</pre>';
 			?>
 
-			<article class="featured-cat container p-0">
+			<article class="featured-cat container">
 				
 				<div class="row">
 
@@ -133,7 +133,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="text col-md-6 col-lg-5 p-5 p-sm-5">
 						  
 							<h1><?php the_title(); ?></h1>
-							<p><?php echo $cat_meta->description; ?></p>
+							<p><?php echo wp_trim_words( $cat_meta->description, $num_words = 120, $more = null ); ?></p>
 
 							<p class="mt-md-4">
 
@@ -194,7 +194,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			?>
 
-				<article class="grid-sponsor col-6 col-lg-3 p-5 text-center">
+				<article class="grid-sponsor col-6 col-lg-3 text-center">
 					
 					<a class="sponsor-logo" href="<?php the_sub_field('sponsor_link'); ?>" ><img src="<?php if( !empty($image) ) echo $image['url']; ?>" class="" ></a>
 					
@@ -216,6 +216,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 			
 
 		</div>
+
+			<?php if(get_field('after_sponsors')){ ?>
+				<div class="mt-4 text-center"><?php the_field('after_sponsors'); ?></div>
+			<?php } ?>
 
 	</section>
 

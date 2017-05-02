@@ -9864,13 +9864,16 @@ section.home-banner {
 .featured-cat .text {
   max-width: 60ch; }
 
-.grid-sponsor h2 {
-  margin-top: 1rem;
-  font-size: 1em;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #404042; }
+.grid-sponsor {
+  padding: 0 3rem;
+  margin-bottom: 2rem; }
+  .grid-sponsor h2 {
+    margin-top: 1rem;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #404042; }
 
 #togglefilters {
   color: #404042;

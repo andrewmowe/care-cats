@@ -16,8 +16,10 @@ function theme_enqueue_styles() {
 	// Get the theme data
 	$the_theme = wp_get_theme();
 
-	$css_ver = filemtime( get_stylesheet_directory() . '/css/child-theme.min.css' );
-	$js_ver = filemtime( get_stylesheet_directory() . '/js/child-theme.min.js' );
+	$css_ver = $js_ver = $the_theme->get( 'Version' );
+
+	if (file_exists(get_stylesheet_directory() . '/css/child-theme.min.css')) $css_ver = filemtime( get_stylesheet_directory() . '/css/child-theme.min.css' );
+	if (file_exists(get_stylesheet_directory() . '/js/child-theme.min.js')) $css_ver = filemtime( get_stylesheet_directory() . '/js/child-theme.min.js' );
 
     wp_enqueue_style( 'child-understrap-styles', get_stylesheet_directory_uri() . '/css/child-theme.min.css', array(), $css_ver );
     wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $js_ver, true );
