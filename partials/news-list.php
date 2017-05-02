@@ -22,6 +22,7 @@
 						'post_type' => 'post',
 						'posts_per_page'	=> 9, 
 						'paged' => $paged,
+						'cat'	=> '-57', // exclude 'courtesy-listing'	
 				);
 
 
