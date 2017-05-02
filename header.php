@@ -65,19 +65,32 @@ $container = get_theme_mod( 'understrap_container_type' );
 							} ?><!-- end custom logo -->
 						</div>
 
+						<div class="col-12 col-lg-8 justify-content-between flex-column">
 
-				  		<!-- The WordPress Menu goes here -->
-						<?php wp_nav_menu(
-							array(
-								'theme_location'  => 'primary',
-								'container_class' => 'collapse navbar-collapse col-12 col-lg-8 justify-content-end',
-								'container_id'    => 'navbartoggled',
-								'menu_class'      => 'navbar-nav py-3',
-								'fallback_cb'     => '',
-								'menu_id'         => 'main-menu',
-								'walker'          => new WP_Bootstrap_Navwalker(),
-							)
-						); ?>
+							<?php if ( function_exists('cn_social_icon') ) { ?>
+
+								<div class="mb-3">	
+
+									<?php echo cn_social_icon(); ?>
+
+								</div>
+
+							<?php }  ?>
+
+					  		<!-- The WordPress Menu goes here -->
+							<?php wp_nav_menu(
+								array(
+									'theme_location'  => 'primary',
+									'container_class' => 'collapse navbar-collapse d-flex justify-content-end',
+									'container_id'    => 'navbartoggled',
+									'menu_class'      => 'navbar-nav py-3',
+									'fallback_cb'     => '',
+									'menu_id'         => 'main-menu',
+									'walker'          => new WP_Bootstrap_Navwalker(),
+								)
+							); ?>
+
+						</div>
 
 					</div>
 
