@@ -23,7 +23,7 @@ get_header();
 		// print_r($cat_meta);
 		// echo '</pre>';
 
-		$featured_image = '<img src="' . $cat_meta->images[0]->original_url .'" alt="' . get_the_title() . '" >';
+		$featured_image = '<img src="' . str_replace("p://","ps://", $cat_meta->images[0]->original_url) .'" alt="' . get_the_title() . '" >';
 		$image_class = 'imgwrap-4-6';
 
 		if(has_post_thumbnail()){
@@ -168,14 +168,22 @@ get_header();
 
 						<div class="row img-thumbs px-3">
 
-							<?php foreach ($cat_meta->images as $key => $image) { ?>
+							<?php foreach ($cat_meta->images as $key => $image) { 
+								$imageurl = str_replace("p://","ps://", $image->original_url);
+							?>
 
 					<?php
-					$content = '<a class="col-sm-6 col-xl-4 mb-3" href="' . $image->original_url .'"><img src="'. $image->original_url .'" alt="' . get_the_title() . '" title="' . get_the_title() . '"></a>';
+					$content = '<a class="col-sm-6 col-xl-4 mb-3" href="' . $imageurl .'"><img src="'. $imageurl .'" alt="' . get_the_title() . '" title="' . get_the_title() . '"></a>';
 					?>
-					<?php if ( function_exists('slb_activate') ) ?>
-					<?php $content = slb_activate($content); ?>
-					<?php echo $content; ?>
+					<?php 
+
+						if ( function_exists('slb_activate') ) {
+							$content = slb_activate($content);
+							echo $content; 
+
+						} 
+
+					?>
 							<?php } ?>
 
 						</div>
@@ -195,10 +203,12 @@ get_header();
 
 			<div class="row img-thumbs px-3 mb-5">
 
-				<?php foreach ($cat_meta->images as $key => $image) { ?>
+				<?php foreach ($cat_meta->images as $key => $image) { 
+					$imageurl = str_replace("p://","ps://", $image->original_url);
+				?>
 
 					<?php
-					$content = '<a class="col-sm-6 col-md-4 col-lg-3" href="' . $image->original_url .'"><img src="'. $image->original_url .'" alt="' . get_the_title() . '" title="' . get_the_title() . '"></a>';
+					$content = '<a class="col-sm-6 col-md-4 col-lg-3" href="' . $imageurl .'"><img src="'. $imageurl .'" alt="' . get_the_title() . '" title="' . get_the_title() . '"></a>';
 					?>
 					<?php 
 
@@ -240,7 +250,9 @@ get_header();
 				$args = array(
 						'post_type' => 'cats',
 						'posts_per_page'	=> 3,
-						'orderby'	=> 'menu_order',
+						'orderby'		=> 'meta_value',
+						'meta_key'		=> 'pet_id',
+						'order'			=> 'ASC',
 						'post__not_in' => $exclude_ids,
 						'meta_query'	=> array(
 								array(
@@ -273,7 +285,7 @@ get_header();
 
 			<article class="grid-cat col-12 col-md-6 col-lg-4 py-3">
 
-				<a href="<?php the_permalink(); ?>" class="imgwrap-4-6"><img src="<?php echo $cat_meta->images[0]->original_url; ?>" alt="<?php the_title(); ?>" ></a>
+				<a href="<?php the_permalink(); ?>" class="imgwrap-4-6"><img src="<?php echo str_replace("p://","ps://", $cat_meta->images[0]->original_url); ?>" alt="<?php the_title(); ?>" ></a>
 
 				<div class="d-flex justify-content-between align-items-baseline bg-gray-lt px-3 py-2">
 

@@ -138,7 +138,7 @@
 
 					$cat_meta = get_post_meta( $post->ID, 'pet_data', true );
 
-					$featured_image = '<img src="' . $cat_meta->images[0]->original_url .'" alt="' . get_the_title() . '" >';
+					$featured_image = '<img src="' . str_replace("p://","ps://", $cat_meta->images[0]->original_url) .'" alt="' . get_the_title() . '" >';
 					$image_class = 'imgwrap-4-6';
 
 					if(has_post_thumbnail()){
