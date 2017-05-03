@@ -148,7 +148,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 								<a class="btn btn-primary" href="<?php the_permalink(); ?>" role="button">Learn More</a>
 
-								<a class="btn btn-secondary ml-md-4" href="#" role="button">Adopt Me</a>
+								<a class="btn btn-secondary ml-md-4" href="<?php echo home_url(); ?>/application/?catname=<?php the_title(); ?>" role="button">Adopt Me</a>
 
 							</p>
 
