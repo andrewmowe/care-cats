@@ -1,4 +1,4 @@
-(function($){ // jQuery code here 
+(function($){ // jQuery code here
 
     $('#mainnavtoggle').click(function() {
         $('#navbartoggled2').slideToggle();
@@ -9,7 +9,7 @@
 	    var current_width = $(window).width();
 
 	    $( window ).resize(function() {
-			
+
 			current_width = $(window).width();
 			$('.filtercontrols').slideDown();
 
@@ -51,4 +51,22 @@
 		$('.load-more-news').load(link+' .load-more-news a');
 	});
 
-})(jQuery); 
+	// Back To Top
+  var $toTop = $('#back-to-top');
+
+  $(window).live('scroll', function() {
+      if ( $(this).scrollTop() > 50 ) {
+          $toTop.fadeIn();
+      } else {
+          $toTop.fadeOut();
+      }
+  });
+
+  $toTop.live('click', function() {
+      $('body, html').animate({
+          scrollTop: 0
+      }, 500);
+      return false;
+  });
+
+})(jQuery);

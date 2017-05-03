@@ -10,6 +10,8 @@
 $the_theme = wp_get_theme();
 ?>
 
+<a id="back-to-top" href="#" role="button"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/back-to-top.svg" width="40" height="40" /></a>
+
 <div class="wrapper bg-primary text-white py-5" id="wrapper-footer">
 
 	<div class="container">
@@ -18,13 +20,13 @@ $the_theme = wp_get_theme();
 
 			<section class="col-12 col-md-5">
 
-				<?php 
+				<?php
 
 				if ( is_active_sidebar( 'footerleft' ) ) :
 
 					dynamic_sidebar( 'footerleft' );
 
-				endif; 
+				endif;
 
 				?>
 
@@ -49,7 +51,7 @@ $the_theme = wp_get_theme();
 
 				<div class="d-flex justify-content-between">
 
-					<a class="btn btn-secondary" href="#" role="button">Donate</a>
+					<a class="btn btn-secondary" href="<?php echo home_url(); ?>/donate" role="button">Donate</a>
 
 					<?php if ( function_exists('cn_social_icon') ) echo cn_social_icon(); ?>
 

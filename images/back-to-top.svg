@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <rect id="a" width="30.004" height="30.004"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="b" fill="white">
+      <use xlink:href="#a"/>
+    </mask>
+    <rect width="30.004" height="30.004" fill="#2BB7AE" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="2" mask="url(#b)"/>
+    <polyline stroke="#FFFFFF" points="9.001 17.898 15.093 12.001 21.003 17.898"/>
+  </g>
+</svg>
