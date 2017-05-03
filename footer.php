@@ -50,8 +50,9 @@ $the_theme = wp_get_theme();
 				<!-- End MC Signup Form -->
 
 				<div class="d-flex justify-content-between">
-
-					<a class="btn btn-secondary" href="<?php echo home_url(); ?>/donate" role="button">Donate</a>
+					<?php if ( !is_page('donate') ) : ?>
+						<a class="btn btn-secondary" href="<?php echo home_url(); ?>/donate" role="button">Donate</a>
+					<?php endif; ?>
 
 					<?php if ( function_exists('cn_social_icon') ) echo cn_social_icon(); ?>
 

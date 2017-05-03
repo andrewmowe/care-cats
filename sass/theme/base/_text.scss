@@ -61,7 +61,8 @@ textarea {
     }
 }
 
-.btn-secondary {
+.btn-secondary,
+.give-submit.give-btn {
     color: white;
     background-color: $brand-secondary;
     border-color: $brand-secondary;
@@ -77,6 +78,16 @@ textarea {
         color:white;
     }
 
+}
+
+.give-submit.give-btn {
+    border-width: 2px;
+    border-radius: 2px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 .btn-gray {
