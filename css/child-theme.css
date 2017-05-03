@@ -9559,22 +9559,27 @@ body {
   display: block; }
   .imgwrap-4-6 > img {
     position: absolute;
-    width: 111%;
+    width: 120%;
     height: auto;
     top: 50%;
-    left: -5.5%;
+    left: -10%;
     max-width: none;
     transform: translateY(-50%); }
 
-.no-crop > img {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  max-width: none;
-  transform: translate(-50%, -50%); }
+/*.no-crop {
 
+	> img {
+
+		position: absolute;
+		width: 100%;
+		height: auto;
+		top: 50%;
+		left: 50%;
+		max-width: none;
+		transform: translate(-50%, -50%);
+
+	}
+}*/
 @media (min-width: 768px) {
   #right-sidebar {
     padding-left: 3rem; }

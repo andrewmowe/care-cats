@@ -68,18 +68,18 @@ body {
 	> img {
 
 		position: absolute;
-		width: 111%;
+		width: 120%;
 		height: auto;
 		top: 50%;
-		left: -5.5%;
+		left: -10%;
 		max-width: none;
 		transform: translateY(-50%);
 
 	}
 
 }
-
-.no-crop {
+ 
+/*.no-crop {
 
 	> img {
 
@@ -92,7 +92,7 @@ body {
 		transform: translate(-50%, -50%);
 
 	}
-}
+}*/
 
 @include media-breakpoint-up(md) {
 
