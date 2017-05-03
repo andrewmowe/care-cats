@@ -51,7 +51,7 @@ get_header();
 
 				<div class="mt-md-4 mb-3">
 
-					<a class="btn btn-secondary mr-md-4" href="#" role="button">Adopt Me</a>
+					<a class="btn btn-secondary mr-md-4" href="<?php echo home_url(); ?>/application/?catname=<?php the_title(); ?>" role="button">Adopt Me</a>
 
 				<!-- 	<a class="btn btn-gray" href="#" role="button">SHARE</a> -->
 					<?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { ADDTOANY_SHARE_SAVE_KIT(); } ?>

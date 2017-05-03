@@ -9736,6 +9736,8 @@ textarea {
     margin-bottom: 4px;
     text-align: center;
     border-radius: 2px; }
+  header .social-icons {
+    display: none; }
   #main-menu > li {
     background-color: #cccccc; }
   #second-menu > li {
@@ -9749,6 +9751,9 @@ textarea {
 @media (min-width: 992px) {
   .navbar-nav a {
     position: relative; }
+  .main-nav-wrap {
+    justify-content: flex-end;
+    display: flex; }
   .navbar-inverse {
     margin-left: -1.5em; }
   .navbar-inverse .navbar-nav li:not(:first-child) a:before {
@@ -9892,7 +9897,7 @@ section.home-banner {
     max-width: 60ch; }
 
 .grid-sponsor {
-  padding: 0 3rem;
+  padding: 0 2rem;
   margin-bottom: 2rem; }
   .grid-sponsor h2 {
     margin-top: 1rem;

@@ -43,6 +43,10 @@
 		border-radius: 2px;
 	}
 
+	header .social-icons {
+		display:none;
+	}
+
 	#main-menu > li {
 
 		background-color: $brand-gray-md;
@@ -74,6 +78,11 @@
 			position: relative;
 		}
 
+	}
+
+	.main-nav-wrap { 
+		justify-content: flex-end;
+		display: flex; 
 	}
 
 	.navbar-inverse {
