@@ -67,6 +67,26 @@ function create_post_type_cats() {
 
 }
 
+//Create custom taxonomy
+add_action( 'init', 'create_availability_taxonomy', 0 );
+
+function create_availability_taxonomy() {
+    register_taxonomy(
+        'availability',
+        'cats',
+        array(
+            'labels' => array(
+                'name' => 'Availability',
+                'add_new_item' => 'Add New Availability',
+                'new_item_name' => "New Availability"
+            ),
+            'show_ui' => true,
+            'show_tagcloud' => false,
+            'hierarchical' => true
+        )
+    );
+}
+
 /**
  * Enqueue TypeKit Fonts
  */

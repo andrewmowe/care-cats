@@ -152,7 +152,20 @@ $p_uri = get_page_uri($page_id);
 
 	<section class="cats-grid container my-5" id="cats-grid">
 
-		<?php get_template_part('partials/catgrid', 'item'); ?>
+		<?php 
+
+			if (isset($_POST["catsearch"]) && !empty($_POST["catsearch"])) {
+				
+				get_template_part('partials/catgrid', 'filtered'); 
+
+			}else{
+
+				get_template_part('partials/catgrid', 'item'); 
+
+			}
+
+
+		?>
 
 	</section>
 

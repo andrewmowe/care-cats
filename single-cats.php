@@ -35,7 +35,7 @@ get_header();
 
 <article class="featured-cat">
 	
-	<div class="container-fluid p-0">
+	<div class="container mt-3">
 
 		<div class="row">
 
@@ -69,7 +69,7 @@ get_header();
 
 		<div class="row my-5 mb-5">
 
-			<div class="col-lg-6 pl-lg-5 mb-5">
+			<div class="col-lg-6 pr-lg-5 mb-5">
 
 				<div class="my-stats p-5">
 

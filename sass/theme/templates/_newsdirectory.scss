@@ -104,29 +104,23 @@
 	}
 
 	.e-date-container {
-		position: absolute;
-		top: 0;
-		right: 0;
 		background: $brand-primary;
-		height: 100%;
-		display: flex;
-		align-items: center;
-		padding: 0 2.5em;
-		text-align: center;
+		padding: .75em;
+		text-align: right;
 		color: white;
 
 		h4 {
-			font-weight: 400;
+			@include labelfont();
 			font-size: 1em;
-			text-transform: uppercase;
+			margin:0;
 
-			span.day {
+			/*span.day {
 				font-size:2em;
 			}
 			span.month {
 				font-size: 1.25em;
    				letter-spacing: 1.5px;
-			}
+			}*/
 		}
 	}
 

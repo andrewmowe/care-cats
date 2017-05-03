@@ -85,7 +85,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<?php
 
-			$args = array(
+			if(get_field('lg_cat')){
+
+				$args = array(
+					'post_type' => 'cats',
+					'p' => get_field('lg_cat')
+				);
+
+			}else{
+
+				$args = array(
 						'post_type' => 'cats',
 						'posts_per_page'	=> 1,
 						'orderby'	=> 'rand',
@@ -97,27 +106,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 								)
 						),
 				);
+			}
 
+			$cats = new WP_Query( $args );
 
-				$cats = new WP_Query( $args );
+			if ( $cats->have_posts() ) :
 
-				if ( $cats->have_posts() ) :
+				while ( $cats->have_posts() ) : $cats->the_post();
 
-					while ( $cats->have_posts() ) : $cats->the_post();
+				$cat_meta = get_post_meta( $post->ID, 'pet_data', true );
 
-					$cat_meta = get_post_meta( $post->ID, 'pet_data', true );
+				$featured_image = '<img src="' . str_replace("p://","ps://", $cat_meta->images[0]->original_url) .'" alt="' . get_the_title() . '" >';
+				$image_class = 'imgwrap-4-6';
 
-					$featured_image = '<img src="' . str_replace("p://","ps://", $cat_meta->images[0]->original_url) .'" alt="' . get_the_title() . '" >';
-					$image_class = 'imgwrap-4-6';
+				if(has_post_thumbnail()){
+					$featured_image = get_the_post_thumbnail( $post->ID, 'medium' );
+					$image_class .= " no-crop ";
+				}
 
-					if(has_post_thumbnail()){
-						$featured_image = get_the_post_thumbnail( $post->ID, 'medium' );
-						$image_class .= " no-crop ";
-					}
-
-					// echo '<pre>';
-					// print_r( $cat_meta );
-					// echo '</pre>';
+				// echo '<pre>';
+				// print_r( $cat_meta );
+				// echo '</pre>';
 			?>
 
 			<article class="featured-cat container">
@@ -133,7 +142,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="text col-md-6 col-lg-5 p-5 p-sm-5">
 						  
 							<h1><?php the_title(); ?></h1>
-							<p><?php echo wp_trim_words( $cat_meta->description, $num_words = 120, $more = null ); ?></p>
+							<p><?php echo wp_trim_words( $cat_meta->description, $num_words = 100, $more = null ); ?></p>
 
 							<p class="mt-md-4">
 
@@ -160,11 +169,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<section class="cats-grid container my-5">
 
-				<?php get_template_part('partials/catgrid', 'item'); ?>
+				<?php get_template_part('partials/catgrid', 'home'); ?>
 
 		</section>
 
-		<h3 class="text-center bg-primary divider-header"><a class="btn btn-outline-secondary" href="<?php echo get_permalink( get_page_by_title( 'Find a Cat' ) ); ?>" role="button">See All Available Cats</a></h3>
+		<h3 class="text-center bg-primary divider-header"><a class="btn btn-outline-secondary" href="<?php echo get_permalink( get_page_by_title( 'Adopt a Cat' ) ); ?>" role="button">See All Available Cats</a></h3>
 
 	</section>
 
@@ -194,11 +203,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			?>
 
-				<article class="grid-sponsor col-6 col-lg-3 text-center">
+				<article class="grid-sponsor col-6 col-sm-4 col-lg-2 text-center">
+
+					<?php if(get_sub_field('sponsor_link')){ ?>
 					
 					<a class="sponsor-logo" href="<?php the_sub_field('sponsor_link'); ?>" ><img src="<?php if( !empty($image) ) echo $image['url']; ?>" class="" ></a>
 					
 					<a class="" href="<?php the_sub_field('sponsor_link'); ?>" ><h2><?php the_sub_field('sponsor_name'); ?></h2></a>
+
+					<?php }else{ ?>
+
+					<img src="<?php if( !empty($image) ) echo $image['url']; ?>" class="" >
+					
+					<h2><?php the_sub_field('sponsor_name'); ?></h2>
+
+					<?php } ?>
 
 				</article>
 

@@ -9857,12 +9857,13 @@ section.home-banner {
     padding-left: 6rem;
     padding-right: 3rem; } }
 
-.featured-cat h1 {
-  font-size: 1.75em;
-  margin-bottom: 1.5em; }
-
-.featured-cat .text {
-  max-width: 60ch; }
+.featured-cat {
+  margin-top: 3rem; }
+  .featured-cat h1 {
+    font-size: 1.75em;
+    margin-bottom: 1.5em; }
+  .featured-cat .text {
+    max-width: 60ch; }
 
 .grid-sponsor {
   padding: 0 3rem;
@@ -10006,25 +10007,23 @@ section.home-banner {
     .news-list h2:hover, .news-list h2:active {
       text-decoration: underline; }
   .news-list .e-date-container {
-    position: absolute;
-    top: 0;
-    right: 0;
     background: #2BB7AE;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 2.5em;
-    text-align: center;
+    padding: .75em;
+    text-align: right;
     color: white; }
     .news-list .e-date-container h4 {
-      font-weight: 400;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
       font-size: 1em;
-      text-transform: uppercase; }
-      .news-list .e-date-container h4 span.day {
-        font-size: 2em; }
-      .news-list .e-date-container h4 span.month {
-        font-size: 1.25em;
-        letter-spacing: 1.5px; }
+      margin: 0;
+      /*span.day {
+				font-size:2em;
+			}
+			span.month {
+				font-size: 1.25em;
+   				letter-spacing: 1.5px;
+			}*/ }
   .news-list .text-columns .entry-content > p:first-child {
     -webkit-columns: 2 40ch;
     -moz-columns: 2 40ch;
@@ -10081,6 +10080,12 @@ section.home-banner {
     padding: 0;
     margin: 0;
     font-size: 1.25em; }
+
+.single .site-main img.wp-post-image {
+  width: 100%; }
+
+.single .site-main .entry-footer {
+  margin-top: 4rem; }
 
 .nav-links {
   background-color: #2BB7AE;

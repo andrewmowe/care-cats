@@ -7,14 +7,16 @@
 
 ?>
 
-<article <?php post_class('row'); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('row align-items-center'); ?> id="post-<?php the_ID(); ?>">
 
 		<?php if(has_post_thumbnail() || in_category('events')){ ?>
 
 		<div class="col-md-4 col-lg-5 p-0 mb-3">
 
-			<a class="imgwrap-4-6" href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail( $post->ID, 'large' ); 
+			<a class="imgwrap-4-6" href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?></a>
 
+
+			<?php
 
 				if(in_category('events')) {
 
@@ -37,8 +39,8 @@
 				<div class="e-date-container">
 
 					<h4>
-						<span class="month"><?php echo $month; ?></span><br>
-						<span class="day"><?php echo $day; ?></span><br>
+						<span class="month"><?php echo $month; ?></span>
+						<span class="day"><?php echo $day; ?></span>
 						<?php echo $year; ?>
 					</h4>
 
@@ -49,7 +51,9 @@
 
 				} 
 
-			?></a>
+			?>
+
+
 
 		</div>
 
