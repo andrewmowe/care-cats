@@ -133,13 +133,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 				
 				<div class="row">
 
-						<div class="col-md-6 col-lg-7 py-0">
+						<div class="col-lg-7 py-0">
 						  
 							<div class="<?php echo $image_class; ?>"><?php echo $featured_image; ?></div>
 
 						</div>
 
-						<div class="text col-md-6 col-lg-5 p-5 p-sm-5">
+						<div class="text col-lg-5 p-5 p-sm-5">
 						  
 							<h1><?php the_title(); ?></h1>
 							<p><?php echo wp_trim_words( $cat_meta->description, $num_words = 100, $more = null ); ?></p>

@@ -5399,7 +5399,7 @@ var Popover = function ($) {
 
 	    $('#togglefilters').click(function() {
 
-	    	if(current_width < 768){
+	    	if(current_width < 992){
 
 		        $('.filtercontrols').slideToggle();
 

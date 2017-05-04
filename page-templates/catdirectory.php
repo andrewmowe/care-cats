@@ -25,13 +25,13 @@ $p_uri = get_page_uri($page_id);
 
 			<form class="cat-filters row py-4 align-items-center" method="post">
 
-				<div class="col-12 col-md-2">
+				<div class="col-12 col-lg-2">
 
 					<h2><a id="togglefilters" href="#filters" aria-expanded="true" aria-controls="#filters">Filters:</a></h2>
 
 				</div>
 
-				<div class="col-12 col-md-2 filtercontrols">
+				<div class="col-12 col-lg-2 filtercontrols">
 
 					<div class="form-group">
 
@@ -44,7 +44,7 @@ $p_uri = get_page_uri($page_id);
 
 					</div>
 				</div>
-				<div class="col-12 col-md-2 filtercontrols">
+				<div class="col-12 col-lg-2 filtercontrols">
 
 					<div class="form-group">
 
@@ -61,7 +61,7 @@ $p_uri = get_page_uri($page_id);
 
 				</div>
 
-				<div class="col-12 col-md-2 filtercontrols">
+				<div class="col-12 col-lg-2 filtercontrols">
 
 					<div class="form-group">
 
@@ -109,7 +109,7 @@ $p_uri = get_page_uri($page_id);
 					</div>
 
 				</div>
-				<div class="col-12 col-md-2 filtercontrols">
+				<div class="col-12 col-lg-2 filtercontrols">
 
 					<div class="form-group">
 
@@ -125,7 +125,7 @@ $p_uri = get_page_uri($page_id);
 
 				</div>
 
-				<div class="col-12 col-md-2 filtercontrols">
+				<div class="col-12 col-lg-2 filtercontrols">
 
 					<div class="form-inline row mx-0">
 

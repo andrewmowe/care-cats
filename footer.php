@@ -18,7 +18,7 @@ $the_theme = wp_get_theme();
 
 		<footer class="site-footer row justify-content-between" id="colophon">
 
-			<section class="col-12 col-md-5">
+			<section class="col-12 col-lg-5">
 
 				<?php
 
@@ -32,7 +32,7 @@ $the_theme = wp_get_theme();
 
 			</section><!--col end -->
 
-			<section class="col-12 col-md-5 pl-md-5">
+			<section class="col-12 col-lg-5 pl-md-5">
 
 				<h3>Stay Connected</h3>
 				<p>Sign up for our newsletter</p>

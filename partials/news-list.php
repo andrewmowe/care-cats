@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Home Page
  *
- * Template for displaying the HOME page without sidebar even if a sidebar widget is published.
+ *
+ * Template for displaying the news list
  *
  * @package understrap
  */
@@ -53,7 +53,7 @@
 
 			<?php if ( $news->max_num_pages > 1 ) : ?>
 		    <div class="text-center py-3 mb-5 load-more-news">
-		         <?php next_posts_link( 'Load More News', $news ->max_num_pages ); ?>
+		         <?php next_posts_link( 'Show More News', $news ->max_num_pages ); ?>
 		    </div>
 			<?php endif;  ?>
 

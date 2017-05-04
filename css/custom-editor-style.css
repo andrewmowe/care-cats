@@ -9985,7 +9985,7 @@ section.home-banner {
     margin-left: .5em;
     position: relative;
     display: inline-block; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .cat-nav-wrap #togglefilters {
       display: none; } }
 
