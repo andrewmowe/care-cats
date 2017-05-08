@@ -173,7 +173,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</section>
 
-		<h3 class="text-center bg-primary divider-header"><a class="btn btn-outline-secondary" href="<?php echo get_permalink( get_page_by_title( 'Adopt a Cat' ) ); ?>" role="button">See All Available Cats</a></h3>
+		<h3 class="text-center bg-primary divider-header"><a class="btn btn-outline-secondary" href="<?php echo get_permalink( get_page_by_path( 'available-cats' ) ); ?>" role="button">See All Available Cats</a></h3>
 
 	</section>
 
